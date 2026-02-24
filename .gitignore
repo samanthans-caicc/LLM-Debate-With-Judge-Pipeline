@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+.venv/
+mnist-env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Ignore the API key file
+api_keys.txt
+
+# Ignore some test files.
+api_demo.py
+openai-test.py
+openai-setup.py
