@@ -20,3 +20,6 @@ api_keys.txt
 api_demo.py
 openai-test.py
 openai-setup.py
+
+# Ignore API setup files.
+api_setup.py
