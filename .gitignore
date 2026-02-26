@@ -16,10 +16,5 @@ mnist-env/
 # Ignore the API key file
 api_keys.txt
 
-# Ignore some test files.
-api_demo.py
-openai-test.py
-openai-setup.py
-
 # Ignore API setup files.
 api_setup.py
