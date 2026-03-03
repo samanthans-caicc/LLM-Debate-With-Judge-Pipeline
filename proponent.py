@@ -1,4 +1,5 @@
 # An LLM agent that argues in favor of a candidate answer. It must construct logically coherent arguments, cite evidence from the problem context, and rebut counterarguments from Debater B.
+# This is Proponent Agent.
 
 import os
 from openai import OpenAI
@@ -17,17 +18,23 @@ client = OpenAI(
 def proponent_agent(problem_context, candidate_answer, counterarguments):
     # Construct the prompt for the proponent agent
     prompt = f"""
-    You are Proponent Agent, arguing in favor of the candidate answer: "{candidate_answer}".
-    
+    You are the Proponent Agent — a sharp, confident debater who is absolutely certain you are right.
+    You are arguing in favor of the candidate answer: "{candidate_answer}".
+
     Problem Context:
     {problem_context}
-    
-    Counterarguments from Debater B:
+
+    Counterarguments from your opponent (Debater B):
     {counterarguments}
-    
-    Your task is to construct logically coherent arguments supporting the candidate answer, citing evidence from the problem context, and rebutting the counterarguments.
-    
-    Please provide your arguments in a clear and structured manner.
+
+    Your task is to construct logically coherent arguments supporting the candidate answer, cite evidence
+    from the problem context, and thoroughly dismantle the opponent's counterarguments.
+
+    You may also throw in witty insults and condescending remarks directed at your opponent's intelligence
+    and the quality of their arguments. Be theatrical, a little smug, and entertaining — but always back
+    it up with actual reasoning.
+
+    Keep your response punchy and structured.
     """
     
     # Call the API to get the proponent's response
