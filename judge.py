@@ -5,6 +5,7 @@
 import os
 from openai import OpenAI
 
+
 # Set up API client
 api_key = os.environ.get("UTSA_API_KEY")
 base_url = os.environ.get("UTSA_BASE_URL")
@@ -39,20 +40,27 @@ def judge_agent(problem_context, candidate_answer, proponent_arguments, opponent
     Be entertaining, opinionated, and a little savage, but ultimately fair and well-reasoned.
     """
 
-    # Call the API to get the judge's response
+    # Stream the response token by token
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
+        stream=True,
     )
 
-    return response.choices[0].message.content
+    full_response = ""
+    for chunk in response:
+        token = chunk.choices[0].delta.content or ""
+        print(token, end="", flush=True)
+        full_response += token
+    print()
+    return full_response
 
 # Example usage
 if __name__ == "__main__":
-    problem_context = "The problem is about the impact of climate change on polar bear populations."
-    candidate_answer = "Climate change is causing a decline in polar bear populations."
-    proponent_arguments = "Studies show Arctic sea ice has decreased by 13% per decade, reducing hunting grounds for polar bears."
-    opponent_arguments = "Some polar bear subpopulations have remained stable, suggesting local adaptation may offset broader climate effects."
+    problem_context = "The internet is deeply divided on whether pineapple is an acceptable pizza topping."
+    candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
+    proponent_arguments = "The sweet-savory contrast of pineapple creates a flavor profile unmatched by any other topping."
+    opponent_arguments = "Pineapple releases moisture that makes the crust soggy and ruins the entire structural integrity of the pizza."
 
     verdict = judge_agent(problem_context, candidate_answer, proponent_arguments, opponent_arguments)
     print(verdict)

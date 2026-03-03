@@ -5,6 +5,7 @@
 import os
 from openai import OpenAI
 
+
 # Set up API client
 api_key = os.environ.get("UTSA_API_KEY")
 base_url = os.environ.get("UTSA_BASE_URL")
@@ -37,19 +38,26 @@ def opponent_agent(problem_context, candidate_answer, proponent_arguments):
     Keep your response punchy and structured.
     """
 
-    # Call the API to get the opponent's response
+    # Stream the response token by token
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
+        stream=True,
     )
 
-    return response.choices[0].message.content
+    full_response = ""
+    for chunk in response:
+        token = chunk.choices[0].delta.content or ""
+        print(token, end="", flush=True)
+        full_response += token
+    print()
+    return full_response
 
 # Example usage
 if __name__ == "__main__":
-    problem_context = "The problem is about the impact of climate change on polar bear populations."
-    candidate_answer = "Climate change is causing a decline in polar bear populations."
-    proponent_arguments = "Studies show Arctic sea ice has decreased by 13% per decade, reducing hunting grounds for polar bears."
+    problem_context = "The internet is deeply divided on whether pineapple is an acceptable pizza topping."
+    candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
+    proponent_arguments = "The sweet-savory contrast of pineapple creates a flavor profile unmatched by any other topping."
 
     opponent_response = opponent_agent(problem_context, candidate_answer, proponent_arguments)
     print(opponent_response)

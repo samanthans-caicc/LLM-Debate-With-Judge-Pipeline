@@ -37,19 +37,26 @@ def proponent_agent(problem_context, candidate_answer, counterarguments):
     Keep your response punchy and structured.
     """
     
-    # Call the API to get the proponent's response
+    # Stream the response token by token
     response = client.chat.completions.create(
         model=model,
         messages=[{"role": "user", "content": prompt}],
+        stream=True,
     )
-    
-    return response.choices[0].message.content
+
+    full_response = ""
+    for chunk in response:
+        token = chunk.choices[0].delta.content or ""
+        print(token, end="", flush=True)
+        full_response += token
+    print()
+    return full_response
 
 # Example usage
 if __name__ == "__main__":
-    problem_context = "The problem is about the impact of climate change on polar bear populations."
-    candidate_answer = "Climate change is causing a decline in polar bear populations."
-    counterarguments = "Some argue that polar bear populations are stable and not significantly affected by climate change."
+    problem_context = "The internet is deeply divided on whether pineapple is an acceptable pizza topping."
+    candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
+    counterarguments = "Fruit has no place on pizza. It ruins the texture and disrespects Italian tradition."
     
     proponent_response = proponent_agent(problem_context, candidate_answer, counterarguments)
     print(proponent_response)

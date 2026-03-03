@@ -4,6 +4,7 @@
 from proponent import proponent_agent
 from opponent import opponent_agent
 from judge import judge_agent
+import config  # Ensure API client and hyperparameters are set up
 
 def run_debate(problem_context, candidate_answer):
     print("=" * 60)
@@ -21,7 +22,6 @@ def run_debate(problem_context, candidate_answer):
         candidate_answer=candidate_answer,
         counterarguments="None yet.",
     )
-    print(proponent_arguments)
 
     # Round 1: Opponent rebuts
     print("\n" + "-" * 60)
@@ -32,7 +32,6 @@ def run_debate(problem_context, candidate_answer):
         candidate_answer=candidate_answer,
         proponent_arguments=proponent_arguments,
     )
-    print(opponent_arguments)
 
     # Judge evaluates both sides and delivers a verdict
     print("\n" + "-" * 60)
@@ -44,11 +43,15 @@ def run_debate(problem_context, candidate_answer):
         proponent_arguments=proponent_arguments,
         opponent_arguments=opponent_arguments,
     )
-    print(verdict)
     print("=" * 60)
 
 if __name__ == "__main__":
-    problem_context = "The problem is about the impact of climate change on polar bear populations."
-    candidate_answer = "Climate change is causing a decline in polar bear populations."
+    problem_context = (
+        "The internet is deeply divided on whether pineapple is an acceptable pizza topping. "
+        "Proponents argue that the sweetness of pineapple creates a bold sweet-savory contrast "
+        "that elevates the pizza experience. Critics insist that fruit has no place on pizza, "
+        "citing texture degradation, moisture release, and the violation of Italian culinary tradition."
+    )
+    candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
 
     run_debate(problem_context, candidate_answer)
