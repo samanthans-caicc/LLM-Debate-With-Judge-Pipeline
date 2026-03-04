@@ -15,6 +15,34 @@ client = OpenAI(
     base_url=base_url,
 )
 
+def proponent_initial_position(question):
+    prompt = f"""
+    You are the Proponent Agent — a sharp, confident debater who is absolutely certain you are right.
+
+    You have been presented with the following question/problem:
+    {question}
+
+    Without any knowledge of what your opponent will say, state your initial position: give your
+    answer clearly and provide brief, focused reasoning that supports it.
+
+    Be concise and structured.
+    """
+
+    response = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        stream=True,
+    )
+
+    full_response = ""
+    for chunk in response:
+        token = chunk.choices[0].delta.content or ""
+        print(token, end="", flush=True)
+        full_response += token
+    print()
+    return full_response
+
+
 def proponent_agent(problem_context, candidate_answer, counterarguments):
     # Construct the prompt for the proponent agent
     prompt = f"""

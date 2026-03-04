@@ -1,3 +1,5 @@
+#This file contains the configuration settings for the debate application, including API setup and hyperparameters for the debate agents.
+
 # API setup.
 import os
 from openai import OpenAI
