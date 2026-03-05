@@ -2,20 +2,7 @@
 # It critically evaluates the candidate answer, identifies weaknesses in the proponent's arguments,
 # and presents counterarguments based on evidence from the problem context.
 
-import os
-from openai import OpenAI
-
-
-# Set up API client
-api_key = os.environ.get("UTSA_API_KEY")
-base_url = os.environ.get("UTSA_BASE_URL")
-model = os.environ.get("UTSA_MODEL")
-# Note: API key, base URL, and model to be input into venv terminal manually via export commands, e.g. export UTSA_API_KEY='api_key_here'
-
-client = OpenAI(
-    api_key=api_key,
-    base_url=base_url,
-)
+from config import client, model
 
 def opponent_initial_position(question):
     prompt = f"""
@@ -46,7 +33,7 @@ def opponent_initial_position(question):
     return full_response
 
 
-def opponent_agent(problem_context, candidate_answer, proponent_arguments):
+def opponent_agent(problem_context, candidate_answer, proponent_history):
     # Construct the prompt for the opponent agent
     prompt = f"""
     You are the Opponent Agent (Debater B) — a ruthless critic who takes great pleasure in tearing apart
@@ -55,8 +42,8 @@ def opponent_agent(problem_context, candidate_answer, proponent_arguments):
     Problem Context:
     {problem_context}
 
-    The Proponent's Arguments (brace yourself, it's rough):
-    {proponent_arguments}
+    Full debate history from the Proponent (brace yourself, it's rough):
+    {proponent_history}
 
     Your task is to expose every flaw, gap, and logical blunder in the proponent's arguments, and present
     sharp counterarguments supported by evidence from the problem context.

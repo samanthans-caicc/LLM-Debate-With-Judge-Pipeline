@@ -18,7 +18,9 @@ client = OpenAI(
 
 # Hyperparameters for the debate
 DEBATE_HYPERPARAMETERS = {
-    "temperature": 0.7,  # Controls creativity of responses
-    "max_tokens": 4098,   # Max tokens for each agent's response
+    "temperature": 0.8,  # Controls creativity of responses. Prior tests: 0.7
+    "max_tokens": 2049,   # Max tokens for each agent's response. Prior tests: 4096
     "top_p": 0.9,        # Nucleus sampling for response diversity
 }
+
+NUM_ROUNDS = 3  # Number of back-and-forth debate rounds (Phase 2)

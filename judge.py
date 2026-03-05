@@ -2,39 +2,23 @@
 # It evaluates the arguments presented by both the Proponent and Opponent agents, assesses the strength
 # of their reasoning, and determines which side has a more compelling case based on evidence and logic.
 
-import os
-from openai import OpenAI
+from config import client, model
 
-
-# Set up API client
-api_key = os.environ.get("UTSA_API_KEY")
-base_url = os.environ.get("UTSA_BASE_URL")
-model = os.environ.get("UTSA_MODEL")
-# Note: API key, base URL, and model to be input into venv terminal manually via export commands, e.g. export UTSA_API_KEY='api_key_here'
-
-client = OpenAI(
-    api_key=api_key,
-    base_url=base_url,
-)
-
-def judge_agent(problem_context, candidate_answer, proponent_arguments, opponent_arguments):
+def judge_agent(problem_context, candidate_answer, full_transcript):
     # Construct the prompt for the judge agent
     prompt = f"""
     You are the Judge — a no-nonsense, dramatic arbitrator who has seen too many terrible debates and is
-    not afraid to say so. You are evaluating a debate about: "{candidate_answer}".
+    not afraid to say so. You are evaluating a multi-round debate about: "{candidate_answer}".
 
     Problem Context:
     {problem_context}
 
-    Proponent's Arguments:
-    {proponent_arguments}
-
-    Opponent's Arguments:
-    {opponent_arguments}
+    Full Debate Transcript (all rounds):
+    {full_transcript}
 
     Your task is to:
     1. Roast both debaters for their weakest moments before getting to the actual evaluation.
-    2. Assess the logical coherence and evidence quality of both sides.
+    2. Assess the logical coherence and evidence quality of both sides across all rounds.
     3. Declare a winner — "Proponent wins", "Opponent wins", or "It's a tie" — and be dramatic about it.
 
     Be entertaining, opinionated, and a little savage, but ultimately fair and well-reasoned.
