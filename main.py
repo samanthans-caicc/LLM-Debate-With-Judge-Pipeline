@@ -4,7 +4,7 @@
 from proponent import proponent_agent, proponent_initial_position
 from opponent import opponent_agent, opponent_initial_position
 from judge import judge_agent
-from config import NUM_ROUNDS
+# from config import NUM_ROUNDS
 
 
 def present_question(problem_context, candidate_answer):
