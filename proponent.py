@@ -3,15 +3,16 @@
 
 from config import client, model
 
-def proponent_initial_position(question):
+def proponent_initial_position(problem_context, candidate_answer):
     prompt = f"""
     You are the Proponent Agent — a sharp, confident debater who is absolutely certain you are right.
+    You are arguing IN FAVOR of the candidate answer: "{candidate_answer}".
 
-    You have been presented with the following question/problem:
-    {question}
+    Problem Context:
+    {problem_context}
 
-    Without any knowledge of what your opponent will say, state your initial position: give your
-    answer clearly and provide brief, focused reasoning that supports it.
+    Without any knowledge of what your opponent will say, state your initial position: explain why
+    the candidate answer is correct and provide brief, focused reasoning that supports it.
 
     Be concise and structured.
     """

@@ -40,46 +40,46 @@ def run_debate(problem_context, candidate_answer):
     print("\n" + "-" * 60)
     print("PROPONENT'S INITIAL POSITION:")
     print("-" * 60)
-    proponent_opening = proponent_initial_position(question)
+    proponent_opening = proponent_initial_position(problem_context, candidate_answer)
 
     print("\n" + "-" * 60)
     print("OPPONENT'S INITIAL POSITION:")
     print("-" * 60)
-    opponent_opening = opponent_initial_position(question)
+    opponent_opening = opponent_initial_position(problem_context, candidate_answer)
 
     # Phase 2: Multi-round debate
     # Each agent sees the opponent's full history up to the previous round.
     proponent_responses = []
     opponent_responses = []
 
-    for round_num in range(1, NUM_ROUNDS + 1):
-        print("\n" + "=" * 60)
-        print(f"  PHASE 2, ROUND {round_num} of {NUM_ROUNDS}: DEBATE")
-        print("=" * 60)
+    # for round_num in range(1, NUM_ROUNDS + 1):
+    #     print("\n" + "=" * 60)
+    #     print(f"  PHASE 2, ROUND {round_num} of {NUM_ROUNDS}: DEBATE")
+    #     print("=" * 60)
 
-        # Each agent sees ALL of the opponent's prior output (initial + previous rounds)
-        opponent_history = _build_history("Opponent", opponent_opening, opponent_responses)
-        proponent_history = _build_history("Proponent", proponent_opening, proponent_responses)
+    #     # Each agent sees ALL of the opponent's prior output (initial + previous rounds)
+    #     opponent_history = _build_history("Opponent", opponent_opening, opponent_responses)
+    #     proponent_history = _build_history("Proponent", proponent_opening, proponent_responses)
 
-        print("\n" + "-" * 60)
-        print(f"PROPONENT ARGUES (Round {round_num}):")
-        print("-" * 60)
-        prop_resp = proponent_agent(
-            problem_context=problem_context,
-            candidate_answer=candidate_answer,
-            opponent_history=opponent_history,
-        )
-        proponent_responses.append(prop_resp)
+    #     print("\n" + "-" * 60)
+    #     print(f"PROPONENT ARGUES (Round {round_num}):")
+    #     print("-" * 60)
+    #     prop_resp = proponent_agent(
+    #         problem_context=problem_context,
+    #         candidate_answer=candidate_answer,
+    #         opponent_history=opponent_history,
+    #     )
+    #     proponent_responses.append(prop_resp)
 
-        print("\n" + "-" * 60)
-        print(f"OPPONENT FIRES BACK (Round {round_num}):")
-        print("-" * 60)
-        opp_resp = opponent_agent(
-            problem_context=problem_context,
-            candidate_answer=candidate_answer,
-            proponent_history=proponent_history,
-        )
-        opponent_responses.append(opp_resp)
+    #     print("\n" + "-" * 60)
+    #     print(f"OPPONENT FIRES BACK (Round {round_num}):")
+    #     print("-" * 60)
+    #     opp_resp = opponent_agent(
+    #         problem_context=problem_context,
+    #         candidate_answer=candidate_answer,
+    #         proponent_history=proponent_history,
+    #     )
+    #     opponent_responses.append(opp_resp)
 
     # Phase 3: Build full transcript and let the judge decide
     full_transcript = (

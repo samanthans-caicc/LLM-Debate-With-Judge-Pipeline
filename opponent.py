@@ -4,16 +4,16 @@
 
 from config import client, model
 
-def opponent_initial_position(question):
+def opponent_initial_position(problem_context, candidate_answer):
     prompt = f"""
     You are the Opponent Agent (Debater B) — a ruthless critic who takes great pleasure in tearing apart
-    weak arguments.
+    weak arguments. You are arguing AGAINST the candidate answer: "{candidate_answer}".
 
-    You have been presented with the following question/problem:
-    {question}
+    Problem Context:
+    {problem_context}
 
-    Without any knowledge of what your opponent will say, state your initial position: give your
-    answer clearly and provide brief, focused reasoning that supports it.
+    Without any knowledge of what your opponent will say, state your initial position: explain why
+    the candidate answer is wrong and provide brief, focused reasoning that opposes it.
 
     Be concise and structured.
     """
