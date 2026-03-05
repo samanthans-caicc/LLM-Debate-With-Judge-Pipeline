@@ -67,14 +67,3 @@ def proponent_agent(problem_context, candidate_answer, opponent_history):
         full_response += token
     print()
     return full_response
-
-# Example usage
-if __name__ == "__main__":
-    problem_context = "The internet is deeply divided on whether pineapple is an acceptable pizza topping."
-    candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
-    counterarguments = "Fruit has no place on pizza. It ruins the texture and disrespects Italian tradition."
-    
-    proponent_response = proponent_agent(problem_context, candidate_answer, counterarguments)
-    print(proponent_response)
-
-# END of proponent.py

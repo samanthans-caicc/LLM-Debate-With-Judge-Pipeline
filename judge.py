@@ -38,15 +38,3 @@ def judge_agent(problem_context, candidate_answer, full_transcript):
         full_response += token
     print()
     return full_response
-
-# Example usage
-if __name__ == "__main__":
-    problem_context = "The internet is deeply divided on whether pineapple is an acceptable pizza topping."
-    candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
-    proponent_arguments = "The sweet-savory contrast of pineapple creates a flavor profile unmatched by any other topping."
-    opponent_arguments = "Pineapple releases moisture that makes the crust soggy and ruins the entire structural integrity of the pizza."
-
-    verdict = judge_agent(problem_context, candidate_answer, proponent_arguments, opponent_arguments)
-    print(verdict)
-
-# END of judge.py
