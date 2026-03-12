@@ -1,1 +1,11 @@
 Refer to https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet when writing this report.
+
+# Introduction
+
+# Methodology
+
+# Analysis
+
+# Prompt Engineering
+
+# Appendix
