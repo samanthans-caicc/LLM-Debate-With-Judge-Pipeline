@@ -1,10 +1,14 @@
 # main.py — LLM Debate Pipeline (multi-round)
 # Orchestrates N debate rounds: both debaters build on full history, then Judge decides.
 
+import json
+import os
+from datetime import datetime
+
+from config import client, model, NUM_ROUNDS
 from proponent import proponent_agent, proponent_initial_position
 from opponent import opponent_agent, opponent_initial_position
 from judge import judge_agent
-# from config import NUM_ROUNDS
 
 
 def present_question(problem_context, candidate_answer):
@@ -22,7 +26,35 @@ def _build_history(label, initial_position, responses):
     return history
 
 
-def run_debate(problem_context, candidate_answer):
+def check_agreement(prop_response, opp_response):
+    """Returns True if both debaters appear to agree on the same conclusion."""
+    prompt = (
+        "Below are responses from two debaters. Determine whether both debaters are now "
+        "expressing agreement or convergence on the same conclusion — meaning neither is "
+        "meaningfully opposing the other anymore.\n\n"
+        f"Proponent's response:\n{prop_response}\n\n"
+        f"Opponent's response:\n{opp_response}\n\n"
+        "Reply with only YES or NO."
+    )
+    response = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        stream=False,
+    )
+    answer = response.choices[0].message.content.strip().upper()
+    return answer.startswith("YES")
+
+
+def save_transcript(transcript: dict):
+    os.makedirs("test_outputs", exist_ok=True)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    path = f"test_outputs/transcript_{timestamp}.json"
+    with open(path, "w") as f:
+        json.dump(transcript, f, indent=2)
+    print(f"\n[Transcript saved to {path}]")
+
+
+def run_debate(problem_context, candidate_answer, ground_truth=None):
     print("=" * 60)
     print("  *** LLM DEBATE PIPELINE: AGENTS AT WAR ***")
     print("=" * 60)
@@ -51,35 +83,42 @@ def run_debate(problem_context, candidate_answer):
     # Each agent sees the opponent's full history up to the previous round.
     proponent_responses = []
     opponent_responses = []
+    early_exit_round = None
 
-    # for round_num in range(1, NUM_ROUNDS + 1):
-    #     print("\n" + "=" * 60)
-    #     print(f"  PHASE 2, ROUND {round_num} of {NUM_ROUNDS}: DEBATE")
-    #     print("=" * 60)
+    for round_num in range(1, NUM_ROUNDS + 1):
+        print("\n" + "=" * 60)
+        print(f"  PHASE 2, ROUND {round_num} of {NUM_ROUNDS}: DEBATE")
+        print("=" * 60)
 
-    #     # Each agent sees ALL of the opponent's prior output (initial + previous rounds)
-    #     opponent_history = _build_history("Opponent", opponent_opening, opponent_responses)
-    #     proponent_history = _build_history("Proponent", proponent_opening, proponent_responses)
+        # Each agent sees ALL of the opponent's prior output (initial + previous rounds)
+        opponent_history = _build_history("Opponent", opponent_opening, opponent_responses)
+        proponent_history = _build_history("Proponent", proponent_opening, proponent_responses)
 
-    #     print("\n" + "-" * 60)
-    #     print(f"PROPONENT ARGUES (Round {round_num}):")
-    #     print("-" * 60)
-    #     prop_resp = proponent_agent(
-    #         problem_context=problem_context,
-    #         candidate_answer=candidate_answer,
-    #         opponent_history=opponent_history,
-    #     )
-    #     proponent_responses.append(prop_resp)
+        print("\n" + "-" * 60)
+        print(f"PROPONENT ARGUES (Round {round_num}):")
+        print("-" * 60)
+        prop_resp = proponent_agent(
+            problem_context=problem_context,
+            candidate_answer=candidate_answer,
+            opponent_history=opponent_history,
+        )
+        proponent_responses.append(prop_resp)
 
-    #     print("\n" + "-" * 60)
-    #     print(f"OPPONENT FIRES BACK (Round {round_num}):")
-    #     print("-" * 60)
-    #     opp_resp = opponent_agent(
-    #         problem_context=problem_context,
-    #         candidate_answer=candidate_answer,
-    #         proponent_history=proponent_history,
-    #     )
-    #     opponent_responses.append(opp_resp)
+        print("\n" + "-" * 60)
+        print(f"OPPONENT FIRES BACK (Round {round_num}):")
+        print("-" * 60)
+        opp_resp = opponent_agent(
+            problem_context=problem_context,
+            candidate_answer=candidate_answer,
+            proponent_history=proponent_history,
+        )
+        opponent_responses.append(opp_resp)
+
+        # Early exit: if both debaters converge, skip remaining rounds
+        if check_agreement(prop_resp, opp_resp):
+            early_exit_round = round_num
+            print(f"\n[Both debaters appear to agree after round {round_num}. Skipping to judgment.]")
+            break
 
     # Phase 3: Build full transcript and let the judge decide
     full_transcript = (
@@ -95,12 +134,31 @@ def run_debate(problem_context, candidate_answer):
     print("\n" + "-" * 60)
     print("THE JUDGE DELIVERS THE VERDICT:")
     print("-" * 60)
-    judge_agent(
+    judge_response = judge_agent(
         problem_context=problem_context,
         candidate_answer=candidate_answer,
         full_transcript=full_transcript,
     )
     print("=" * 60)
+
+    transcript = {
+        "timestamp": datetime.now().isoformat(),
+        "problem_context": problem_context,
+        "candidate_answer": candidate_answer,
+        "ground_truth": ground_truth,
+        "question": question,
+        "initial_positions": {
+            "proponent": proponent_opening,
+            "opponent": opponent_opening,
+        },
+        "rounds": [
+            {"round": i + 1, "proponent": p, "opponent": o}
+            for i, (p, o) in enumerate(zip(proponent_responses, opponent_responses))
+        ],
+        "early_exit_round": early_exit_round,
+        "judge_response": judge_response,
+    }
+    save_transcript(transcript)
 
 
 if __name__ == "__main__":
@@ -112,4 +170,6 @@ if __name__ == "__main__":
     )
     candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
 
-    run_debate(problem_context, candidate_answer)
+    ground_truth = "Pineapple on pizza is a matter of personal taste with no objectively correct answer."
+
+    run_debate(problem_context, candidate_answer, ground_truth=ground_truth)

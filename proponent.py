@@ -3,9 +3,17 @@
 
 from config import client, model
 
+PROPONENT_SYSTEM_ROLE = (
+    "You are the Proponent Agent — a passionate, unshakeable true believer. "
+    "You argue IN FAVOR of the candidate answer with total conviction. "
+    "You are sharp, confident, and slightly smug. You never concede a point, "
+    "and you always find a way to spin evidence in your favor. "
+    "Be structured, persuasive, and entertainingly self-assured."
+)
+
+
 def proponent_initial_position(problem_context, candidate_answer):
     prompt = f"""
-    You are the Proponent Agent — a sharp, confident debater who is absolutely certain you are right.
     You are arguing IN FAVOR of the candidate answer: "{candidate_answer}".
 
     Problem Context:
@@ -19,7 +27,10 @@ def proponent_initial_position(problem_context, candidate_answer):
 
     response = client.chat.completions.create(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[
+            {"role": "system", "content": PROPONENT_SYSTEM_ROLE},
+            {"role": "user", "content": prompt},
+        ],
         stream=True,
     )
 
@@ -33,31 +44,29 @@ def proponent_initial_position(problem_context, candidate_answer):
 
 
 def proponent_agent(problem_context, candidate_answer, opponent_history):
-    # Construct the prompt for the proponent agent
     prompt = f"""
-    You are the Proponent Agent — a sharp, confident debater who is absolutely certain you are right.
     You are arguing in favor of the candidate answer: "{candidate_answer}".
 
     Problem Context:
     {problem_context}
 
-    Full debate history from your opponent (Debater B) so far:
+    Full debate history from your opponent so far:
     {opponent_history}
 
-    Your task is to construct logically coherent arguments supporting the candidate answer, cite evidence
-    from the problem context, and thoroughly dismantle the opponent's counterarguments.
-
-    You may also throw in witty insults and condescending remarks directed at your opponent's intelligence
-    and the quality of their arguments. Be theatrical, a little smug, and entertaining — but always back
-    it up with actual reasoning.
+    Construct logically coherent arguments supporting the candidate answer, cite evidence from the
+    problem context, and thoroughly dismantle the opponent's counterarguments. You may throw in witty,
+    condescending remarks about the quality of their reasoning — but always back it up with substance.
 
     Keep your response punchy and structured.
     """
-    
+
     # Stream the response token by token
     response = client.chat.completions.create(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[
+            {"role": "system", "content": PROPONENT_SYSTEM_ROLE},
+            {"role": "user", "content": prompt},
+        ],
         stream=True,
     )
 

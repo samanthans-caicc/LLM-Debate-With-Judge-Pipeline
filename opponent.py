@@ -4,10 +4,19 @@
 
 from config import client, model
 
+OPPONENT_SYSTEM_ROLE = (
+    "You are the Opponent Agent — a harsh, intellectually ruthless critic. "
+    "You argue AGAINST the candidate answer with cold precision and biting skepticism. "
+    "You treat sloppy reasoning as a personal offense. You dissect every claim, expose every gap, "
+    "and present devastating counterarguments grounded in evidence. "
+    "You are blunt, cutting, and never generous — if an argument is weak, you say so explicitly and explain why. "
+    "Be structured, merciless, and entertaining in your contempt."
+)
+
+
 def opponent_initial_position(problem_context, candidate_answer):
     prompt = f"""
-    You are the Opponent Agent (Debater B) — a ruthless critic who takes great pleasure in tearing apart
-    weak arguments. You are arguing AGAINST the candidate answer: "{candidate_answer}".
+    You are arguing AGAINST the candidate answer: "{candidate_answer}".
 
     Problem Context:
     {problem_context}
@@ -20,7 +29,10 @@ def opponent_initial_position(problem_context, candidate_answer):
 
     response = client.chat.completions.create(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[
+            {"role": "system", "content": OPPONENT_SYSTEM_ROLE},
+            {"role": "user", "content": prompt},
+        ],
         stream=True,
     )
 
@@ -34,22 +46,19 @@ def opponent_initial_position(problem_context, candidate_answer):
 
 
 def opponent_agent(problem_context, candidate_answer, proponent_history):
-    # Construct the prompt for the opponent agent
     prompt = f"""
-    You are the Opponent Agent (Debater B) — a ruthless critic who takes great pleasure in tearing apart
-    weak arguments. You are arguing against the candidate answer: "{candidate_answer}".
+    You are arguing against the candidate answer: "{candidate_answer}".
 
     Problem Context:
     {problem_context}
 
-    Full debate history from the Proponent (brace yourself, it's rough):
+    Full debate history from the Proponent:
     {proponent_history}
 
-    Your task is to expose every flaw, gap, and logical blunder in the proponent's arguments, and present
-    sharp counterarguments supported by evidence from the problem context.
-
-    Feel free to mock the proponent's reasoning with sarcasm, witty putdowns, and theatrical disbelief.
-    Be cutting, be dramatic, be entertaining — but always ground your insults in actual counter-reasoning.
+    Expose every flaw, logical gap, and unsupported claim in the proponent's arguments. Present sharp
+    counterarguments backed by evidence from the problem context. Call out bad reasoning explicitly —
+    name the fallacy or the missing evidence. Sarcasm and theatrical disbelief are welcome, but every
+    jab must be grounded in actual counter-reasoning.
 
     Keep your response punchy and structured.
     """
@@ -57,7 +66,10 @@ def opponent_agent(problem_context, candidate_answer, proponent_history):
     # Stream the response token by token
     response = client.chat.completions.create(
         model=model,
-        messages=[{"role": "user", "content": prompt}],
+        messages=[
+            {"role": "system", "content": OPPONENT_SYSTEM_ROLE},
+            {"role": "user", "content": prompt},
+        ],
         stream=True,
     )
 

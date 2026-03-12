@@ -16,7 +16,5 @@ mnist-env/
 # Ignore the API key file
 api_keys.txt
 
-# Ignore the run folder and its contents.
-tests/
 
 

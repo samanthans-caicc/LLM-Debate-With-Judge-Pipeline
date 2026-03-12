@@ -23,4 +23,4 @@ DEBATE_HYPERPARAMETERS = {
     "top_p": 0.9,        # Nucleus sampling for response diversity
 }
 
-# NUM_ROUNDS = 3  # Number of back-and-forth debate rounds (Phase 2)
+NUM_ROUNDS = 3  # Number of back-and-forth debate rounds (Phase 2)
