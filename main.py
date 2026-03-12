@@ -18,12 +18,16 @@ def present_question(problem_context, candidate_answer):
     )
 
 
-def _build_history(label, initial_position, responses):
-    """Format a debater's full history (initial position + all round responses)."""
-    history = f"--- {label}'s Initial Position ---\n{initial_position}\n"
-    for i, resp in enumerate(responses, start=1):
-        history += f"\n--- {label}'s Round {i} Response ---\n{resp}\n"
-    return history
+def _build_full_transcript(proponent_opening, opponent_opening, proponent_responses, opponent_responses):
+    """Build a chronological interleaved transcript of all complete rounds."""
+    transcript = "=== INITIAL POSITIONS ===\n"
+    transcript += f"[Proponent]\n{proponent_opening}\n\n"
+    transcript += f"[Opponent]\n{opponent_opening}\n"
+    for i, (p, o) in enumerate(zip(proponent_responses, opponent_responses), start=1):
+        transcript += f"\n=== ROUND {i} ===\n"
+        transcript += f"[Proponent]\n{p}\n\n"
+        transcript += f"[Opponent]\n{o}\n"
+    return transcript
 
 
 def check_agreement(prop_response, opp_response):
@@ -43,6 +47,31 @@ def check_agreement(prop_response, opp_response):
     )
     answer = response.choices[0].message.content.strip().upper()
     return answer.startswith("YES")
+
+
+def evaluate_verdict(judge_response, candidate_answer, ground_truth):
+    """Compare the judge's verdict against the ground truth. Returns a result dict."""
+    if ground_truth is None:
+        return {"verdict_matches_ground_truth": None, "explanation": "No ground truth provided."}
+
+    prompt = (
+        f"A debate was held about the following candidate answer:\n"
+        f"  Candidate Answer: {candidate_answer}\n\n"
+        f"The ground truth is:\n"
+        f"  {ground_truth}\n\n"
+        f"The judge's full ruling is:\n"
+        f"{judge_response}\n\n"
+        f"Does the judge's final verdict select the answer that best aligns with the ground truth?\n"
+        f"Start your response with YES or NO, then explain in 2-3 sentences."
+    )
+    response = client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        stream=False,
+    )
+    explanation = response.choices[0].message.content.strip()
+    matches = explanation.upper().startswith("YES")
+    return {"verdict_matches_ground_truth": matches, "explanation": explanation}
 
 
 def save_transcript(transcript: dict):
@@ -79,53 +108,63 @@ def run_debate(problem_context, candidate_answer, ground_truth=None):
     print("-" * 60)
     opponent_opening = opponent_initial_position(problem_context, candidate_answer)
 
-    # Phase 2: Multi-round debate
-    # Each agent sees the opponent's full history up to the previous round.
+    # Phase 1, Requirement 3: Check for consensus on initial positions
     proponent_responses = []
     opponent_responses = []
     early_exit_round = None
 
-    for round_num in range(1, NUM_ROUNDS + 1):
-        print("\n" + "=" * 60)
-        print(f"  PHASE 2, ROUND {round_num} of {NUM_ROUNDS}: DEBATE")
-        print("=" * 60)
+    if check_agreement(proponent_opening, opponent_opening):
+        print("\n[Both debaters agree on initial positions. Skipping to judgment.]")
+    else:
+        # Phase 2: Multi-round debate (N >= 3 rounds)
+        consecutive_agreements = 0
+        for round_num in range(1, NUM_ROUNDS + 1):
+            print("\n" + "=" * 60)
+            print(f"  PHASE 2, ROUND {round_num} of {NUM_ROUNDS}: DEBATE")
+            print("=" * 60)
 
-        # Each agent sees ALL of the opponent's prior output (initial + previous rounds)
-        opponent_history = _build_history("Opponent", opponent_opening, opponent_responses)
-        proponent_history = _build_history("Proponent", proponent_opening, proponent_responses)
+            # Req 2: Both agents receive the full interleaved transcript of all previous rounds
+            prev_transcript = _build_full_transcript(
+                proponent_opening, opponent_opening, proponent_responses, opponent_responses
+            )
 
-        print("\n" + "-" * 60)
-        print(f"PROPONENT ARGUES (Round {round_num}):")
-        print("-" * 60)
-        prop_resp = proponent_agent(
-            problem_context=problem_context,
-            candidate_answer=candidate_answer,
-            opponent_history=opponent_history,
-        )
-        proponent_responses.append(prop_resp)
+            print("\n" + "-" * 60)
+            print(f"PROPONENT ARGUES (Round {round_num}):")
+            print("-" * 60)
+            prop_resp = proponent_agent(
+                problem_context=problem_context,
+                candidate_answer=candidate_answer,
+                full_transcript=prev_transcript,
+            )
+            proponent_responses.append(prop_resp)
 
-        print("\n" + "-" * 60)
-        print(f"OPPONENT FIRES BACK (Round {round_num}):")
-        print("-" * 60)
-        opp_resp = opponent_agent(
-            problem_context=problem_context,
-            candidate_answer=candidate_answer,
-            proponent_history=proponent_history,
-        )
-        opponent_responses.append(opp_resp)
+            # Opponent also sees the proponent's argument from this round
+            opponent_context = prev_transcript + f"\n=== ROUND {round_num} ===\n[Proponent]\n{prop_resp}\n"
 
-        # Early exit: if both debaters converge, skip remaining rounds
-        if check_agreement(prop_resp, opp_resp):
-            early_exit_round = round_num
-            print(f"\n[Both debaters appear to agree after round {round_num}. Skipping to judgment.]")
-            break
+            print("\n" + "-" * 60)
+            print(f"OPPONENT FIRES BACK (Round {round_num}):")
+            print("-" * 60)
+            opp_resp = opponent_agent(
+                problem_context=problem_context,
+                candidate_answer=candidate_answer,
+                full_transcript=opponent_context,
+            )
+            opponent_responses.append(opp_resp)
+
+            # Req 3: Adaptive stopping — exit only after TWO consecutive rounds of agreement
+            if check_agreement(prop_resp, opp_resp):
+                consecutive_agreements += 1
+                print(f"\n[Agreement detected — {consecutive_agreements} consecutive round(s).]")
+                if consecutive_agreements >= 2:
+                    early_exit_round = round_num
+                    print("[Two consecutive rounds of agreement. Skipping to judgment.]")
+                    break
+            else:
+                consecutive_agreements = 0
 
     # Phase 3: Build full transcript and let the judge decide
-    full_transcript = (
-        "=== PROPONENT'S FULL DEBATE HISTORY ===\n"
-        + _build_history("Proponent", proponent_opening, proponent_responses)
-        + "\n=== OPPONENT'S FULL DEBATE HISTORY ===\n"
-        + _build_history("Opponent", opponent_opening, opponent_responses)
+    full_transcript = _build_full_transcript(
+        proponent_opening, opponent_opening, proponent_responses, opponent_responses
     )
 
     print("\n" + "=" * 60)
@@ -139,6 +178,16 @@ def run_debate(problem_context, candidate_answer, ground_truth=None):
         candidate_answer=candidate_answer,
         full_transcript=full_transcript,
     )
+    print("=" * 60)
+
+    # Phase 4: Evaluate judge's verdict against ground truth
+    print("\n" + "=" * 60)
+    print("  PHASE 4: EVALUATION")
+    print("=" * 60)
+    evaluation = evaluate_verdict(judge_response, candidate_answer, ground_truth)
+    print(f"\nGround Truth:\n{ground_truth}")
+    print(f"\nVerdict matches ground truth: {evaluation['verdict_matches_ground_truth']}")
+    print(f"\nExplanation:\n{evaluation['explanation']}")
     print("=" * 60)
 
     transcript = {
@@ -157,6 +206,7 @@ def run_debate(problem_context, candidate_answer, ground_truth=None):
         ],
         "early_exit_round": early_exit_round,
         "judge_response": judge_response,
+        "evaluation": evaluation,
     }
     save_transcript(transcript)
 
