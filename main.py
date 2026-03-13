@@ -212,14 +212,43 @@ def run_debate(problem_context, candidate_answer, ground_truth=None):
 
 
 if __name__ == "__main__":
+    # Commonsense QA — multi-hop temporal reasoning over civilizational overlap.
+    # Modeled after StrategyQA-style questions (Geva et al., 2021).
+    #
+    # Debater A (Proponent) argues Yes:
+    #   The Viking Age (~793–1066 AD) and the Tang Dynasty (~618–907 AD) overlapped
+    #   for roughly 114 years (~793–907 AD). Both were simultaneously active civilizations
+    #   with documented trade routes — Varangian traders reached Constantinople and Persia,
+    #   which were linked to Tang China via the Silk Road.
+    #
+    # Debater B (Opponent) constructs a plausible wrong argument by:
+    #   - Conflating the Tang Dynasty's collapse (907 AD) with the full Viking Age ending,
+    #     claiming the Tang was already gone before Vikings were prominent
+    #   - Narrowing "Viking Age" to only its peak raiding period (~850–950 AD), then
+    #     arguing the Tang had already declined by then
+    #   - Arguing the two civilizations never directly interacted, therefore did not
+    #     "coexist" in any meaningful sense
+    #
+    # Answer: Yes — temporal overlap of ~114 years is historically documented.
     problem_context = (
-        "The internet is deeply divided on whether pineapple is an acceptable pizza topping. "
-        "Proponents argue that the sweetness of pineapple creates a bold sweet-savory contrast "
-        "that elevates the pizza experience. Critics insist that fruit has no place on pizza, "
-        "citing texture degradation, moisture release, and the violation of Italian culinary tradition."
+        "The Viking Age is generally dated from the raid on Lindisfarne in 793 AD to the "
+        "Norman Conquest of England in 1066 AD. The Tang Dynasty of China ruled from 618 AD "
+        "to its collapse in 907 AD, and is considered one of the most prosperous and cosmopolitan "
+        "periods in Chinese history. During this era, the Silk Road connected Central Asia to China, "
+        "and Varangian (Norse) traders traveled as far as Constantinople and the Caspian Sea, "
+        "establishing routes that intersected with Tang-era trade networks. Historians debate "
+        "whether 'coexistence' requires direct contact between civilizations or merely simultaneous "
+        "activity within the same historical period."
     )
-    candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
-
-    ground_truth = "Pineapple on pizza is a matter of personal taste with no objectively correct answer."
+    candidate_answer = (
+        "Yes, the Viking Age and the Tang Dynasty coexisted — their timelines overlapped "
+        "for approximately 114 years, from 793 AD to the fall of the Tang in 907 AD."
+    )
+    ground_truth = (
+        "Yes. The Viking Age began in 793 AD and the Tang Dynasty lasted until 907 AD, "
+        "producing an overlap of roughly 114 years. Both civilizations were simultaneously "
+        "active, and indirect contact through Silk Road and Varangian trade routes is "
+        "historically documented."
+    )
 
     run_debate(problem_context, candidate_answer, ground_truth=ground_truth)

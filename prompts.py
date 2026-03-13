@@ -269,3 +269,17 @@ def judge_prompt(problem_context: str, candidate_answer: str, full_transcript: s
         f"  5 = One side completely dominant — the other had no substantive arguments\n"
         f"State the score as 'Confidence: X/5' and explain it in one sentence."
     )
+
+# Debate prompt one.
+# if __name__ == "__main__":
+#     problem_context = (
+#         "The internet is deeply divided on whether pineapple is an acceptable pizza topping. "
+#         "Proponents argue that the sweetness of pineapple creates a bold sweet-savory contrast "
+#         "that elevates the pizza experience. Critics insist that fruit has no place on pizza, "
+#         "citing texture degradation, moisture release, and the violation of Italian culinary tradition."
+#     )
+#     candidate_answer = "Pineapple belongs on pizza and anyone who disagrees has no taste."
+
+#     ground_truth = "Pineapple on pizza is a matter of personal taste with no objectively correct answer."
+
+#     run_debate(problem_context, candidate_answer, ground_truth=ground_truth
