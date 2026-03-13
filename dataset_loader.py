@@ -27,6 +27,8 @@ from datetime import datetime
 
 from datasets import load_dataset
 
+from config import DEBATE_HYPERPARAMETERS
+
 
 # ---------------------------------------------------------------------------
 # Formatters — convert each dataset's schema into a unified debate dict:
@@ -210,8 +212,10 @@ def run_batch(questions: list[dict], out_dir: str):
     batch_dir = os.path.join(out_dir, f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
     os.makedirs(batch_dir, exist_ok=True)
     print(f"[Batch folder: {batch_dir}]")
+    print(f"[Hyperparameters: {DEBATE_HYPERPARAMETERS}]")
 
     results = []
+    errors = []
 
     for i, q in enumerate(questions, start=1):
         # Sanitize source_id for use in filename
@@ -232,19 +236,24 @@ def run_batch(questions: list[dict], out_dir: str):
                     candidate_answer=q["candidate_answer"],
                     ground_truth=q["ground_truth"],
                 )
+                results.append(q)
+            except Exception as e:
+                errors.append({"index": i, "source_id": q["source_id"], "error": str(e)})
+                print(f"\n[ERROR on question {i} ({q['source_id']}): {e}]")
             finally:
                 sys.stdout = sys.__stdout__
 
         print(f"[Saved: {md_path}]")
-        results.append(q)
 
     # Save the question index for reproducibility
     index_path = os.path.join(
         batch_dir, f"batch_questions_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
     )
     with open(index_path, "w") as f:
-        json.dump(results, f, indent=2)
+        json.dump({"hyperparameters": DEBATE_HYPERPARAMETERS, "questions": results, "errors": errors}, f, indent=2)
     print(f"[Batch index saved to {index_path}]")
+    if errors:
+        print(f"[{len(errors)} question(s) failed: {[e['source_id'] for e in errors]}]")
 
 
 # ---------------------------------------------------------------------------
