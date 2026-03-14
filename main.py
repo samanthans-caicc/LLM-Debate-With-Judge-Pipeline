@@ -74,16 +74,16 @@ def evaluate_verdict(judge_response, candidate_answer, ground_truth):
     return {"verdict_matches_ground_truth": matches, "explanation": explanation}
 
 
-def save_transcript(transcript: dict):
-    os.makedirs("test_outputs", exist_ok=True)
+def save_transcript(transcript: dict, out_dir: str = "test_outputs"):
+    os.makedirs(out_dir, exist_ok=True)
     timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-    path = f"test_outputs/transcript_{timestamp}.json"
+    path = os.path.join(out_dir, f"transcript_{timestamp}.json")
     with open(path, "w") as f:
         json.dump(transcript, f, indent=2)
     print(f"\n[Transcript saved to {path}]")
 
 
-def run_debate(problem_context, candidate_answer, ground_truth=None):
+def run_debate(problem_context, candidate_answer, ground_truth=None, out_dir: str = "test_outputs"):
     print("=" * 60)
     print("  *** LLM DEBATE PIPELINE: AGENTS AT WAR ***")
     print("=" * 60)
@@ -208,7 +208,7 @@ def run_debate(problem_context, candidate_answer, ground_truth=None):
         "judge_response": judge_response,
         "evaluation": evaluation,
     }
-    save_transcript(transcript)
+    save_transcript(transcript, out_dir=out_dir)
 
 
 if __name__ == "__main__":

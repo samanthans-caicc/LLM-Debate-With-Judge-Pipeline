@@ -209,9 +209,13 @@ def run_batch(questions: list[dict], out_dir: str):
     from main import run_debate  # imported here to avoid circular import at module load
 
     # Create a dedicated folder for this batch run
-    batch_dir = os.path.join(out_dir, f"batch_{datetime.now().strftime('%Y%m%d_%H%M%S')}")
+    batch_ts = datetime.now().strftime('%Y%m%d_%H%M%S')
+    batch_dir = os.path.join(out_dir, f"batch_{batch_ts}")       # .md files + batch_questions.json
+    json_dir = os.path.join("test_outputs", f"batch_{batch_ts}") # transcript JSONs
     os.makedirs(batch_dir, exist_ok=True)
-    print(f"[Batch folder: {batch_dir}]")
+    os.makedirs(json_dir, exist_ok=True)
+    print(f"[Batch folder (.md): {batch_dir}]")
+    print(f"[Batch folder (JSON): {json_dir}]")
     print(f"[Hyperparameters: {DEBATE_HYPERPARAMETERS}]")
 
     results = []
@@ -235,6 +239,7 @@ def run_batch(questions: list[dict], out_dir: str):
                     problem_context=q["problem_context"],
                     candidate_answer=q["candidate_answer"],
                     ground_truth=q["ground_truth"],
+                    out_dir=json_dir,
                 )
                 results.append(q)
             except Exception as e:
