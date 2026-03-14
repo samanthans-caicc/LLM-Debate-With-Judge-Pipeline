@@ -2,6 +2,8 @@ Refer to https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet when w
 
 # Introduction
 
+This report highlights a detailed outline of this project's initial question of "Can a structured adversarial debate between two LLM agents, supervised by an LLM judge, produce more accurate and well-reasoned answers than a single LLM answering directly?" I used Claude and a little bit of ChatGPT to aid me in this experimental project.
+
 # Methodology
 
 (System architecture, debate protocol details, model choices and justification, configuration and hyperparameters)
@@ -10,8 +12,12 @@ Refer to https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet when w
 
 (Experimental setup, results tables/figures for all experiments in Section 4, statistical significance tests where applicable)
 
+Timeline: Setup the agents individually, initialized them by making them debate on one question sample size with a judge (pinapple on pizza thing), boosted the debate rounds to 3, then loaded the datasets.
+
 # Analysis
 (Qualitative analysis of 3–5 debate transcripts (what went well, failure cases), connection to theoretical predictions from Irving et al.)
+
+Include `batch_20260313_193737/q002_b18b7cbde476888d0059.md` from the 200 sample size due to agent literally having a stroke as a failure case. (It had to cut off due to token size being inefficient.) 
 
 # Prompt Engineering
 
