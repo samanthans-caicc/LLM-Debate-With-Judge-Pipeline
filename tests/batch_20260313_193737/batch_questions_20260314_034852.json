@@ -1,0 +1,1210 @@
+{
+  "hyperparameters": {
+    "temperature": 0.8,
+    "max_tokens": 2049,
+    "top_p": 0.9
+  },
+  "questions": [
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Bob Marley's children hypothetically win tug of war against Kublai Khan's children?\"\n\nSupporting facts: Bob Marley had 9 children. Kublai Khan had 23 children. Many of Bob Marley's children became singers, and followed his themes of peace and love. The children of Kublai Khan followed in his footsteps and were fierce warlords.",
+      "candidate_answer": "Yes \u2014 Could Bob Marley's children hypothetically win tug of war against Kublai Khan's children.",
+      "ground_truth": "No. Supporting evidence: Bob Marley had 9 children. Kublai Khan had 23 children. Many of Bob Marley's children became singers, and followed his themes of peace and love. The children of Kublai Khan followed in his footsteps and were fierce warlords.",
+      "source_id": "598be3dcddbd7775a827"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can an adult male stand on top Donatello's bronze David and touch the Sistine Chapel ceiling?\"\n\nSupporting facts: Donatello's created a bronze David statue that stands over five feet tall. The average height of an adult male is five feet and nine inches. The tallest adult male in history was eight feet and eleven inches. The Sistine Chapel ceiling is sixty eight feet high.",
+      "candidate_answer": "Yes \u2014 Can an adult male stand on top Donatello's bronze David and touch the Sistine Chapel ceiling.",
+      "ground_truth": "No. Supporting evidence: Donatello's created a bronze David statue that stands over five feet tall. The average height of an adult male is five feet and nine inches. The tallest adult male in history was eight feet and eleven inches. The Sistine Chapel ceiling is sixty eight feet high.",
+      "source_id": "67c026fe6a026c575755"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are implants from an ORIF surgery affected by the magnetic field of the Earth?\"\n\nSupporting facts: An ORIF surgery is an Open Reduction Internal Fixation, done to fix broken bones. Most hardware from ORIF surgeries is made of titanium. Titanium is only slightly magnetic and does not affect metal detectors.",
+      "candidate_answer": "Yes \u2014 Are implants from an ORIF surgery affected by the magnetic field of the Earth.",
+      "ground_truth": "No. Supporting evidence: An ORIF surgery is an Open Reduction Internal Fixation, done to fix broken bones. Most hardware from ORIF surgeries is made of titanium. Titanium is only slightly magnetic and does not affect metal detectors.",
+      "source_id": "423f9d3f282fe8cb087b"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Alexander Graham Bell hypothetically support Nazi eugenics?\"\n\nSupporting facts: Eugenics was the idea of selective breeding or sterilization to rid the human populace of certain traits. Nazis used eugenics to justify mass sterilization and mass murder. Alexander Graham Bell Alexander Graham Bell advocated against the use of sign language and hoped to eradicate deafness through selective breeding.",
+      "candidate_answer": "Yes \u2014 Would Alexander Graham Bell hypothetically support Nazi eugenics.",
+      "ground_truth": "Yes. Supporting evidence: Eugenics was the idea of selective breeding or sterilization to rid the human populace of certain traits. Nazis used eugenics to justify mass sterilization and mass murder. Alexander Graham Bell Alexander Graham Bell advocated against the use of sign language and hoped to eradicate deafness through selective breeding.",
+      "source_id": "faa475c30066e8b522f1"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a vegan eat a traditional Paella dish?\"\n\nSupporting facts: Vegans do not consume animals or products derived from animals. The traditional Paella recipe includes rabbit and chicken as two of the ingredients.",
+      "candidate_answer": "Yes \u2014 Would a vegan eat a traditional Paella dish.",
+      "ground_truth": "No. Supporting evidence: Vegans do not consume animals or products derived from animals. The traditional Paella recipe includes rabbit and chicken as two of the ingredients.",
+      "source_id": "91917c5e30dbf8552b34"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can you hide a pet macaque under your desk?\"\n\nSupporting facts: Macaques grow up to 28 inches in length A typical desk is 29 to 30 inches from the ground",
+      "candidate_answer": "Yes \u2014 Can you hide a pet macaque under your desk.",
+      "ground_truth": "Yes. Supporting evidence: Macaques grow up to 28 inches in length A typical desk is 29 to 30 inches from the ground",
+      "source_id": "b2312cb85e1d00d48947"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can 1980 United States presidential election result be considered a photo finish?\"\n\nSupporting facts: A photo finish refers to a race or finish in which contestants are so close that a photograph of them as they cross the finish line has to be examined. Ronald Reagan had 489 electoral votes while Jimmy Carter had 49 in the 1980 United States presidential election. Ronald Reagan won 44 states while Jimmy Carter won 6 in the 1980 United States presidential election.",
+      "candidate_answer": "Yes \u2014 Can 1980 United States presidential election result be considered a photo finish.",
+      "ground_truth": "No. Supporting evidence: A photo finish refers to a race or finish in which contestants are so close that a photograph of them as they cross the finish line has to be examined. Ronald Reagan had 489 electoral votes while Jimmy Carter had 49 in the 1980 United States presidential election. Ronald Reagan won 44 states while Jimmy Carter won 6 in the 1980 United States presidential election.",
+      "source_id": "f087d393e2ab1f8783f5"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Will the producer of Easy Rider become an octogenarian in 2021?\"\n\nSupporting facts: The producer of Easy Rider was Peter Fonda. Peter Fonda died in 2019 at the age of 79. An octogenarian is someone who is between 80 and 89 years old and is still alive.",
+      "candidate_answer": "Yes \u2014 Will the producer of Easy Rider become an octogenarian in 2021.",
+      "ground_truth": "No. Supporting evidence: The producer of Easy Rider was Peter Fonda. Peter Fonda died in 2019 at the age of 79. An octogenarian is someone who is between 80 and 89 years old and is still alive.",
+      "source_id": "75cb50e207fe81886cfc"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a student of the class of 2017 have amnesia about 9/11?\"\n\nSupporting facts: Childhood amnesia is common, with most adults not remembering their lives before 2 or 3 years of age 9/11 occurred in 2001 Students graduating high-school in 2017 would have been born in 1999",
+      "candidate_answer": "Yes \u2014 Would a student of the class of 2017 have amnesia about 9/11.",
+      "ground_truth": "Yes. Supporting evidence: Childhood amnesia is common, with most adults not remembering their lives before 2 or 3 years of age 9/11 occurred in 2001 Students graduating high-school in 2017 would have been born in 1999",
+      "source_id": "58fd5574f3447c8f590f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would an eleventh-grader be eligible for Medicare?\"\n\nSupporting facts: Students in the 11th grade are typically between 16-17 years old. The age requirement for most Medicare recipients is 65 or older.",
+      "candidate_answer": "Yes \u2014 Would an eleventh-grader be eligible for Medicare.",
+      "ground_truth": "No. Supporting evidence: Students in the 11th grade are typically between 16-17 years old. The age requirement for most Medicare recipients is 65 or older.",
+      "source_id": "3ac14678dd395d41639c"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Earth Day celebrated in summer?\"\n\nSupporting facts: Earth Day is celebrated on April 22. Summer runs from about June 20 to September 20.",
+      "candidate_answer": "Yes \u2014 Is Earth Day celebrated in summer.",
+      "ground_truth": "No. Supporting evidence: Earth Day is celebrated on April 22. Summer runs from about June 20 to September 20.",
+      "source_id": "420837c63ba49f76d2a7"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a pacifist be opposed to hunting?\"\n\nSupporting facts: Pacifists are a group opposed to violence and war. Amish people are well known for their pacifism. Amish people hunt for meat and sport.",
+      "candidate_answer": "Yes \u2014 Would a pacifist be opposed to hunting.",
+      "ground_truth": "No. Supporting evidence: Pacifists are a group opposed to violence and war. Amish people are well known for their pacifism. Amish people hunt for meat and sport.",
+      "source_id": "bfb33c51d0dd3bb6cbb8"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do you need to schedule separate preventive healthcare and sickness visits? \"\n\nSupporting facts: Preventive healthcare options are typically covered at no charge by health insurance. Sick visits to the doctor are billed separately from preventive healthcare visits. Sick visits and preventive healthcare visits are generally given different time allotments. ",
+      "candidate_answer": "Yes \u2014 Do you need to schedule separate preventive healthcare and sickness visits? .",
+      "ground_truth": "Yes. Supporting evidence: Preventive healthcare options are typically covered at no charge by health insurance. Sick visits to the doctor are billed separately from preventive healthcare visits. Sick visits and preventive healthcare visits are generally given different time allotments. ",
+      "source_id": "fb0aef4d6278a1623abc"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Operation Barbarossa or Barbarossa's last expedition succeed?\"\n\nSupporting facts: Operation Barbarossa was the Nazi advance on Russia during World War II. Operation Barbarossa was a failure that resulted in Nazi Germany being pushed back by a Soviet counter offensive. Operation Barbarossa was named after Holy Roman Emperor Frederick Barbarossa. On his final expedition, Frederick Barbarossa drowned while leading an army to help the Crusaders during the Third Crusade. The Crusaders failed to recapture Jerusalem during the Third Crusade without the support of Barbarossa and his troops.",
+      "candidate_answer": "Yes \u2014 Did Operation Barbarossa or Barbarossa's last expedition succeed.",
+      "ground_truth": "No. Supporting evidence: Operation Barbarossa was the Nazi advance on Russia during World War II. Operation Barbarossa was a failure that resulted in Nazi Germany being pushed back by a Soviet counter offensive. Operation Barbarossa was named after Holy Roman Emperor Frederick Barbarossa. On his final expedition, Frederick Barbarossa drowned while leading an army to help the Crusaders during the Third Crusade. The Crusaders failed to recapture Jerusalem during the Third Crusade without the support of Barbarossa and his troops.",
+      "source_id": "28cb9d93e3a0f58e6350"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could the children of Greek hero Jason hypothetically fill a polo team?\"\n\nSupporting facts: The Greek mythological hero is known for his quest to obtain the Golden Fleece. The Greek mythological hero had four children: Euneus, Nebrophonus, Mermerus, and Pheres. Polo is a sport played between two teams of 4 players.",
+      "candidate_answer": "Yes \u2014 Could the children of Greek hero Jason hypothetically fill a polo team.",
+      "ground_truth": "Yes. Supporting evidence: The Greek mythological hero is known for his quest to obtain the Golden Fleece. The Greek mythological hero had four children: Euneus, Nebrophonus, Mermerus, and Pheres. Polo is a sport played between two teams of 4 players.",
+      "source_id": "347eea662abc9467ed18"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does autopilot rely on fossil fuels?\"\n\nSupporting facts: Autopilot is used in vehicles. Vehicles are powered by engines. Engines rely on fossil fuels to operate.",
+      "candidate_answer": "Yes \u2014 Does autopilot rely on fossil fuels.",
+      "ground_truth": "Yes. Supporting evidence: Autopilot is used in vehicles. Vehicles are powered by engines. Engines rely on fossil fuels to operate.",
+      "source_id": "1624ab3ef12c87afc984"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would food made with black salt smell of sulfur?\"\n\nSupporting facts: Black Salt has is a kiln-fired rock salt that contains sulfur. When black salt is cooked with, it smells similar to rotten eggs.  Rotten eggs smell like sulfur.",
+      "candidate_answer": "Yes \u2014 Would food made with black salt smell of sulfur.",
+      "ground_truth": "Yes. Supporting evidence: Black Salt has is a kiln-fired rock salt that contains sulfur. When black salt is cooked with, it smells similar to rotten eggs.  Rotten eggs smell like sulfur.",
+      "source_id": "9a87e2e0f53e5d8689f2"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Sockington enjoy onions?\"\n\nSupporting facts: Sockington is a domestic cat Onions can cause toxicity in cats by breaking down their red blood cells",
+      "candidate_answer": "Yes \u2014 Does Sockington enjoy onions.",
+      "ground_truth": "No. Supporting evidence: Sockington is a domestic cat Onions can cause toxicity in cats by breaking down their red blood cells",
+      "source_id": "9205ac05975118d93717"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are black and white prison uniforms made to resemble a zebra?\"\n\nSupporting facts: Prison stripes are made of parallel lines. Zebra stripes are jagged in appearance. ",
+      "candidate_answer": "Yes \u2014 Are black and white prison uniforms made to resemble a zebra.",
+      "ground_truth": "No. Supporting evidence: Prison stripes are made of parallel lines. Zebra stripes are jagged in appearance. ",
+      "source_id": "42025ba75ec5d0f0f291"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Surfing popular when pogs came out?\"\n\nSupporting facts: Pogs came out in the 1990's. The 90's saw a rise in 'Big Wave Culture', a practice involving finding the largest possible waves to surf on.",
+      "candidate_answer": "Yes \u2014 Was Surfing popular when pogs came out.",
+      "ground_truth": "Yes. Supporting evidence: Pogs came out in the 1990's. The 90's saw a rise in 'Big Wave Culture', a practice involving finding the largest possible waves to surf on.",
+      "source_id": "f794258d1e33a50d1348"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Issac Newton often associated with a red fruit?\"\n\nSupporting facts: Issac Newton claimed to have contemplated gravity for the first time after seeing an apple fall. In most illustrations of Issac Newton discovering gravity, the apple shown falling is red.",
+      "candidate_answer": "Yes \u2014 Is Issac Newton often associated with a red fruit.",
+      "ground_truth": "Yes. Supporting evidence: Issac Newton claimed to have contemplated gravity for the first time after seeing an apple fall. In most illustrations of Issac Newton discovering gravity, the apple shown falling is red.",
+      "source_id": "038d2f23ebc149069a74"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Krishna skilled at using the bow?\"\n\nSupporting facts: Lord Krishna was known as the eighth manifestation of the god Vishnu. Vishnu had a trove of weapons including the Sudarshana Chakra and Sharanga. Sharanga was a celestial bow and a favored weapon of Vishnu.",
+      "candidate_answer": "Yes \u2014 Was Krishna skilled at using the bow.",
+      "ground_truth": "Yes. Supporting evidence: Lord Krishna was known as the eighth manifestation of the god Vishnu. Vishnu had a trove of weapons including the Sudarshana Chakra and Sharanga. Sharanga was a celestial bow and a favored weapon of Vishnu.",
+      "source_id": "8aa5c9ba2ae74151dd6e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does a lapidary work with items that are studied by geologists?\"\n\nSupporting facts: Some of the things geologists study include gemstones, minerals, and stone Lapidarists work with stone, minerals and gemstones",
+      "candidate_answer": "Yes \u2014 Does a lapidary work with items that are studied by geologists.",
+      "ground_truth": "Yes. Supporting evidence: Some of the things geologists study include gemstones, minerals, and stone Lapidarists work with stone, minerals and gemstones",
+      "source_id": "1e0f0676ee91a330262a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can a copy of The Daily Mirror sustain a campfire?\"\n\nSupporting facts: The Daily Mirror is a British tabloid made of paper. Kindling helps sustain a fire because easily combustible help a fire keep igniting. Paper is capable of igniting and burning easily.",
+      "candidate_answer": "Yes \u2014 Can a copy of The Daily Mirror sustain a campfire.",
+      "ground_truth": "Yes. Supporting evidence: The Daily Mirror is a British tabloid made of paper. Kindling helps sustain a fire because easily combustible help a fire keep igniting. Paper is capable of igniting and burning easily.",
+      "source_id": "f61620c8fca3a1530998"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Shakespeare famous because of the infinitive form?\"\n\nSupporting facts: Shakespeare wrote the play Hamlet Hamlet contains one of Shakespeare's most famous passages, Hamlet's soliloquy Hamlet's soliloquy begins with the line 'To be or not to be', which uses the infinitive form",
+      "candidate_answer": "Yes \u2014 Is Shakespeare famous because of the infinitive form.",
+      "ground_truth": "Yes. Supporting evidence: Shakespeare wrote the play Hamlet Hamlet contains one of Shakespeare's most famous passages, Hamlet's soliloquy Hamlet's soliloquy begins with the line 'To be or not to be', which uses the infinitive form",
+      "source_id": "620957c2018f91328a2e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is a doctorate required to teach at a SUNY School?\"\n\nSupporting facts: At SUNY schools, there are some full time professors with doctorates. At SUNY schools, there are adjunct professors who teach with a Masters degree. ",
+      "candidate_answer": "Yes \u2014 Is a doctorate required to teach at a SUNY School.",
+      "ground_truth": "No. Supporting evidence: At SUNY schools, there are some full time professors with doctorates. At SUNY schools, there are adjunct professors who teach with a Masters degree. ",
+      "source_id": "95c7c7b36b2dd981b820"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are the brooms from curling good for using on house floors?\"\n\nSupporting facts: Curling brooms are designed for use within the sport specifically.  Curling brooms do not have traditional bristle heads, and the heads are costly to replace. ",
+      "candidate_answer": "Yes \u2014 Are the brooms from curling good for using on house floors.",
+      "ground_truth": "No. Supporting evidence: Curling brooms are designed for use within the sport specifically.  Curling brooms do not have traditional bristle heads, and the heads are costly to replace. ",
+      "source_id": "3900eb40c0ee1e1a5b6d"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Have rhinoceroses been killed to improve human sex lives?\"\n\nSupporting facts: Rhinoceros horns are used for folk treatment of sexual impotency. Rhinoceroses are killed to remove their horns.",
+      "candidate_answer": "Yes \u2014 Have rhinoceroses been killed to improve human sex lives.",
+      "ground_truth": "Yes. Supporting evidence: Rhinoceros horns are used for folk treatment of sexual impotency. Rhinoceroses are killed to remove their horns.",
+      "source_id": "eb7c254ac7ae82656aee"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Were all the materials to make a cannon known during the bronze age?\"\n\nSupporting facts: The Bronze Age happened from about 3300 BC to 300 BC. Cannons require a fuse, gunpowder, and iron or other material to house the chemicals. Gunpowder was discovered around the 9th century AD.",
+      "candidate_answer": "Yes \u2014 Were all the materials to make a cannon known during the bronze age.",
+      "ground_truth": "No. Supporting evidence: The Bronze Age happened from about 3300 BC to 300 BC. Cannons require a fuse, gunpowder, and iron or other material to house the chemicals. Gunpowder was discovered around the 9th century AD.",
+      "source_id": "69030830a83aa7209cf7"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are twins always born during the same year?\"\n\nSupporting facts: Some twins are born right before the New Year, and right after the New Year. There are some twins, implanted through IVF, who are born decades apart.",
+      "candidate_answer": "Yes \u2014 Are twins always born during the same year.",
+      "ground_truth": "No. Supporting evidence: Some twins are born right before the New Year, and right after the New Year. There are some twins, implanted through IVF, who are born decades apart.",
+      "source_id": "3554b8a182555f759b9f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could James Brown's ex-wives hold a doubles game of tennis?\"\n\nSupporting facts: James Brown had four ex-wives Doubles tennis requires two players per team, with two teams playing against each other",
+      "candidate_answer": "Yes \u2014 Could James Brown's ex-wives hold a doubles game of tennis.",
+      "ground_truth": "Yes. Supporting evidence: James Brown had four ex-wives Doubles tennis requires two players per team, with two teams playing against each other",
+      "source_id": "ee1ccc88aa46999db8da"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can voice actors for Goofy and Bugs Bunny each get one stripe from American flag?\"\n\nSupporting facts: The American flag has 13 stripes on it. Since the role originated in 1932, six people have voiced the character of Goofy. Since 1940, seven people have voiced the character of Bugs Bunny.",
+      "candidate_answer": "Yes \u2014 Can voice actors for Goofy and Bugs Bunny each get one stripe from American flag.",
+      "ground_truth": "Yes. Supporting evidence: The American flag has 13 stripes on it. Since the role originated in 1932, six people have voiced the character of Goofy. Since 1940, seven people have voiced the character of Bugs Bunny.",
+      "source_id": "ac61d110f57cd7855686"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are vinegar pickled cucumbers rich in lactobacillus?\"\n\nSupporting facts: Pickles made with vinegar are not probiotic and are simply preserved. Pickles made through a soak in a salt brine solution begin to ferment because of lactobacillus. ",
+      "candidate_answer": "Yes \u2014 Are vinegar pickled cucumbers rich in lactobacillus.",
+      "ground_truth": "No. Supporting evidence: Pickles made with vinegar are not probiotic and are simply preserved. Pickles made through a soak in a salt brine solution begin to ferment because of lactobacillus. ",
+      "source_id": "83dc57cde5122f0a5d19"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Pig Latin related to real Latin?\"\n\nSupporting facts: Pig Latin is based on English. It is formed by moving consonants and syllables. Real Latin is a separate language distinct from English.",
+      "candidate_answer": "Yes \u2014 Is Pig Latin related to real Latin.",
+      "ground_truth": "No. Supporting evidence: Pig Latin is based on English. It is formed by moving consonants and syllables. Real Latin is a separate language distinct from English.",
+      "source_id": "e87406dacc533ee3a3af"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is a paleo dieter unlikely to color beverages green for St. Patrick's Day?\"\n\nSupporting facts: There is no natural source for green food coloring approved by the FDA A paleo diet avoids artificial colors and flavors",
+      "candidate_answer": "Yes \u2014 Is a paleo dieter unlikely to color beverages green for St. Patrick's Day.",
+      "ground_truth": "Yes. Supporting evidence: There is no natural source for green food coloring approved by the FDA A paleo diet avoids artificial colors and flavors",
+      "source_id": "7a096b2fc559fd5c7919"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do placozoa get learning disabilities?\"\n\nSupporting facts: Learning disabilities are neurodevelopmental conditions afflicting a portion of the human population Neurodevelopmental conditions affect the nervous system Placozoa are multicellular microscopic organisms which do not have a nervous system",
+      "candidate_answer": "Yes \u2014 Do placozoa get learning disabilities.",
+      "ground_truth": "No. Supporting evidence: Learning disabilities are neurodevelopmental conditions afflicting a portion of the human population Neurodevelopmental conditions affect the nervous system Placozoa are multicellular microscopic organisms which do not have a nervous system",
+      "source_id": "e3253bcbb5125e2d29d9"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does handedness determine how you use American Sign Language?\"\n\nSupporting facts: Your dominant hand typically performs the moving part of a sign in ASL. Your dominant hand determines the hand you use to finger spell in ASL.",
+      "candidate_answer": "Yes \u2014 Does handedness determine how you use American Sign Language.",
+      "ground_truth": "Yes. Supporting evidence: Your dominant hand typically performs the moving part of a sign in ASL. Your dominant hand determines the hand you use to finger spell in ASL.",
+      "source_id": "f95956c13e22f073310a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is an espresso likely to assuage fear?\"\n\nSupporting facts: Fear raises heart rate Caffeine raises heart rate Coffee may also increase symptoms such as jitteriness and nausea ",
+      "candidate_answer": "Yes \u2014 Is an espresso likely to assuage fear.",
+      "ground_truth": "No. Supporting evidence: Fear raises heart rate Caffeine raises heart rate Coffee may also increase symptoms such as jitteriness and nausea ",
+      "source_id": "91a3d81584c66d26d49a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Will AC/DC album sales buy more B-52 bombers than Lil Wayne's?\"\n\nSupporting facts: The B-52 bomber plane cost 60 million dollars in 2018. AC/DC has sold over 200 million albums. Lil Wayne has sold 120 million records worldwide.",
+      "candidate_answer": "Yes \u2014 Will AC/DC album sales buy more B-52 bombers than Lil Wayne's.",
+      "ground_truth": "Yes. Supporting evidence: The B-52 bomber plane cost 60 million dollars in 2018. AC/DC has sold over 200 million albums. Lil Wayne has sold 120 million records worldwide.",
+      "source_id": "a1dabe439511af470303"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could the Pope be on an episode of Pimp My Ride?\"\n\nSupporting facts: Pimp My Ride is a show where people's cars are upgraded and improved The Pope has a personal vehicle called the Popemobile",
+      "candidate_answer": "Yes \u2014 Could the Pope be on an episode of Pimp My Ride.",
+      "ground_truth": "Yes. Supporting evidence: Pimp My Ride is a show where people's cars are upgraded and improved The Pope has a personal vehicle called the Popemobile",
+      "source_id": "98c00a69ee9fd33c60f7"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is the Very Large Telescope the most productive telescope in the world?\"\n\nSupporting facts: Telescope productivity is measured based on how many scientific papers a telescope generates. The Hubble Space Telescope is the most productive telescope in the world. ",
+      "candidate_answer": "Yes \u2014 Is the Very Large Telescope the most productive telescope in the world.",
+      "ground_truth": "No. Supporting evidence: Telescope productivity is measured based on how many scientific papers a telescope generates. The Hubble Space Telescope is the most productive telescope in the world. ",
+      "source_id": "6523b3b72884557b38e8"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Final Fantasy VI closer to beginning than end of its franchise?\"\n\nSupporting facts: Final Fantasy VI is the sixth entry into the Final Fantasy series of video games. There are 15 total games in the main Final Fantasy series of video games as of 2020.",
+      "candidate_answer": "Yes \u2014 Is Final Fantasy VI closer to beginning than end of its franchise.",
+      "ground_truth": "Yes. Supporting evidence: Final Fantasy VI is the sixth entry into the Final Fantasy series of video games. There are 15 total games in the main Final Fantasy series of video games as of 2020.",
+      "source_id": "b52d3a7244abcf58ac29"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would someone in Boston not receive the Toronto Star?\"\n\nSupporting facts: The Toronto Star is only distributed in Canada. Boston is located in the United States.",
+      "candidate_answer": "Yes \u2014 Would someone in Boston not receive the Toronto Star.",
+      "ground_truth": "Yes. Supporting evidence: The Toronto Star is only distributed in Canada. Boston is located in the United States.",
+      "source_id": "535870a1d73b7288d0e1"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would keelhauling be a fair punishment under the Eighth Amendment?\"\n\nSupporting facts: Keelhauling was a severe punishment whereby the condemned man was dragged beneath the ship\u2019s keel on a rope. Keelhauling is considered a form of torture. Torture is considered cruel. The Eighth Amendment forbids the use of \"cruel and unusual punishment\".",
+      "candidate_answer": "Yes \u2014 Would keelhauling be a fair punishment under the Eighth Amendment.",
+      "ground_truth": "No. Supporting evidence: Keelhauling was a severe punishment whereby the condemned man was dragged beneath the ship\u2019s keel on a rope. Keelhauling is considered a form of torture. Torture is considered cruel. The Eighth Amendment forbids the use of \"cruel and unusual punishment\".",
+      "source_id": "234e4eccb374a4191c86"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can you listen to the entire Itunes song catalog in one year?\"\n\nSupporting facts: Itunes has around 43 million songs as of 2017. The average length of a song is 3 minutes. There are 525,600 minutes in a year.",
+      "candidate_answer": "Yes \u2014 Can you listen to the entire Itunes song catalog in one year.",
+      "ground_truth": "No. Supporting evidence: Itunes has around 43 million songs as of 2017. The average length of a song is 3 minutes. There are 525,600 minutes in a year.",
+      "source_id": "4ba19380524bb1f05786"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can ham make a cut seal up quicker?\"\n\nSupporting facts: Salt helps cleanse the skin by displacing bacteria in a cut. 1 Cup of ham contains 1.684 mg of sodium. Salt is a mineral made up mostly of sodium chloride.",
+      "candidate_answer": "Yes \u2014 Can ham make a cut seal up quicker.",
+      "ground_truth": "Yes. Supporting evidence: Salt helps cleanse the skin by displacing bacteria in a cut. 1 Cup of ham contains 1.684 mg of sodium. Salt is a mineral made up mostly of sodium chloride.",
+      "source_id": "cb6819752f1688d7044b"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can an African Elephant get pregnant twice in a year?\"\n\nSupporting facts: There are 365 days in one year. It takes around 645 days for an African Elephant to give birth to one baby elephant.",
+      "candidate_answer": "Yes \u2014 Can an African Elephant get pregnant twice in a year.",
+      "ground_truth": "No. Supporting evidence: There are 365 days in one year. It takes around 645 days for an African Elephant to give birth to one baby elephant.",
+      "source_id": "cce78efa2e5a91f1a7eb"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Oprah Winfrey buy dozens of her staff Bugatti luxury cars?\"\n\nSupporting facts: Oprah Winfrey is a billionaire A new Bugatti costs a few million dollars",
+      "candidate_answer": "Yes \u2014 Could Oprah Winfrey buy dozens of her staff Bugatti luxury cars.",
+      "ground_truth": "Yes. Supporting evidence: Oprah Winfrey is a billionaire A new Bugatti costs a few million dollars",
+      "source_id": "ed08e2d4bbe5bbf1b01d"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did either Kublai Khan or his grandfather practice monogamy?\"\n\nSupporting facts: Kublai Khan was married multiple times and was said by some to have thousands of concubines. Kublai Khans grandfather was Genghis Khan. Genghis Khan had six wives and was said to have over 500 concubines.",
+      "candidate_answer": "Yes \u2014 Did either Kublai Khan or his grandfather practice monogamy.",
+      "ground_truth": "No. Supporting evidence: Kublai Khan was married multiple times and was said by some to have thousands of concubines. Kublai Khans grandfather was Genghis Khan. Genghis Khan had six wives and was said to have over 500 concubines.",
+      "source_id": "00dc05718aedf2370213"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Paul Bunyan hypothetically be a poor choice for an urban planner?\"\n\nSupporting facts: Paul Bunyan was a legendary giant from tall tale stories. Urban planners need to design buildings and ceilings in cities. Paul Bunyan lived in the country side with a giant blue ox. New York city apartment ceilings average around 8 feet in height. Paul Bunyan was over seven feet tall.",
+      "candidate_answer": "Yes \u2014 Would Paul Bunyan hypothetically be a poor choice for an urban planner.",
+      "ground_truth": "Yes. Supporting evidence: Paul Bunyan was a legendary giant from tall tale stories. Urban planners need to design buildings and ceilings in cities. Paul Bunyan lived in the country side with a giant blue ox. New York city apartment ceilings average around 8 feet in height. Paul Bunyan was over seven feet tall.",
+      "source_id": "ae0891799990442fbb0e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would baker's dozen of side by side Mac Trucks jam up Golden Gate Bridge?\"\n\nSupporting facts: The width of the Golden Gate Bridge is 90 feet.  A baker's dozen includes 13 items. The width of a Mac truck is around 8 feet.",
+      "candidate_answer": "Yes \u2014 Would baker's dozen of side by side Mac Trucks jam up Golden Gate Bridge.",
+      "ground_truth": "Yes. Supporting evidence: The width of the Golden Gate Bridge is 90 feet.  A baker's dozen includes 13 items. The width of a Mac truck is around 8 feet.",
+      "source_id": "364935e95e4880fcc8b0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do people watching Coen brothers films in Guinea Bissau need subtitles?\"\n\nSupporting facts: The Coen brothers direct films primarily using English The primary languages used in Guinea Bissau are Creole, native African languages, and Portuguese",
+      "candidate_answer": "Yes \u2014 Do people watching Coen brothers films in Guinea Bissau need subtitles.",
+      "ground_truth": "Yes. Supporting evidence: The Coen brothers direct films primarily using English The primary languages used in Guinea Bissau are Creole, native African languages, and Portuguese",
+      "source_id": "cfba036236507374976d"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Miami a city on the American West Coast?\"\n\nSupporting facts: Miami is a city in the state of Florida. Florida is the southernmost state on the American East Coast.",
+      "candidate_answer": "Yes \u2014 Is Miami a city on the American West Coast.",
+      "ground_truth": "No. Supporting evidence: Miami is a city in the state of Florida. Florida is the southernmost state on the American East Coast.",
+      "source_id": "d24514ae216c7a55f4f0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would someone on a keto diet be able to eat Dosa?\"\n\nSupporting facts: Dosa's main ingredients are rice and black gram, The ketogenic diet is a high-fat, adequate-protein, low-carbohydrate diet. Rice is high in carbohydrates.",
+      "candidate_answer": "Yes \u2014 Would someone on a keto diet be able to eat Dosa.",
+      "ground_truth": "No. Supporting evidence: Dosa's main ingredients are rice and black gram, The ketogenic diet is a high-fat, adequate-protein, low-carbohydrate diet. Rice is high in carbohydrates.",
+      "source_id": "72af0dabec64573d498f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was the sable depicted in Marvel comics anthropomorphic?\"\n\nSupporting facts: Anthropomorphism is the process of giving human characteristics to an animal or non human object. A sable is a carnivorous mammal of the weasel family. Silver Sable was a female character that first appeared in Marvel Comics in 1985. Silver Sable was a human mercenary that wore a silver suit and used hand to hand combat and weaponry to battle war criminals.",
+      "candidate_answer": "Yes \u2014 Was the sable depicted in Marvel comics anthropomorphic.",
+      "ground_truth": "No. Supporting evidence: Anthropomorphism is the process of giving human characteristics to an animal or non human object. A sable is a carnivorous mammal of the weasel family. Silver Sable was a female character that first appeared in Marvel Comics in 1985. Silver Sable was a human mercenary that wore a silver suit and used hand to hand combat and weaponry to battle war criminals.",
+      "source_id": "6c5e2f76bd94dfb33396"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Lamarck and Darwin agree about the origin of species diversity?\"\n\nSupporting facts: Darwin theorized that evolution was driven by the fittest animals surviving and passing their genes on. Lamarck theorized that animals' responses to needs in their life would influence the growth of their offspring.",
+      "candidate_answer": "Yes \u2014 Did Lamarck and Darwin agree about the origin of species diversity.",
+      "ground_truth": "No. Supporting evidence: Darwin theorized that evolution was driven by the fittest animals surviving and passing their genes on. Lamarck theorized that animals' responses to needs in their life would influence the growth of their offspring.",
+      "source_id": "1f4eecdce7604d783890"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is the Illuminati card game still popular?\"\n\nSupporting facts: The original version of the game was released in 1982. A collectible card game version was released in 1995 but only had one set. The most recent edition of the base game was published in 2007.",
+      "candidate_answer": "Yes \u2014 Is the Illuminati card game still popular.",
+      "ground_truth": "No. Supporting evidence: The original version of the game was released in 1982. A collectible card game version was released in 1995 but only had one set. The most recent edition of the base game was published in 2007.",
+      "source_id": "30e2cf44640c4fe81d80"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Christina Aguilera turn her chair around for Kelly Clarkson on The Voice?\"\n\nSupporting facts: Christina Aguilera is a judge on the voice. Kelly Clarkson is a judge on the voice. Judges only turn their chairs around for competitors.  Kelly Clarkson has not competed on the voice.",
+      "candidate_answer": "Yes \u2014 Did Christina Aguilera turn her chair around for Kelly Clarkson on The Voice.",
+      "ground_truth": "No. Supporting evidence: Christina Aguilera is a judge on the voice. Kelly Clarkson is a judge on the voice. Judges only turn their chairs around for competitors.  Kelly Clarkson has not competed on the voice.",
+      "source_id": "74936a1e1f16a8e97d68"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"At midnight in Times Square on New Years Eve, are you likely to meet people in diapers?\"\n\nSupporting facts: Times Square holds an enormous gathering on New Year's Eve. There are no portable restrooms in Times Square. People begin waiting for the midnight event in Times Square before 10 a.m.",
+      "candidate_answer": "Yes \u2014 At midnight in Times Square on New Years Eve, are you likely to meet people in diapers.",
+      "ground_truth": "Yes. Supporting evidence: Times Square holds an enormous gathering on New Year's Eve. There are no portable restrooms in Times Square. People begin waiting for the midnight event in Times Square before 10 a.m.",
+      "source_id": "3103007c7b0ca91df965"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Javier Sotomayor jump over the head of the average giraffe?\"\n\nSupporting facts: Fully grown giraffes stand 4.3\u20135.7 m (14.1\u201318.7 ft) tall. Javier Sotomayor is the current world record holder in the long jump, with a personal best of 2.45 m (8 ft 1/2 in).",
+      "candidate_answer": "Yes \u2014 Could Javier Sotomayor jump over the head of the average giraffe.",
+      "ground_truth": "No. Supporting evidence: Fully grown giraffes stand 4.3\u20135.7 m (14.1\u201318.7 ft) tall. Javier Sotomayor is the current world record holder in the long jump, with a personal best of 2.45 m (8 ft 1/2 in).",
+      "source_id": "42b5997366dc3f987db2"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could eating Chinook salmon help Ryan Reynolds?\"\n\nSupporting facts: Chinook salmon is high in omega-3 fatty acids. Omega-3 fatty acids can aid treatment of depression.  Ryan Reynolds has struggled with depression.",
+      "candidate_answer": "Yes \u2014 Could eating Chinook salmon help Ryan Reynolds.",
+      "ground_truth": "Yes. Supporting evidence: Chinook salmon is high in omega-3 fatty acids. Omega-3 fatty acids can aid treatment of depression.  Ryan Reynolds has struggled with depression.",
+      "source_id": "1969318e30a31e49e5ca"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are gorillas closely related to humans?\"\n\nSupporting facts: Gorillas are part of the animal family Hominidae. Hominidae also includes the genus Homo, which only contains the human species.",
+      "candidate_answer": "Yes \u2014 Are gorillas closely related to humans.",
+      "ground_truth": "Yes. Supporting evidence: Gorillas are part of the animal family Hominidae. Hominidae also includes the genus Homo, which only contains the human species.",
+      "source_id": "97c91d5613b99fd4098f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does the country that received the most gold medals during the 1976 Olympics still exist?\"\n\nSupporting facts: The Soviet Union received the most gold medals during the 1976 Summer Olympics The Soviet Union existed from 1922 to 1991",
+      "candidate_answer": "Yes \u2014 Does the country that received the most gold medals during the 1976 Olympics still exist.",
+      "ground_truth": "No. Supporting evidence: The Soviet Union received the most gold medals during the 1976 Summer Olympics The Soviet Union existed from 1922 to 1991",
+      "source_id": "86f441f4f66b4b5eb375"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would an ethics professor teach a class on Cezanne?\"\n\nSupporting facts: Cezanne was an Impressionist painter Aesthetics is the branch of philosophy that deals with the arts",
+      "candidate_answer": "Yes \u2014 Would an ethics professor teach a class on Cezanne.",
+      "ground_truth": "No. Supporting evidence: Cezanne was an Impressionist painter Aesthetics is the branch of philosophy that deals with the arts",
+      "source_id": "27368c21e50b6af694ab"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do Armenians tend to dislike System of a Down?\"\n\nSupporting facts: System of a Down is an Armenian-American rock band. System of a Down has numerous songs bringing light to the plight of Armenian people and the Armenian Genocide.",
+      "candidate_answer": "Yes \u2014 Do Armenians tend to dislike System of a Down.",
+      "ground_truth": "No. Supporting evidence: System of a Down is an Armenian-American rock band. System of a Down has numerous songs bringing light to the plight of Armenian people and the Armenian Genocide.",
+      "source_id": "d5cd043d6f15fb43bd04"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Rosemary outclassed as plant found in most song titles?\"\n\nSupporting facts: Rosemary appears in a few popular song titles such as Love Grows (Where My Rosemary Goes) and Randy Newman's Rosemary. Rose appears in many song titles including: Kiss From a Rose, The Rose, Desert Rose, Beauty of the Rose, and I Never Promised You a Rose Garden.",
+      "candidate_answer": "Yes \u2014 Is Rosemary outclassed as plant found in most song titles.",
+      "ground_truth": "Yes. Supporting evidence: Rosemary appears in a few popular song titles such as Love Grows (Where My Rosemary Goes) and Randy Newman's Rosemary. Rose appears in many song titles including: Kiss From a Rose, The Rose, Desert Rose, Beauty of the Rose, and I Never Promised You a Rose Garden.",
+      "source_id": "e6d8397b258ac4006210"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was the Donatello crucifix identified in 2020 life size?\"\n\nSupporting facts: The crucifix discovered in the church of Sant\u2019Angelo depicts an adult man. The crucifix discovered in the church of Sant\u2019Angelo is 89 cm high. The crucifix discovered in the church of Sant'Angelo was identified as being a work of Donatello. The average height of an adult man has been at least 150 cm in historical times.",
+      "candidate_answer": "Yes \u2014 Was the Donatello crucifix identified in 2020 life size.",
+      "ground_truth": "No. Supporting evidence: The crucifix discovered in the church of Sant\u2019Angelo depicts an adult man. The crucifix discovered in the church of Sant\u2019Angelo is 89 cm high. The crucifix discovered in the church of Sant'Angelo was identified as being a work of Donatello. The average height of an adult man has been at least 150 cm in historical times.",
+      "source_id": "c87e343f444912cc9680"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could a cat ride Panzer VIII Maus tank missile from Barcelona to Madrid?\"\n\nSupporting facts: The Panzer VIII Maus tank missile had a range of around 2.2 miles. The distance from Barcelona to Madrid is 385 miles. Motion sickness is a common problem in cats.",
+      "candidate_answer": "Yes \u2014 Could a cat ride Panzer VIII Maus tank missile from Barcelona to Madrid.",
+      "ground_truth": "No. Supporting evidence: The Panzer VIII Maus tank missile had a range of around 2.2 miles. The distance from Barcelona to Madrid is 385 miles. Motion sickness is a common problem in cats.",
+      "source_id": "e530682239bb5e59ebf0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Bill Nye vote for Franklin Delano Roosevelt?\"\n\nSupporting facts: Bill Nye was born in 1955 Franklin Delano Roosevelt's last election was in 1944",
+      "candidate_answer": "Yes \u2014 Did Bill Nye vote for Franklin Delano Roosevelt.",
+      "ground_truth": "No. Supporting evidence: Bill Nye was born in 1955 Franklin Delano Roosevelt's last election was in 1944",
+      "source_id": "dce3695a2aaa8d7dba5a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a greyhound be able to outrun a greyhound bus?\"\n\nSupporting facts: A greyhound bus can travel speeds upward of 60 mph. A greyhound dog can run at speeds up to 45 mph.",
+      "candidate_answer": "Yes \u2014 Would a greyhound be able to outrun a greyhound bus.",
+      "ground_truth": "No. Supporting evidence: A greyhound bus can travel speeds upward of 60 mph. A greyhound dog can run at speeds up to 45 mph.",
+      "source_id": "d21ae4c7ee26f90b9574"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can a minor replicate the double-slit experiment?\"\n\nSupporting facts: A minor is a human child. The double-slit experiment can theoretically be replicated by any human.",
+      "candidate_answer": "Yes \u2014 Can a minor replicate the double-slit experiment.",
+      "ground_truth": "Yes. Supporting evidence: A minor is a human child. The double-slit experiment can theoretically be replicated by any human.",
+      "source_id": "4ce0ad7ba3ee5886a794"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are lengths measured in metres in the UK?\"\n\nSupporting facts: Metres are part of the metric system. The UK uses the metric system for measurements.",
+      "candidate_answer": "Yes \u2014 Are lengths measured in metres in the UK.",
+      "ground_truth": "Yes. Supporting evidence: Metres are part of the metric system. The UK uses the metric system for measurements.",
+      "source_id": "1ffcadc478d4f408b988"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Beethoven enjoy listening to EDM?\"\n\nSupporting facts: Ludwig van Beethoven died in 1827. EDM originated in the mid-to-late 20th century.",
+      "candidate_answer": "Yes \u2014 Did Beethoven enjoy listening to EDM.",
+      "ground_truth": "No. Supporting evidence: Ludwig van Beethoven died in 1827. EDM originated in the mid-to-late 20th century.",
+      "source_id": "43198079fc7c683780fb"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would it be very difficult for Nuno Gomes to dive to the Red Sea's deepest point?\"\n\nSupporting facts: The Red Sea has a maximum depth of 3,040 m (9,970 ft). Nuno Gomes' deepest dive in the Red Sea to date is 318 metres (1,043 ft).",
+      "candidate_answer": "Yes \u2014 Would it be very difficult for Nuno Gomes to dive to the Red Sea's deepest point.",
+      "ground_truth": "Yes. Supporting evidence: The Red Sea has a maximum depth of 3,040 m (9,970 ft). Nuno Gomes' deepest dive in the Red Sea to date is 318 metres (1,043 ft).",
+      "source_id": "3fc6ba608677b8314b77"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Has type of political association Pompey had with Caesar influenced reality TV?\"\n\nSupporting facts: Pompey, Julius Caesar, and Marcus Licinius Crassus formed a political association called a triumvirate. A triumvirate spits rule between three powerful people that get to make decisions. Reality show The Challenge: Total Madness appoints three weekly winners to make decisions for the group, known as the Tribunal. Reality show American Idol has had three judges making decisions about which contestants advance.",
+      "candidate_answer": "Yes \u2014 Has type of political association Pompey had with Caesar influenced reality TV.",
+      "ground_truth": "Yes. Supporting evidence: Pompey, Julius Caesar, and Marcus Licinius Crassus formed a political association called a triumvirate. A triumvirate spits rule between three powerful people that get to make decisions. Reality show The Challenge: Total Madness appoints three weekly winners to make decisions for the group, known as the Tribunal. Reality show American Idol has had three judges making decisions about which contestants advance.",
+      "source_id": "f4ac300578dfab653d3f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is pickled cucumber ever red?\"\n\nSupporting facts: Koolickles are a variety of pickled cucumber made with brine and red kool-aid. Korean cucumber kimchi is flavored with korean pepper powder. Korean pepper powder is red in color. ",
+      "candidate_answer": "Yes \u2014 Is pickled cucumber ever red.",
+      "ground_truth": "Yes. Supporting evidence: Koolickles are a variety of pickled cucumber made with brine and red kool-aid. Korean cucumber kimchi is flavored with korean pepper powder. Korean pepper powder is red in color. ",
+      "source_id": "0592bdf18748bbc951f8"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Disney associated with Los Angeles County?\"\n\nSupporting facts: Disney Concert Hall and Disney Studio are located in Los Angeles. The city of Los Angeles is located in Los Angeles County.",
+      "candidate_answer": "Yes \u2014 Is Disney associated with Los Angeles County.",
+      "ground_truth": "Yes. Supporting evidence: Disney Concert Hall and Disney Studio are located in Los Angeles. The city of Los Angeles is located in Los Angeles County.",
+      "source_id": "1a4eb85c31188af515b0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is grief always obvious when it is being experienced?\"\n\nSupporting facts: Grief has no set external representation.  People who are grieving may laugh, cry, or even seem angry.",
+      "candidate_answer": "Yes \u2014 Is grief always obvious when it is being experienced.",
+      "ground_truth": "No. Supporting evidence: Grief has no set external representation.  People who are grieving may laugh, cry, or even seem angry.",
+      "source_id": "6b83137493422db701bb"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is xenophobia hypothetically unimportant between Saladin and Ali Askari?\"\n\nSupporting facts: Xenophobia is the dislike of someone that is foreign or from a different background. Saladin was a Kurdish leader that became sultan of Egypt. Ali Askari was a Kurdish politician.",
+      "candidate_answer": "Yes \u2014 Is xenophobia hypothetically unimportant between Saladin and Ali Askari.",
+      "ground_truth": "Yes. Supporting evidence: Xenophobia is the dislike of someone that is foreign or from a different background. Saladin was a Kurdish leader that became sultan of Egypt. Ali Askari was a Kurdish politician.",
+      "source_id": "26aefc40b2d04ca6b78b"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are banana trees used by judges for maintaining order?\"\n\nSupporting facts: A banana tree has seeds that only have one embryonic leaf and is called a monocot. Judges use gavels to maintain order in court. Gavels are made of hardwood. Hardwood comes from dicot trees. Oak, maple, and sycamore are dicot trees.",
+      "candidate_answer": "Yes \u2014 Are banana trees used by judges for maintaining order.",
+      "ground_truth": "No. Supporting evidence: A banana tree has seeds that only have one embryonic leaf and is called a monocot. Judges use gavels to maintain order in court. Gavels are made of hardwood. Hardwood comes from dicot trees. Oak, maple, and sycamore are dicot trees.",
+      "source_id": "d77b8a72c7c3126f35b4"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Amazon afford The Mona Lisa?\"\n\nSupporting facts: Amazon is worth over $1 trillion and had a revenue of $232.887 billion in 2018. The Mona Lisa had an insurance valuation equivalent to $650 million as of 2018.",
+      "candidate_answer": "Yes \u2014 Could Amazon afford The Mona Lisa.",
+      "ground_truth": "Yes. Supporting evidence: Amazon is worth over $1 trillion and had a revenue of $232.887 billion in 2018. The Mona Lisa had an insurance valuation equivalent to $650 million as of 2018.",
+      "source_id": "0bde4bdfecce47fbf7de"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Capricorn the hypothetical zodiac sign of Satanism?\"\n\nSupporting facts: Satanism is a group of beliefs based on Satan and has numerous symbols. Satan (The Devil) is often depicted as the deity Baphomet, a Sabbatic Goat with a human body and goat head. The Capricorn is the zodiac sign symbolized by the goat. The Tarot card attributed to the Zodiac sign Capricorn is The Devil.",
+      "candidate_answer": "Yes \u2014 Is Capricorn the hypothetical zodiac sign of Satanism.",
+      "ground_truth": "Yes. Supporting evidence: Satanism is a group of beliefs based on Satan and has numerous symbols. Satan (The Devil) is often depicted as the deity Baphomet, a Sabbatic Goat with a human body and goat head. The Capricorn is the zodiac sign symbolized by the goat. The Tarot card attributed to the Zodiac sign Capricorn is The Devil.",
+      "source_id": "35a5b27d84294ebf1fe0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do most fans follow Katy Perry for gospel music?\"\n\nSupporting facts: Katy Perry's gospel album sold about 200 copies. Katy Perry's most recent pop albums sold over 800,000 copies.",
+      "candidate_answer": "Yes \u2014 Do most fans follow Katy Perry for gospel music.",
+      "ground_truth": "No. Supporting evidence: Katy Perry's gospel album sold about 200 copies. Katy Perry's most recent pop albums sold over 800,000 copies.",
+      "source_id": "aac689a5f2da92bb35e7"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Kurt Cobain have benefited from Project Semicolon?\"\n\nSupporting facts: Project Semicolon is an American nonprofit organization known for its advocacy of mental health wellness and its focus as an anti-suicide initiative. During the last years of his life, Cobain struggled with heroin addiction and chronic health problems such as depression. Cobain died at the age of 27 from apparent suicide by gunshot.",
+      "candidate_answer": "Yes \u2014 Would Kurt Cobain have benefited from Project Semicolon.",
+      "ground_truth": "Yes. Supporting evidence: Project Semicolon is an American nonprofit organization known for its advocacy of mental health wellness and its focus as an anti-suicide initiative. During the last years of his life, Cobain struggled with heroin addiction and chronic health problems such as depression. Cobain died at the age of 27 from apparent suicide by gunshot.",
+      "source_id": "315575d5cbdd1d154744"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do some people soak in olive oil and water?\"\n\nSupporting facts: Adding olive oil to bath water is a common practice for dry skin. In baths, people tend to soak for a period of time. ",
+      "candidate_answer": "Yes \u2014 Do some people soak in olive oil and water.",
+      "ground_truth": "Yes. Supporting evidence: Adding olive oil to bath water is a common practice for dry skin. In baths, people tend to soak for a period of time. ",
+      "source_id": "12f49bcc3fdaebe88bd9"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Were Walkman's used in the Kingdom of Hungary?\"\n\nSupporting facts: The Kingdom of Hungary ended in 1946.  The Walkman was invented in 1979.",
+      "candidate_answer": "Yes \u2014 Were Walkman's used in the Kingdom of Hungary.",
+      "ground_truth": "No. Supporting evidence: The Kingdom of Hungary ended in 1946.  The Walkman was invented in 1979.",
+      "source_id": "18553c3fc528f6a38e5f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was the man who played the male lead in Mrs. Doubtfire known for his humour?\"\n\nSupporting facts: Robin Williams played the male lead in Mrs. Doubtfire. Robin Williams had a prolific standup and film comedy career.",
+      "candidate_answer": "Yes \u2014 Was the man who played the male lead in Mrs. Doubtfire known for his humour.",
+      "ground_truth": "Yes. Supporting evidence: Robin Williams played the male lead in Mrs. Doubtfire. Robin Williams had a prolific standup and film comedy career.",
+      "source_id": "5a781808bf59dc835bd2"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Saint Vincent and the Grenadines named by an Italian explorer?\"\n\nSupporting facts: Christopher Columbus, an Italian explorer, was the first European to discover the islands. He named them after St. Vincent because he first saw the island on the saint's feast day, and the Spanish city of Granada.",
+      "candidate_answer": "Yes \u2014 Was Saint Vincent and the Grenadines named by an Italian explorer.",
+      "ground_truth": "Yes. Supporting evidence: Christopher Columbus, an Italian explorer, was the first European to discover the islands. He named them after St. Vincent because he first saw the island on the saint's feast day, and the Spanish city of Granada.",
+      "source_id": "6b3601b4c251046cbef4"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do sun bears stay active during winter?\"\n\nSupporting facts: The sun bear is a species in the family Ursidae occurring in the tropical forests of Southeast Asia.  Sun bears do not seem to hibernate. Hibernation is a seasonal heterothermy characterized by low body-temperature, slow breathing and heart-rate, and low metabolic rate. It most commonly occurs during winter months.",
+      "candidate_answer": "Yes \u2014 Do sun bears stay active during winter.",
+      "ground_truth": "Yes. Supporting evidence: The sun bear is a species in the family Ursidae occurring in the tropical forests of Southeast Asia.  Sun bears do not seem to hibernate. Hibernation is a seasonal heterothermy characterized by low body-temperature, slow breathing and heart-rate, and low metabolic rate. It most commonly occurs during winter months.",
+      "source_id": "d2e19ba0ffb3418fc545"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Rhode Island sink into the Bohai Sea?\"\n\nSupporting facts: The Bohai Sea is 30,000 square miles Rhode Island is 1,214 square miles",
+      "candidate_answer": "Yes \u2014 Could Rhode Island sink into the Bohai Sea.",
+      "ground_truth": "Yes. Supporting evidence: The Bohai Sea is 30,000 square miles Rhode Island is 1,214 square miles",
+      "source_id": "ddfbe25915ba85ef4716"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is the QWERTY keyboard layout meant to be slow?\"\n\nSupporting facts: The QWERTY keyboard layout was made for use on typewriters. Typewriters could not be used too quickly, or they would jam. ",
+      "candidate_answer": "Yes \u2014 Is the QWERTY keyboard layout meant to be slow.",
+      "ground_truth": "Yes. Supporting evidence: The QWERTY keyboard layout was made for use on typewriters. Typewriters could not be used too quickly, or they would jam. ",
+      "source_id": "5b78898b7ef289f3cd26"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was ethanol beneficial to Jack Kerouac's health?\"\n\nSupporting facts: In 1969, at age 47, Kerouac died from an abdominal hemorrhage caused by a lifetime of heavy drinking of alcohol. Ethanol is the main ingredient in alcoholic beverages.",
+      "candidate_answer": "Yes \u2014 Was ethanol beneficial to Jack Kerouac's health.",
+      "ground_truth": "No. Supporting evidence: In 1969, at age 47, Kerouac died from an abdominal hemorrhage caused by a lifetime of heavy drinking of alcohol. Ethanol is the main ingredient in alcoholic beverages.",
+      "source_id": "4fe90b9eab197be78729"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Bugs Bunny known for carrying a root vegetable around with him?\"\n\nSupporting facts: Bugs Bunny carries a carrot around with him. Carrots are considered root vegetables.",
+      "candidate_answer": "Yes \u2014 Is Bugs Bunny known for carrying a root vegetable around with him.",
+      "ground_truth": "Yes. Supporting evidence: Bugs Bunny carries a carrot around with him. Carrots are considered root vegetables.",
+      "source_id": "f046ac1a972a64c13501"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Brad Peyton need to know about seismology?\"\n\nSupporting facts: Brad Peyton directed the movie San Andreas San Andreas is an earthquake disaster film Seismology is the science of earthquakes and related phenomena",
+      "candidate_answer": "Yes \u2014 Did Brad Peyton need to know about seismology.",
+      "ground_truth": "Yes. Supporting evidence: Brad Peyton directed the movie San Andreas San Andreas is an earthquake disaster film Seismology is the science of earthquakes and related phenomena",
+      "source_id": "4957e0329698c05832c0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does having lip piercings lead to more expensive dental bills?\"\n\nSupporting facts: Lip piercings can rub the enamel on your teeth and can cause tissue damage to the gums. Tooth enamel protects the teeth from decay.",
+      "candidate_answer": "Yes \u2014 Does having lip piercings lead to more expensive dental bills.",
+      "ground_truth": "Yes. Supporting evidence: Lip piercings can rub the enamel on your teeth and can cause tissue damage to the gums. Tooth enamel protects the teeth from decay.",
+      "source_id": "a253f98e01008297d4b3"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is cycling a high-risk activity for pelvis fractures?\"\n\nSupporting facts: Cycling is a low-impact activity  Stress fractures in a pelvic bone often develop as a result of repetitive, high-impact activity that puts stress on the pelvis, such as long-distance running or ballet",
+      "candidate_answer": "Yes \u2014 Is cycling a high-risk activity for pelvis fractures.",
+      "ground_truth": "No. Supporting evidence: Cycling is a low-impact activity  Stress fractures in a pelvic bone often develop as a result of repetitive, high-impact activity that puts stress on the pelvis, such as long-distance running or ballet",
+      "source_id": "50ee714386bc6323ae11"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would multiple average rulers be necessary to measure the length of a giant armadillo?\"\n\nSupporting facts: The average ruler is 12 inches or 30 centimeters in length. The typical length of the giant armadillo is 75\u2013100 cm (30\u201339 in), with the tail adding another 50 cm (20 in).",
+      "candidate_answer": "Yes \u2014 Would multiple average rulers be necessary to measure the length of a giant armadillo.",
+      "ground_truth": "Yes. Supporting evidence: The average ruler is 12 inches or 30 centimeters in length. The typical length of the giant armadillo is 75\u2013100 cm (30\u201339 in), with the tail adding another 50 cm (20 in).",
+      "source_id": "f32228b474fc1ff18d59"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is November a bad time for a photographer to take pictures of a plum tree in bloom?\"\n\nSupporting facts: A plum tree is a deciduous tree that bears fruit. Deciduous trees shed their leaves in the autumn. Autumn happens from September until the end of Deember.",
+      "candidate_answer": "Yes \u2014 Is November a bad time for a photographer to take pictures of a plum tree in bloom.",
+      "ground_truth": "Yes. Supporting evidence: A plum tree is a deciduous tree that bears fruit. Deciduous trees shed their leaves in the autumn. Autumn happens from September until the end of Deember.",
+      "source_id": "cfe1c436a761f01041dd"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are there five different single-digit Fibonacci numbers?\"\n\nSupporting facts: The first six numbers in the Fibonacci sequence are 1,1,2,3,5,8. Since 1 is doubled, there are only five different single digit numbers.",
+      "candidate_answer": "Yes \u2014 Are there five different single-digit Fibonacci numbers.",
+      "ground_truth": "Yes. Supporting evidence: The first six numbers in the Fibonacci sequence are 1,1,2,3,5,8. Since 1 is doubled, there are only five different single digit numbers.",
+      "source_id": "31328c97391c0e047f44"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do bald eagles nest on Mount Sharp?\"\n\nSupporting facts: Bald eagles are birds found on earth Mount Sharp is a mountain on Mars To date, no life forms have been detected on Mars",
+      "candidate_answer": "Yes \u2014 Do bald eagles nest on Mount Sharp.",
+      "ground_truth": "No. Supporting evidence: Bald eagles are birds found on earth Mount Sharp is a mountain on Mars To date, no life forms have been detected on Mars",
+      "source_id": "51cfdfc9c52aeed3a1cc"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was 1941 Operation Barbarossa related to The Crusades?\"\n\nSupporting facts: Operation Barbarossa referred to the 1941 German invasion of the Soviet Union. Frederick Barbarosa was the Holy Roman Empire that drowned while marching his army to The Crusades. The Holy Roman Empire was a medieval empire that ruled over lands including what became modern Germany.",
+      "candidate_answer": "Yes \u2014 Was 1941 Operation Barbarossa related to The Crusades.",
+      "ground_truth": "Yes. Supporting evidence: Operation Barbarossa referred to the 1941 German invasion of the Soviet Union. Frederick Barbarosa was the Holy Roman Empire that drowned while marching his army to The Crusades. The Holy Roman Empire was a medieval empire that ruled over lands including what became modern Germany.",
+      "source_id": "71682e0e8e89c5297390"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Sainsbury's buy Tesco?\"\n\nSupporting facts: Sainsbury is a business worth \u00a329.007 billion in 2019. Tesco is a business worth \u00a363.911 billion in 2019. 63 billion is more than 29 billion. A business needs to have enough revenue to buy another business.",
+      "candidate_answer": "Yes \u2014 Could Sainsbury's buy Tesco.",
+      "ground_truth": "No. Supporting evidence: Sainsbury is a business worth \u00a329.007 billion in 2019. Tesco is a business worth \u00a363.911 billion in 2019. 63 billion is more than 29 billion. A business needs to have enough revenue to buy another business.",
+      "source_id": "c7b343171ca9bce49241"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is greed the most prevalent of the Seven Deadly Sins?\"\n\nSupporting facts: Greed is a longing for wealth and power. White collar crime involves businesses stealing money or assets from people.  5-10% of arrests per 100,000 arrests were for  white collar crime according to Department of Justice statistics. Gluttony is the overindulgence in food or similar things. 39.8% of US adults were classified as overweight according to the National Center for Health Statistics.",
+      "candidate_answer": "Yes \u2014 Is greed the most prevalent of the Seven Deadly Sins.",
+      "ground_truth": "No. Supporting evidence: Greed is a longing for wealth and power. White collar crime involves businesses stealing money or assets from people.  5-10% of arrests per 100,000 arrests were for  white collar crime according to Department of Justice statistics. Gluttony is the overindulgence in food or similar things. 39.8% of US adults were classified as overweight according to the National Center for Health Statistics.",
+      "source_id": "8e01fbec3b932a3252ef"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are Donkeys part of Christmas celebrations?\"\n\nSupporting facts: \"Dominic The Donkey\" is a popular Christmas song. \"Nestor The Ling Eared Christmas Donkey\" is a popular Christmas Movie.",
+      "candidate_answer": "Yes \u2014 Are Donkeys part of Christmas celebrations.",
+      "ground_truth": "Yes. Supporting evidence: \"Dominic The Donkey\" is a popular Christmas song. \"Nestor The Ling Eared Christmas Donkey\" is a popular Christmas Movie.",
+      "source_id": "36c497860f72d148e4e8"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Ludacris in same music genre as 2000's Binaural?\"\n\nSupporting facts: Ludacris is a rapper, particularly in the southern rap style. Binaural was a 2000 album released by Pearl Jam. Pearl Jam is a grunge rock band formed in Seattle.",
+      "candidate_answer": "Yes \u2014 Is Ludacris in same music genre as 2000's Binaural.",
+      "ground_truth": "No. Supporting evidence: Ludacris is a rapper, particularly in the southern rap style. Binaural was a 2000 album released by Pearl Jam. Pearl Jam is a grunge rock band formed in Seattle.",
+      "source_id": "af6afbc6da7065d522ee"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Morris County named after a chief justice?\"\n\nSupporting facts: The Morris County was named after Colonel Lewis Morris. Colonel Lewis Morris was the chief justice of New York.",
+      "candidate_answer": "Yes \u2014 Was Morris County named after a chief justice.",
+      "ground_truth": "Yes. Supporting evidence: The Morris County was named after Colonel Lewis Morris. Colonel Lewis Morris was the chief justice of New York.",
+      "source_id": "9d277acbb432c3ddab16"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is jalapeno heat outclassed by Bhut jolokia?\"\n\nSupporting facts: The Scoville scale measures how hot peppers are. The jalapeno pepper has a Scoville scale rating of between 3,500 and 3,600 SHU (Scoville Heat Units). The Bhut jolokia (ghost pepper) has a Scoville scale rating of 1 million SHU (Scoville Heat Units).",
+      "candidate_answer": "Yes \u2014 Is jalapeno heat outclassed by Bhut jolokia.",
+      "ground_truth": "Yes. Supporting evidence: The Scoville scale measures how hot peppers are. The jalapeno pepper has a Scoville scale rating of between 3,500 and 3,600 SHU (Scoville Heat Units). The Bhut jolokia (ghost pepper) has a Scoville scale rating of 1 million SHU (Scoville Heat Units).",
+      "source_id": "2ed50522610a3683933f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does the word swastika have meaning in sanskrit?\"\n\nSupporting facts: In Sanskrit, the word swastika is a combination of \u2018su\u2019 (meaning \u2018good\u2019) and \u2018asti\u2019 (meaning \u2018to exist\u2019) This meaning of swastika  from Sanskrit this gets translated as \u2018all is well.\u2019 ",
+      "candidate_answer": "Yes \u2014 Does the word swastika have meaning in sanskrit.",
+      "ground_truth": "Yes. Supporting evidence: In Sanskrit, the word swastika is a combination of \u2018su\u2019 (meaning \u2018good\u2019) and \u2018asti\u2019 (meaning \u2018to exist\u2019) This meaning of swastika  from Sanskrit this gets translated as \u2018all is well.\u2019 ",
+      "source_id": "3b9f0e80d5929f447166"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Bill Gates achieve Latin honors?\"\n\nSupporting facts: Bill Gates left Harvard after two years. Latin honors are Latin phrases used in some colleges and universities to indicate the level of distinction with which an academic degree has been earned. You cannot earn an academic degree if you drop out of the program.",
+      "candidate_answer": "Yes \u2014 Did Bill Gates achieve Latin honors.",
+      "ground_truth": "No. Supporting evidence: Bill Gates left Harvard after two years. Latin honors are Latin phrases used in some colleges and universities to indicate the level of distinction with which an academic degree has been earned. You cannot earn an academic degree if you drop out of the program.",
+      "source_id": "9b5a993ed4b5f121f935"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can numerologists become members of Royal Society?\"\n\nSupporting facts: The royal society fulfills a number of roles: promoting science and its benefits, recognizing excellence in science, supporting outstanding science, providing scientific advice for policy. Numerology is a superstition and a pseudoscience that uses numbers to give the subject a veneer of scientific authority.",
+      "candidate_answer": "Yes \u2014 Can numerologists become members of Royal Society.",
+      "ground_truth": "No. Supporting evidence: The royal society fulfills a number of roles: promoting science and its benefits, recognizing excellence in science, supporting outstanding science, providing scientific advice for policy. Numerology is a superstition and a pseudoscience that uses numbers to give the subject a veneer of scientific authority.",
+      "source_id": "cac0fdde384da0c11524"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Antarctica a good location for Groundhog Day?\"\n\nSupporting facts: Groundhog Day relies on a groundhog seeing their shadow. Antarctica has an irregular sun pattern and some days have no sun rise or 24 hour sunlight. Antarctica has temperatures can range from -10C to -60C. Groundhogs live in forests or woodlands with plenty of sunlight.",
+      "candidate_answer": "Yes \u2014 Is Antarctica a good location for Groundhog Day.",
+      "ground_truth": "No. Supporting evidence: Groundhog Day relies on a groundhog seeing their shadow. Antarctica has an irregular sun pattern and some days have no sun rise or 24 hour sunlight. Antarctica has temperatures can range from -10C to -60C. Groundhogs live in forests or woodlands with plenty of sunlight.",
+      "source_id": "998132ad8f805c90f31e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could the main character of \"Alice's Adventures in Wonderland\" join a Masonic Lodge?\"\n\nSupporting facts: The main character of \"Alice's Adventures in Wonderland\" is Alice, a young girl. Masonic Lodge membership is restricted to men over the age of either 18 or 21, depending on jurisdiction.",
+      "candidate_answer": "Yes \u2014 Could the main character of \"Alice's Adventures in Wonderland\" join a Masonic Lodge.",
+      "ground_truth": "No. Supporting evidence: The main character of \"Alice's Adventures in Wonderland\" is Alice, a young girl. Masonic Lodge membership is restricted to men over the age of either 18 or 21, depending on jurisdiction.",
+      "source_id": "72d9416ee7093deb9eab"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Canada have a relationship with a monarch?\"\n\nSupporting facts: Canada is a constitutional monarchy. The head of the monarchy that rules Canada is Queen Elizabeth.",
+      "candidate_answer": "Yes \u2014 Does Canada have a relationship with a monarch.",
+      "ground_truth": "Yes. Supporting evidence: Canada is a constitutional monarchy. The head of the monarchy that rules Canada is Queen Elizabeth.",
+      "source_id": "3bba311f7abb8ad4be82"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would four shoes be insufficient for a set of octuplets?\"\n\nSupporting facts: There are eight children in a set of octuplets. The typical child is born with two feet. Normally each foot needs to be covered with a single shoe.",
+      "candidate_answer": "Yes \u2014 Would four shoes be insufficient for a set of octuplets.",
+      "ground_truth": "Yes. Supporting evidence: There are eight children in a set of octuplets. The typical child is born with two feet. Normally each foot needs to be covered with a single shoe.",
+      "source_id": "34ef40fff88e669f154f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did the Pearl Harbor attack occur during autumn?\"\n\nSupporting facts: Autumn runs from about September 20 to about December 20. Pearl Harbor was attacked on December 7, 1941.",
+      "candidate_answer": "Yes \u2014 Did the Pearl Harbor attack occur during autumn.",
+      "ground_truth": "Yes. Supporting evidence: Autumn runs from about September 20 to about December 20. Pearl Harbor was attacked on December 7, 1941.",
+      "source_id": "d717f5321d1e1d3d5e37"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Nancy Pelosi have hypothetically been on same side as Gerald Ford?\"\n\nSupporting facts: Gerald Ford was a Republican and was president from 1974-1977. Nancy Pelosi is the Democratic Speaker of the House. Domestically, Ford was consistently conservative, and led the fight against Johnson's Great Society.  Programs of the Great Society included Medicare, and Medicaid. Nancy Pelosi has consistently voted for Medicare and Medicaid.",
+      "candidate_answer": "Yes \u2014 Would Nancy Pelosi have hypothetically been on same side as Gerald Ford.",
+      "ground_truth": "No. Supporting evidence: Gerald Ford was a Republican and was president from 1974-1977. Nancy Pelosi is the Democratic Speaker of the House. Domestically, Ford was consistently conservative, and led the fight against Johnson's Great Society.  Programs of the Great Society included Medicare, and Medicaid. Nancy Pelosi has consistently voted for Medicare and Medicaid.",
+      "source_id": "0bc39f6d0566896a2139"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a hippie hypothetically be bummed out by Augustus's Pax Romana?\"\n\nSupporting facts: A hippie was a member of the counterculture movement of the 1960s. One of the most prevalent hippie statements is peace and love. The Pax Romana was a near 200 year era of peace in the Roman Empire that began during the reign of Augustus. Augustus had several loves, including three wives.",
+      "candidate_answer": "Yes \u2014 Would a hippie hypothetically be bummed out by Augustus's Pax Romana.",
+      "ground_truth": "No. Supporting evidence: A hippie was a member of the counterculture movement of the 1960s. One of the most prevalent hippie statements is peace and love. The Pax Romana was a near 200 year era of peace in the Roman Empire that began during the reign of Augustus. Augustus had several loves, including three wives.",
+      "source_id": "a771fc7612cc3b8dc2dc"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Dante have hypothetically placed Nostradamus in 3rd Circle of Hell?\"\n\nSupporting facts: Nostradamus was a famous seer and court astrologer. Dante's 3rd Circle of Hell is reserved for gluttons. The 8th Circle of Hell is reserved for frauds. Astrology was seen as a valuable skill during Dante's lifetime. Dante places the mystic and prophet Joachim of Flora in the heaven of the sun.",
+      "candidate_answer": "Yes \u2014 Would Dante have hypothetically placed Nostradamus in 3rd Circle of Hell.",
+      "ground_truth": "No. Supporting evidence: Nostradamus was a famous seer and court astrologer. Dante's 3rd Circle of Hell is reserved for gluttons. The 8th Circle of Hell is reserved for frauds. Astrology was seen as a valuable skill during Dante's lifetime. Dante places the mystic and prophet Joachim of Flora in the heaven of the sun.",
+      "source_id": "90fc9a677ae0df6f2974"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can you see Stonehenge from a window in Dusseldorf?\"\n\nSupporting facts: Dusseldorf is a city in Germany. Stonehenge is a prehistoric monument in Wiltshire, England. Wiltshire England is around seven hours away from Dusseldorf Germany by car.",
+      "candidate_answer": "Yes \u2014 Can you see Stonehenge from a window in Dusseldorf.",
+      "ground_truth": "No. Supporting evidence: Dusseldorf is a city in Germany. Stonehenge is a prehistoric monument in Wiltshire, England. Wiltshire England is around seven hours away from Dusseldorf Germany by car.",
+      "source_id": "7f6a3fac5a419d53e5f2"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does the human stomach destroy a bee if ingested?\"\n\nSupporting facts: Bees have an outer protective exoskeleton made of chitin, a polymer of glucose. The human stomach releases harsh acids that break down materials. The human stomach breaks down glucose in about 33 hours.",
+      "candidate_answer": "Yes \u2014 Does the human stomach destroy a bee if ingested.",
+      "ground_truth": "Yes. Supporting evidence: Bees have an outer protective exoskeleton made of chitin, a polymer of glucose. The human stomach releases harsh acids that break down materials. The human stomach breaks down glucose in about 33 hours.",
+      "source_id": "3cc870b5665bc1bc2a8e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Alan Turing suffer the same fate as Abraham Lincoln?\"\n\nSupporting facts: Alan Turing committed suicide via cyanide poisoning. Abraham Lincoln was killed by a gunshot wound to the head.",
+      "candidate_answer": "Yes \u2014 Did Alan Turing suffer the same fate as Abraham Lincoln.",
+      "ground_truth": "No. Supporting evidence: Alan Turing committed suicide via cyanide poisoning. Abraham Lincoln was killed by a gunshot wound to the head.",
+      "source_id": "19e3882ec4a562b57d3c"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can the theory of cultural hegemony explain global warming?\"\n\nSupporting facts: Cultural hegemony is a theory of social and cultural dominance rooted in Marxism Marxism is a philosophy with applications in the social sciences and humanities Global warming is a phenomenon dealt with by environmental science",
+      "candidate_answer": "Yes \u2014 Can the theory of cultural hegemony explain global warming.",
+      "ground_truth": "No. Supporting evidence: Cultural hegemony is a theory of social and cultural dominance rooted in Marxism Marxism is a philosophy with applications in the social sciences and humanities Global warming is a phenomenon dealt with by environmental science",
+      "source_id": "0b0dc8dc326765c1540b"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Saturn named after king of gods in Greek mythology?\"\n\nSupporting facts: Saturn, the sixth planet from the sun is named after the Roman god Saturn. The Roman god Saturn is derived from its Greek equivalent, Kronos. The king of the gods in Greek mythology was Zeus. Kronos was Zeus's father, and was the leader of the Titans.",
+      "candidate_answer": "Yes \u2014 Is Saturn named after king of gods in Greek mythology.",
+      "ground_truth": "No. Supporting evidence: Saturn, the sixth planet from the sun is named after the Roman god Saturn. The Roman god Saturn is derived from its Greek equivalent, Kronos. The king of the gods in Greek mythology was Zeus. Kronos was Zeus's father, and was the leader of the Titans.",
+      "source_id": "5799a384a9ca6cc645a0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is capsaicin associated with cooking?\"\n\nSupporting facts: Capsaicin occurs naturally in chilies and other peppers. It is the substance that makes the peppers spicy. Peppers are routinely used in cooking in many cultures.",
+      "candidate_answer": "Yes \u2014 Is capsaicin associated with cooking.",
+      "ground_truth": "Yes. Supporting evidence: Capsaicin occurs naturally in chilies and other peppers. It is the substance that makes the peppers spicy. Peppers are routinely used in cooking in many cultures.",
+      "source_id": "30ffdbc264ee1084a9b5"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Woodrow Wilson support Plessy v. Ferguson decision?\"\n\nSupporting facts: Plessy v Ferguson was a landmark case that stated segregation did not violate the constitution. President Woodrow Wilson escalated the discriminatory hiring policies and segregation of government offices. By the end of 1913, under President Wilson, many departments, including the navy, had segregated work spaces, restrooms, and cafeterias.",
+      "candidate_answer": "Yes \u2014 Would Woodrow Wilson support Plessy v. Ferguson decision.",
+      "ground_truth": "Yes. Supporting evidence: Plessy v Ferguson was a landmark case that stated segregation did not violate the constitution. President Woodrow Wilson escalated the discriminatory hiring policies and segregation of government offices. By the end of 1913, under President Wilson, many departments, including the navy, had segregated work spaces, restrooms, and cafeterias.",
+      "source_id": "8d708927b1593d8b9b42"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are there multiple Star Wars TV shows produced by Disney?\"\n\nSupporting facts: Star Wars Rebels and Star Wars Resistance were released after Disney bought ownership of Star Wars. Disney also produced the first live-action TV show set in the Star Wars galaxy, The Mandalorian. Disney produced one additional revival season of Star Wars Clone Wars which was originally produced before Disney owned Star Wars.",
+      "candidate_answer": "Yes \u2014 Are there multiple Star Wars TV shows produced by Disney.",
+      "ground_truth": "Yes. Supporting evidence: Star Wars Rebels and Star Wars Resistance were released after Disney bought ownership of Star Wars. Disney also produced the first live-action TV show set in the Star Wars galaxy, The Mandalorian. Disney produced one additional revival season of Star Wars Clone Wars which was originally produced before Disney owned Star Wars.",
+      "source_id": "db7ceb3da1361288eeb2"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can a minotaur hypothetically injure a tibia playing football?\"\n\nSupporting facts: A minotaur is a mythological creature with the head of a bull and the body of a human. The tibia is the bone between the knee and the ankle in humans. Tibia injuries are common injuries in contact sports such as football.",
+      "candidate_answer": "Yes \u2014 Can a minotaur hypothetically injure a tibia playing football.",
+      "ground_truth": "Yes. Supporting evidence: A minotaur is a mythological creature with the head of a bull and the body of a human. The tibia is the bone between the knee and the ankle in humans. Tibia injuries are common injuries in contact sports such as football.",
+      "source_id": "9247b5afb2eef4c9f95b"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Christopher Nolan borrow pants from Danny Devito?\"\n\nSupporting facts: Christopher Nolan is 6 feet tall. Danny Devito is 4'10\" tall. Pant sizes relate to height.",
+      "candidate_answer": "Yes \u2014 Could Christopher Nolan borrow pants from Danny Devito.",
+      "ground_truth": "No. Supporting evidence: Christopher Nolan is 6 feet tall. Danny Devito is 4'10\" tall. Pant sizes relate to height.",
+      "source_id": "183a6e39a27a2432989c"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Dioskourides a lapidary?\"\n\nSupporting facts: A lapidary is a person or machine who cuts gemstones; classically, it refers to a person who engraves gemstones. Dioskourides put his signature on a Roman amethyst ringstone with a portrait of Demosthenes circa late 1st century BC. Artists sign their work.",
+      "candidate_answer": "Yes \u2014 Was Dioskourides a lapidary.",
+      "ground_truth": "Yes. Supporting evidence: A lapidary is a person or machine who cuts gemstones; classically, it refers to a person who engraves gemstones. Dioskourides put his signature on a Roman amethyst ringstone with a portrait of Demosthenes circa late 1st century BC. Artists sign their work.",
+      "source_id": "a68cfdfc49fdc73dbd2e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Shiva's divine dance an ancient physical fitness pose?\"\n\nSupporting facts: In yoga as exercise, the pose called Natarajasara represents Shiva's divine dance This pose is new, originating in the early 20th century Exercise is an activity that maintains physical fitness",
+      "candidate_answer": "Yes \u2014 Is Shiva's divine dance an ancient physical fitness pose.",
+      "ground_truth": "No. Supporting evidence: In yoga as exercise, the pose called Natarajasara represents Shiva's divine dance This pose is new, originating in the early 20th century Exercise is an activity that maintains physical fitness",
+      "source_id": "effcb862cfb341b8774c"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Isaac Newton buried at the same church as the author of Great Expectations?\"\n\nSupporting facts: Isaac Newton is buried at Westminster Abbey. Charles Dickens's book Great Expectations was published  in 1861. Charles Dickens is buried at the Poets' Corner of Westminster Abbey. Westminster Abbey is a large church in the City of Westminster, London, England.",
+      "candidate_answer": "Yes \u2014 Is Isaac Newton buried at the same church as the author of Great Expectations.",
+      "ground_truth": "Yes. Supporting evidence: Isaac Newton is buried at Westminster Abbey. Charles Dickens's book Great Expectations was published  in 1861. Charles Dickens is buried at the Poets' Corner of Westminster Abbey. Westminster Abbey is a large church in the City of Westminster, London, England.",
+      "source_id": "8e9607aa0cefcb84c0fb"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a Fakir be surprised if they saw a comma in their religious book?\"\n\nSupporting facts: A Fakir is a Muslim Sufi holy man or woman that lives a simple life. The holy book for Muslims is the Quran. The comma is a punctuation mark in modern language. The Quran does not use any forms of modern punctuation.",
+      "candidate_answer": "Yes \u2014 Would a Fakir be surprised if they saw a comma in their religious book.",
+      "ground_truth": "Yes. Supporting evidence: A Fakir is a Muslim Sufi holy man or woman that lives a simple life. The holy book for Muslims is the Quran. The comma is a punctuation mark in modern language. The Quran does not use any forms of modern punctuation.",
+      "source_id": "72d2e2d76ec01e97f88f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Jackie Chan have trouble communicating with a deaf person?\"\n\nSupporting facts: Jackie Chan speaks Cantonese, Mandarin, English, and American Sign Language. American Sign Language (ASL) is a natural language that serves as the predominant sign language of Deaf communities in the United States and most of Anglophone Canada.",
+      "candidate_answer": "Yes \u2014 Would Jackie Chan have trouble communicating with a deaf person.",
+      "ground_truth": "No. Supporting evidence: Jackie Chan speaks Cantonese, Mandarin, English, and American Sign Language. American Sign Language (ASL) is a natural language that serves as the predominant sign language of Deaf communities in the United States and most of Anglophone Canada.",
+      "source_id": "79f41f77e80dbef57439"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Glenn Beck known for his mild temper?\"\n\nSupporting facts: Glenn Beck has gone viral for screaming at callers on his program. Glenn Beck has walked off of professional interviews when he doesn't like the questions.",
+      "candidate_answer": "Yes \u2014 Is Glenn Beck known for his mild temper.",
+      "ground_truth": "No. Supporting evidence: Glenn Beck has gone viral for screaming at callers on his program. Glenn Beck has walked off of professional interviews when he doesn't like the questions.",
+      "source_id": "da0b209dff1ccc80f46a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can an anchovy born in 2020 survive 25th US census?\"\n\nSupporting facts: The US Census takes place every ten years. The 24th US Census took place in 2020. The 25th US Census will take place in 2030. The average lifespan of an anchovy is five years.",
+      "candidate_answer": "Yes \u2014 Can an anchovy born in 2020 survive 25th US census.",
+      "ground_truth": "No. Supporting evidence: The US Census takes place every ten years. The 24th US Census took place in 2020. The 25th US Census will take place in 2030. The average lifespan of an anchovy is five years.",
+      "source_id": "9cf2cfed8753e1a1a3dc"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Jesus know anyone who spoke Estonian?\"\n\nSupporting facts: Estonian is the language of Estonia, which is located in Northern Europe near Finland. Jesus is recorded to have lived and traveled almost exclusively within the borders of Galilee. Galilee is a territory within the borders of northern Israel. Israel is located on the Mediterranean sea in the Middle East. Israel is almost 2,000 miles from Estonia. ",
+      "candidate_answer": "Yes \u2014 Did Jesus know anyone who spoke Estonian.",
+      "ground_truth": "No. Supporting evidence: Estonian is the language of Estonia, which is located in Northern Europe near Finland. Jesus is recorded to have lived and traveled almost exclusively within the borders of Galilee. Galilee is a territory within the borders of northern Israel. Israel is located on the Mediterranean sea in the Middle East. Israel is almost 2,000 miles from Estonia. ",
+      "source_id": "bda79ddfa59d6d51e081"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is an ocelot a good present for a kindergartener?\"\n\nSupporting facts: An ocelot is a small wild cat native to South America, Mexico, and the southern US. Ocelots are carnivores that hunt other animals and are aggressive, and strong for their size. Kindergarteners are usually 5 years old and weigh around 39 pounds.",
+      "candidate_answer": "Yes \u2014 Is an ocelot a good present for a kindergartener.",
+      "ground_truth": "No. Supporting evidence: An ocelot is a small wild cat native to South America, Mexico, and the southern US. Ocelots are carnivores that hunt other animals and are aggressive, and strong for their size. Kindergarteners are usually 5 years old and weigh around 39 pounds.",
+      "source_id": "2856480f93e5e9596f83"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do any Islamic dominated countries have a Starbucks?\"\n\nSupporting facts: Starbucks is a coffee shop found in numerous countries including USA, China, and the United Arab Emirates. The United Arab Emirates has a Starbucks in Dubai. Islam is the largest and the official state religion of the United Arab Emirates. Pew Research estimates state that over 76% of the citizens of the United Arab Emirates are Islamic.",
+      "candidate_answer": "Yes \u2014 Do any Islamic dominated countries have a Starbucks.",
+      "ground_truth": "Yes. Supporting evidence: Starbucks is a coffee shop found in numerous countries including USA, China, and the United Arab Emirates. The United Arab Emirates has a Starbucks in Dubai. Islam is the largest and the official state religion of the United Arab Emirates. Pew Research estimates state that over 76% of the citizens of the United Arab Emirates are Islamic.",
+      "source_id": "0d527db1bc94c695fb74"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can a human eat an entire 12-lb roast turkey in an hour? \"\n\nSupporting facts: A serving of roast turkey is about 1 pound of uncooked turkey. A 12-lb roast turkey would contain about 12 servings of cooked turkey meat. One human cannot eat 12 1-lb servings of turkey in one sitting.",
+      "candidate_answer": "Yes \u2014 Can a human eat an entire 12-lb roast turkey in an hour? .",
+      "ground_truth": "No. Supporting evidence: A serving of roast turkey is about 1 pound of uncooked turkey. A 12-lb roast turkey would contain about 12 servings of cooked turkey meat. One human cannot eat 12 1-lb servings of turkey in one sitting.",
+      "source_id": "b208e5d641fbf43bc647"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Romeo and Juliet an unusual title to teach high schoolers?\"\n\nSupporting facts: Romeo and Juliet has topped multiple 'Top Read Books In High School' lists. Romeo and Juliet is available in multiple editions targeted at school age children.",
+      "candidate_answer": "Yes \u2014 Is Romeo and Juliet an unusual title to teach high schoolers.",
+      "ground_truth": "No. Supporting evidence: Romeo and Juliet has topped multiple 'Top Read Books In High School' lists. Romeo and Juliet is available in multiple editions targeted at school age children.",
+      "source_id": "9567d9236e4e01580b1a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does a Generation Y member satisfy NYPD police officer age requirement?\"\n\nSupporting facts: The NYPD has a minimum age requirement of 21. Members of Generation Y were born between 1980 and 1994.",
+      "candidate_answer": "Yes \u2014 Does a Generation Y member satisfy NYPD police officer age requirement.",
+      "ground_truth": "Yes. Supporting evidence: The NYPD has a minimum age requirement of 21. Members of Generation Y were born between 1980 and 1994.",
+      "source_id": "6296b8c3a16680a826eb"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did the Social Democratic Party of Germany help Frederick II become King of Prussia?\"\n\nSupporting facts: The Social Democratic Party of Germany was founded in 1863. Frederick II was King of Prussia from 1740-1786.",
+      "candidate_answer": "Yes \u2014 Did the Social Democratic Party of Germany help Frederick II become King of Prussia.",
+      "ground_truth": "No. Supporting evidence: The Social Democratic Party of Germany was founded in 1863. Frederick II was King of Prussia from 1740-1786.",
+      "source_id": "cc41d3b2a3f1aab33adf"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Felix Potvin have a position on a dodgeball team?\"\n\nSupporting facts: Felix Potvin was an NHL goaltender There is no goalie position on a dodgeball team",
+      "candidate_answer": "Yes \u2014 Does Felix Potvin have a position on a dodgeball team.",
+      "ground_truth": "No. Supporting evidence: Felix Potvin was an NHL goaltender There is no goalie position on a dodgeball team",
+      "source_id": "d808a0c72dbe605309ab"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"If you were on a diet, would you have to skip lunch at McDonald's?\"\n\nSupporting facts: McDonald's offers low calorie brunch options like parfaits and egg white sandwiches.  McDonald's offers low calorie lunch options including basic hamburgers and salads.",
+      "candidate_answer": "Yes \u2014 If you were on a diet, would you have to skip lunch at McDonald's.",
+      "ground_truth": "No. Supporting evidence: McDonald's offers low calorie brunch options like parfaits and egg white sandwiches.  McDonald's offers low calorie lunch options including basic hamburgers and salads.",
+      "source_id": "3e023027bb296245506a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Jamie Brewer have attended the United States Naval Academy?\"\n\nSupporting facts: Jamie Brewer is a famous actress with down syndrome. Individuals with down syndrome are disqualified from military service.",
+      "candidate_answer": "Yes \u2014 Could Jamie Brewer have attended the United States Naval Academy.",
+      "ground_truth": "No. Supporting evidence: Jamie Brewer is a famous actress with down syndrome. Individuals with down syndrome are disqualified from military service.",
+      "source_id": "1335c853d7f61866345a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would the top of Mount Fuji stick out of the Sea of Japan? \"\n\nSupporting facts: The average depth of the Sea of Japan is  5,748 feet (1,752 metres) and its maximum depth is 12,276 feet (3,742 metres) Mount Fuji is 3,776.24 metres (12,389.2 ft) tall. ",
+      "candidate_answer": "Yes \u2014 Would the top of Mount Fuji stick out of the Sea of Japan? .",
+      "ground_truth": "Yes. Supporting evidence: The average depth of the Sea of Japan is  5,748 feet (1,752 metres) and its maximum depth is 12,276 feet (3,742 metres) Mount Fuji is 3,776.24 metres (12,389.2 ft) tall. ",
+      "source_id": "646d3503f3a3939e2e63"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would it be difficult for Kami Rita to climb Mount Emei?\"\n\nSupporting facts: Kami Rita has climbed Mount Everest 24 times. Mount Everest has an elevation of 8,848 m (29,029 ft). Mount Emei has an elevation of 3,099 metres (10,167 ft).",
+      "candidate_answer": "Yes \u2014 Would it be difficult for Kami Rita to climb Mount Emei.",
+      "ground_truth": "No. Supporting evidence: Kami Rita has climbed Mount Everest 24 times. Mount Everest has an elevation of 8,848 m (29,029 ft). Mount Emei has an elevation of 3,099 metres (10,167 ft).",
+      "source_id": "c7a4b7ed963de3d9cd92"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Eric Clapton's children play a regulation game of basketball among themselves?\"\n\nSupporting facts: NBA regulations require two teams of five players each for a game, for a total of 10 players. Eric Clapton has 5 children.",
+      "candidate_answer": "Yes \u2014 Could Eric Clapton's children play a regulation game of basketball among themselves.",
+      "ground_truth": "No. Supporting evidence: NBA regulations require two teams of five players each for a game, for a total of 10 players. Eric Clapton has 5 children.",
+      "source_id": "2df30aa0fc5bdc229dce"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Has Burger King  contributed to a decrease in need for snowshoes?\"\n\nSupporting facts: Burger king serves beef Beef farming is associated with increased global temperatures and decreased snowfall",
+      "candidate_answer": "Yes \u2014 Has Burger King  contributed to a decrease in need for snowshoes.",
+      "ground_truth": "Yes. Supporting evidence: Burger king serves beef Beef farming is associated with increased global temperatures and decreased snowfall",
+      "source_id": "1c505cad07ffe97f4e41"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Sojourner Truth use the elevator at the Washington Monument?\"\n\nSupporting facts: The Washington Monument was opened to the public in October 1888. Sojourner Truth died November 26, 1883. ",
+      "candidate_answer": "Yes \u2014 Did Sojourner Truth use the elevator at the Washington Monument.",
+      "ground_truth": "No. Supporting evidence: The Washington Monument was opened to the public in October 1888. Sojourner Truth died November 26, 1883. ",
+      "source_id": "139d12df0ad15cc0347c"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Hanuman have some of the same duties as Athena?\"\n\nSupporting facts: Hanuman, the divine Hindu monkey, is a god of strength, knowledge, and victory. Athena was the Greek goddess of war, and wisdom.",
+      "candidate_answer": "Yes \u2014 Does Hanuman have some of the same duties as Athena.",
+      "ground_truth": "Yes. Supporting evidence: Hanuman, the divine Hindu monkey, is a god of strength, knowledge, and victory. Athena was the Greek goddess of war, and wisdom.",
+      "source_id": "e4945001c03fa74e1cc9"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Were there greater landslides than 1980 United States presidential election?\"\n\nSupporting facts: A landslide refers to a competitor beating their opponent by a wide margin. Ronald Reagan defeated Jimmy carter in the 1980 United States presidential election by around 8 million votes. Franklin D. Roosevelt won the 1936 United States presidential election over Alf Landon by more than 11 million votes. In 1804 Thomas Jefferson received 162 (92%) of the electoral votes while Charles Cotesworth Pinckney received only 14 (8%).",
+      "candidate_answer": "Yes \u2014 Were there greater landslides than 1980 United States presidential election.",
+      "ground_truth": "Yes. Supporting evidence: A landslide refers to a competitor beating their opponent by a wide margin. Ronald Reagan defeated Jimmy carter in the 1980 United States presidential election by around 8 million votes. Franklin D. Roosevelt won the 1936 United States presidential election over Alf Landon by more than 11 million votes. In 1804 Thomas Jefferson received 162 (92%) of the electoral votes while Charles Cotesworth Pinckney received only 14 (8%).",
+      "source_id": "7fa631340ce8c42aba53"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is the Hobbit more profitable for proofreader than Constitution of the United States?\"\n\nSupporting facts: Proofreaders typically get paid per the number of words in a document. The Constitution of the United States contains around 7,500 words. The Hobbit contains 95,356 words.",
+      "candidate_answer": "Yes \u2014 Is the Hobbit more profitable for proofreader than Constitution of the United States.",
+      "ground_truth": "Yes. Supporting evidence: Proofreaders typically get paid per the number of words in a document. The Constitution of the United States contains around 7,500 words. The Hobbit contains 95,356 words.",
+      "source_id": "c8e267b583f722ff485e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is a spice grinder ueseless for the cheapest cinnamon sticks?\"\n\nSupporting facts: Different species of cinnamon require different grinding methods to make the spice Indonesian cinnamon quills are thick and capable of damaging a spice or coffee grinder. Indonesian cinnamon is the most common and cheapest cinnamon in the USA",
+      "candidate_answer": "Yes \u2014 Is a spice grinder ueseless for the cheapest cinnamon sticks.",
+      "ground_truth": "Yes. Supporting evidence: Different species of cinnamon require different grinding methods to make the spice Indonesian cinnamon quills are thick and capable of damaging a spice or coffee grinder. Indonesian cinnamon is the most common and cheapest cinnamon in the USA",
+      "source_id": "759c7c8babd737e24f1d"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is it expected that Charla Nash would be anxious near a gorilla?\"\n\nSupporting facts: In 2009, Charla Nash was attacked and nearly killed by a chimpanzee.  While a different species, Gorillas and Chimpanzees have similar physical appearances and are both primates.",
+      "candidate_answer": "Yes \u2014 Is it expected that Charla Nash would be anxious near a gorilla.",
+      "ground_truth": "Yes. Supporting evidence: In 2009, Charla Nash was attacked and nearly killed by a chimpanzee.  While a different species, Gorillas and Chimpanzees have similar physical appearances and are both primates.",
+      "source_id": "b0ab236d19fec61c0111"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would somebody leave reiki with bruises?\"\n\nSupporting facts: Bruises are caused by blunt trauma to the body. Reiki is performed without touching the recipient. ",
+      "candidate_answer": "Yes \u2014 Would somebody leave reiki with bruises.",
+      "ground_truth": "No. Supporting evidence: Bruises are caused by blunt trauma to the body. Reiki is performed without touching the recipient. ",
+      "source_id": "13f14adc86f66c7d620a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are the events of Star Trek: The Next Generation in the history of the world?\"\n\nSupporting facts: The history of the world includes factual events. Star Trek: TNG is a fictional television show. ",
+      "candidate_answer": "Yes \u2014 Are the events of Star Trek: The Next Generation in the history of the world.",
+      "ground_truth": "No. Supporting evidence: The history of the world includes factual events. Star Trek: TNG is a fictional television show. ",
+      "source_id": "a1db94948b252250102b"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was hippie culture encouraged by the government in the Soviet Union?\"\n\nSupporting facts: Long hair was associated with the subcultures and youth movements that arose in the Western world during the mid-1960s, such as Hippies.  M\u00e1ni\u010dky) is a Czech term used for young people with long hair, typically men, in Czechoslovakia through the 1960s and 1970s. From the mid-1960s, \"m\u00e1ni\u010dky\" became a target of continuous interest of the state security apparatus.",
+      "candidate_answer": "Yes \u2014 Was hippie culture encouraged by the government in the Soviet Union.",
+      "ground_truth": "No. Supporting evidence: Long hair was associated with the subcultures and youth movements that arose in the Western world during the mid-1960s, such as Hippies.  M\u00e1ni\u010dky) is a Czech term used for young people with long hair, typically men, in Czechoslovakia through the 1960s and 1970s. From the mid-1960s, \"m\u00e1ni\u010dky\" became a target of continuous interest of the state security apparatus.",
+      "source_id": "ac75c6a745713c08508a"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Marco Polo travel with Christopher Columbus?\"\n\nSupporting facts: Marco Polo died in 1324. Christopher Columbus was born in 1451.",
+      "candidate_answer": "Yes \u2014 Did Marco Polo travel with Christopher Columbus.",
+      "ground_truth": "No. Supporting evidence: Marco Polo died in 1324. Christopher Columbus was born in 1451.",
+      "source_id": "036a0cce807566449c9f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is watermelon safe for people with a tricarboxylic acid allergy?\"\n\nSupporting facts: Tricarboxylic acid as an acid that manifests itself in fruits as citric acid. Citric acid can be found in citrus fruits such as oranges and lemon. Watermelon is not a citrus fruit.",
+      "candidate_answer": "Yes \u2014 Is watermelon safe for people with a tricarboxylic acid allergy.",
+      "ground_truth": "Yes. Supporting evidence: Tricarboxylic acid as an acid that manifests itself in fruits as citric acid. Citric acid can be found in citrus fruits such as oranges and lemon. Watermelon is not a citrus fruit.",
+      "source_id": "27b84ef72c557aa8fc14"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Benito Mussolini hypothetically play well in the NBA?\"\n\nSupporting facts: Height is an important factor in playing basketball at a high level. The average NBA player is 6 feet 7 inches tall. Benito Mussolini was 5 feet 6.5 inches tall.",
+      "candidate_answer": "Yes \u2014 Would Benito Mussolini hypothetically play well in the NBA.",
+      "ground_truth": "No. Supporting evidence: Height is an important factor in playing basketball at a high level. The average NBA player is 6 feet 7 inches tall. Benito Mussolini was 5 feet 6.5 inches tall.",
+      "source_id": "efffc81b286925c40b89"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can the US branch of government that has power over the military also have the power to veto?\"\n\nSupporting facts: The US President is the commander in chief of the US military. The executive branch of the USA includes the President. The President has power to veto.",
+      "candidate_answer": "Yes \u2014 Can the US branch of government that has power over the military also have the power to veto.",
+      "ground_truth": "Yes. Supporting evidence: The US President is the commander in chief of the US military. The executive branch of the USA includes the President. The President has power to veto.",
+      "source_id": "b331cd0701aa703e188b"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"In isopropyl alcohol, is the solubility of salt low?\"\n\nSupporting facts: Isopropyl alcohol is unique in the sense that salt remains visible. When salt has high solubility, it becomes invisible.",
+      "candidate_answer": "Yes \u2014 In isopropyl alcohol, is the solubility of salt low.",
+      "ground_truth": "Yes. Supporting evidence: Isopropyl alcohol is unique in the sense that salt remains visible. When salt has high solubility, it becomes invisible.",
+      "source_id": "c921bdade889def26cf4"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Eminem perform well at the International Mathematical Olympiad?\"\n\nSupporting facts: Eminem dropped out of Lincoln High School at age 17 and disliked math and social studies. Mathematics competitions or mathematical olympiads are competitive events where participants sit a mathematics test. The content on the International Mathematical Olympiad ranges from extremely difficult algebra and pre-calculus problems to problems on branches of mathematics not conventionally covered at school and often not at university level either.",
+      "candidate_answer": "Yes \u2014 Would Eminem perform well at the International Mathematical Olympiad.",
+      "ground_truth": "No. Supporting evidence: Eminem dropped out of Lincoln High School at age 17 and disliked math and social studies. Mathematics competitions or mathematical olympiads are competitive events where participants sit a mathematics test. The content on the International Mathematical Olympiad ranges from extremely difficult algebra and pre-calculus problems to problems on branches of mathematics not conventionally covered at school and often not at university level either.",
+      "source_id": "f815aaa22d608f1dcb84"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Jackson Pollock straight edge?\"\n\nSupporting facts: Jackson Pollock was a famous painter. Straight Edge is a punk inspired lifestyle who's adherents abstain from alcohol and drugs. Jackson Pollock was an alcoholic. Jackson Pollock died in a car crash while driving under the influence of alcohol.",
+      "candidate_answer": "Yes \u2014 Was Jackson Pollock straight edge.",
+      "ground_truth": "No. Supporting evidence: Jackson Pollock was a famous painter. Straight Edge is a punk inspired lifestyle who's adherents abstain from alcohol and drugs. Jackson Pollock was an alcoholic. Jackson Pollock died in a car crash while driving under the influence of alcohol.",
+      "source_id": "ee9770dcce6a42b4c97e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Great Recession the period of severest unemployment?\"\n\nSupporting facts: The Great Recession had an unemployment peak of 10%. The Great Depression saw global GDP decline by almost 30% and unemployment approach 25%. US unemployment numbers approached 15% in May 2020 due to the Coronavirus.",
+      "candidate_answer": "Yes \u2014 Was Great Recession the period of severest unemployment.",
+      "ground_truth": "No. Supporting evidence: The Great Recession had an unemployment peak of 10%. The Great Depression saw global GDP decline by almost 30% and unemployment approach 25%. US unemployment numbers approached 15% in May 2020 due to the Coronavirus.",
+      "source_id": "e5eaf0633f2fcedbcc8e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Poseidon similar to the god Vulcan?\"\n\nSupporting facts: Poseidon is the Greek god of the sea and water, and is the brother of Zeus. Neptune is the Roman god of the sea. Hephaestus is the Greek god of fire. Hephaestus's ROman equivalent is Vulcan, the Roman god of fire.",
+      "candidate_answer": "Yes \u2014 Is Poseidon similar to the god Vulcan.",
+      "ground_truth": "No. Supporting evidence: Poseidon is the Greek god of the sea and water, and is the brother of Zeus. Neptune is the Roman god of the sea. Hephaestus is the Greek god of fire. Hephaestus's ROman equivalent is Vulcan, the Roman god of fire.",
+      "source_id": "84dd002838898869cfad"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Batman (1989 film) likely to be shown on flight from NY to Kansas City?\"\n\nSupporting facts: A flight from NY to Kansas City is four and a half hours. The run time of Batman (1989 film) is two hours and six minutes. Batman (1989 film) is rated PG-13 The average age group of passengers is 18-34. Airlines have relaxed their rules for in-flight movies in last few years and even R rated movies have been shown.",
+      "candidate_answer": "Yes \u2014 Is Batman (1989 film) likely to be shown on flight from NY to Kansas City.",
+      "ground_truth": "Yes. Supporting evidence: A flight from NY to Kansas City is four and a half hours. The run time of Batman (1989 film) is two hours and six minutes. Batman (1989 film) is rated PG-13 The average age group of passengers is 18-34. Airlines have relaxed their rules for in-flight movies in last few years and even R rated movies have been shown.",
+      "source_id": "601db2d5fba830c71962"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can musicians become knights?\"\n\nSupporting facts: Elton John was knighted by the Queen of England. Tom Jones was knighted by the Queen of England. Elton John is a famous pop singer. Tom Jones is a famous musician.",
+      "candidate_answer": "Yes \u2014 Can musicians become knights.",
+      "ground_truth": "Yes. Supporting evidence: Elton John was knighted by the Queen of England. Tom Jones was knighted by the Queen of England. Elton John is a famous pop singer. Tom Jones is a famous musician.",
+      "source_id": "07b9fcd269bd1f8b0803"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Mario use mushrooms to run faster?\"\n\nSupporting facts: Mushrooms in the Mario universe are used to provide extra lives and to make Mario grow, providing him an extra hit point.  Mario is made to run faster when he wears bunny ears or uses a starman.",
+      "candidate_answer": "Yes \u2014 Does Mario use mushrooms to run faster.",
+      "ground_truth": "No. Supporting evidence: Mushrooms in the Mario universe are used to provide extra lives and to make Mario grow, providing him an extra hit point.  Mario is made to run faster when he wears bunny ears or uses a starman.",
+      "source_id": "3b38e00d8d1da26f7f02"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Will The Exorcist stimulate limbic system?\"\n\nSupporting facts: The limbic system of the brain contains regions that detect fear, control bodily functions and perceive sensory information. The Exorcist has been called one of the scariest movies of all time. The Exorcist ranked number 3 on the American Film Institute's 100 Years/100 Thrills list.",
+      "candidate_answer": "Yes \u2014 Will The Exorcist stimulate limbic system.",
+      "ground_truth": "Yes. Supporting evidence: The limbic system of the brain contains regions that detect fear, control bodily functions and perceive sensory information. The Exorcist has been called one of the scariest movies of all time. The Exorcist ranked number 3 on the American Film Institute's 100 Years/100 Thrills list.",
+      "source_id": "4464ad7e6a0b908632ac"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can a diamond float on water?\"\n\nSupporting facts: Diamonds are formed by extreme heat and pressure being applied to carbon under the earth's crust. The density of a diamond is 3.51 g/cm\u00b3. The density of water is 997 kg/m\u00b3. A diamond is more dense than water. A diamond will sink in water.",
+      "candidate_answer": "Yes \u2014 Can a diamond float on water.",
+      "ground_truth": "No. Supporting evidence: Diamonds are formed by extreme heat and pressure being applied to carbon under the earth's crust. The density of a diamond is 3.51 g/cm\u00b3. The density of water is 997 kg/m\u00b3. A diamond is more dense than water. A diamond will sink in water.",
+      "source_id": "be1c91b7d7c455b614bc"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did the Wall Street Crash of 1929 hurt the stocks of robotics companies?\"\n\nSupporting facts: The first robotics company was formed in the 1950s The crash of 1929 was a single event, not one that lasted decades",
+      "candidate_answer": "Yes \u2014 Did the Wall Street Crash of 1929 hurt the stocks of robotics companies.",
+      "ground_truth": "No. Supporting evidence: The first robotics company was formed in the 1950s The crash of 1929 was a single event, not one that lasted decades",
+      "source_id": "64fbc620641915a4a6b4"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is white light the absence of color?\"\n\nSupporting facts: White light is formed by the combination of red, green, and blue light. Instead, black is considered to be the absence of color.",
+      "candidate_answer": "Yes \u2014 Is white light the absence of color.",
+      "ground_truth": "No. Supporting evidence: White light is formed by the combination of red, green, and blue light. Instead, black is considered to be the absence of color.",
+      "source_id": "ad2f6f41742075ce5c65"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are hippos dangerous to humans?\"\n\nSupporting facts: Hippos are large and have large teeth. If threatened, they aggressively defend themselves.",
+      "candidate_answer": "Yes \u2014 Are hippos dangerous to humans.",
+      "ground_truth": "Yes. Supporting evidence: Hippos are large and have large teeth. If threatened, they aggressively defend themselves.",
+      "source_id": "b93a4174d1a7dca2ee0f"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would the current president of Ohio University hypothetically wear a jockstrap?\"\n\nSupporting facts: The current president of Ohio University is Duane Nellis. Duane Nellis is a man. A jockstrap is an undergarment for protecting the testes and penis during cycling, contact sports or other vigorous physical activity. The testes and penis are the sexual organs of men.",
+      "candidate_answer": "Yes \u2014 Would the current president of Ohio University hypothetically wear a jockstrap.",
+      "ground_truth": "Yes. Supporting evidence: The current president of Ohio University is Duane Nellis. Duane Nellis is a man. A jockstrap is an undergarment for protecting the testes and penis during cycling, contact sports or other vigorous physical activity. The testes and penis are the sexual organs of men.",
+      "source_id": "30a4396aa0743165d8d6"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do onions have a form that resembles the inside of a tree?\"\n\nSupporting facts: When bisected, an onion has rings that extend from the core to the outside. Trees are formed of a series of rings that extend from the inside to the outside",
+      "candidate_answer": "Yes \u2014 Do onions have a form that resembles the inside of a tree.",
+      "ground_truth": "Yes. Supporting evidence: When bisected, an onion has rings that extend from the core to the outside. Trees are formed of a series of rings that extend from the inside to the outside",
+      "source_id": "9883d6c816d4855035ea"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can a sesame seed grow in the human body?\"\n\nSupporting facts: Seeds need water, oxygen, and light to grow. The human digestive system releases powerful acid that dissolves food.",
+      "candidate_answer": "Yes \u2014 Can a sesame seed grow in the human body.",
+      "ground_truth": "No. Supporting evidence: Seeds need water, oxygen, and light to grow. The human digestive system releases powerful acid that dissolves food.",
+      "source_id": "150492a2590b8447707b"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Has a baby ever had a moustache?\"\n\nSupporting facts: When babies are in the womb, many have hair known as lanugo. Lanugo is unpigmented, downy hair that is sometimes found on the body of fetuses and babies. Lanugo can grow anywhere on a baby's body but is usually shed before the baby is born and is reabsorbed by the mother.",
+      "candidate_answer": "Yes \u2014 Has a baby ever had a moustache.",
+      "ground_truth": "Yes. Supporting evidence: When babies are in the womb, many have hair known as lanugo. Lanugo is unpigmented, downy hair that is sometimes found on the body of fetuses and babies. Lanugo can grow anywhere on a baby's body but is usually shed before the baby is born and is reabsorbed by the mother.",
+      "source_id": "e4a0eeb26daef5087fe9"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Will Ahura Mazda have to look down to see Abaddon's dwelling??\"\n\nSupporting facts: Abaddon is a demon that is said to dwell in a bottomless pit below the earth that is a realm of the dead. Ahura Mazda is the chief deity of Zoroastrianism. Ahura Mazda is the Supreme Being located in heaven, high above the sky.",
+      "candidate_answer": "Yes \u2014 Will Ahura Mazda have to look down to see Abaddon's dwelling.",
+      "ground_truth": "Yes. Supporting evidence: Abaddon is a demon that is said to dwell in a bottomless pit below the earth that is a realm of the dead. Ahura Mazda is the chief deity of Zoroastrianism. Ahura Mazda is the Supreme Being located in heaven, high above the sky.",
+      "source_id": "7b15ca4cc2a7bf3fe1b9"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Elizabeth I of England have seen the play Dido, Queen of Carthage ?\"\n\nSupporting facts: Elizabeth I of England lived from 1533 - 1603. Dido, Queen of Carthage is a short play written by the English playwright Christopher Marlowe.  It was probably written between 1587 and 1593.",
+      "candidate_answer": "Yes \u2014 Could Elizabeth I of England have seen the play Dido, Queen of Carthage .",
+      "ground_truth": "Yes. Supporting evidence: Elizabeth I of England lived from 1533 - 1603. Dido, Queen of Carthage is a short play written by the English playwright Christopher Marlowe.  It was probably written between 1587 and 1593.",
+      "source_id": "5c03103b5a70117cbdf0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"If you add water to rice pudding is it horchata?\"\n\nSupporting facts: Horchata is a drink made from soaking dry rice in water for hours, then pulverizing and straining the mixture and adding spices and sweetener. Rice pudding includes ingredients like eggs, and whole grains of cooked rice. ",
+      "candidate_answer": "Yes \u2014 If you add water to rice pudding is it horchata.",
+      "ground_truth": "No. Supporting evidence: Horchata is a drink made from soaking dry rice in water for hours, then pulverizing and straining the mixture and adding spices and sweetener. Rice pudding includes ingredients like eggs, and whole grains of cooked rice. ",
+      "source_id": "88b682482647a80a080d"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is latitude required to determine the coordinates of an area?\"\n\nSupporting facts: Longitude is one of the required data points needed for determining coordinates. Latitude is the other angle required to determine coordinates of an area. ",
+      "candidate_answer": "Yes \u2014 Is latitude required to determine the coordinates of an area.",
+      "ground_truth": "Yes. Supporting evidence: Longitude is one of the required data points needed for determining coordinates. Latitude is the other angle required to determine coordinates of an area. ",
+      "source_id": "d2af086597e0e03a4f57"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could largest ship from Voyages of Christopher Columbus haul Statue of Liberty?\"\n\nSupporting facts: The largest ship Christopher Columbus used was the Santa Maria. The Santa Maria has a cargo capacity of 108 tons. The Statue of Liberty weighs 225 tons.",
+      "candidate_answer": "Yes \u2014 Could largest ship from Voyages of Christopher Columbus haul Statue of Liberty.",
+      "ground_truth": "No. Supporting evidence: The largest ship Christopher Columbus used was the Santa Maria. The Santa Maria has a cargo capacity of 108 tons. The Statue of Liberty weighs 225 tons.",
+      "source_id": "fba89c686fe1c025a0ed"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are Sable's a good choice of Mustelidae to weigh down a scale?\"\n\nSupporting facts: Mustelidae is the scientific designation for animals that share similarities including polecats, sables, and ferrets. Polecats weigh between 2.2 and 3.3 pounds. Sable's weigh around 2.4 pounds. Ferrets can weigh up to 44 pounds. Sable's have sharp teeth and a painful bite and are outlawed in many states.",
+      "candidate_answer": "Yes \u2014 Are Sable's a good choice of Mustelidae to weigh down a scale.",
+      "ground_truth": "No. Supporting evidence: Mustelidae is the scientific designation for animals that share similarities including polecats, sables, and ferrets. Polecats weigh between 2.2 and 3.3 pounds. Sable's weigh around 2.4 pounds. Ferrets can weigh up to 44 pounds. Sable's have sharp teeth and a painful bite and are outlawed in many states.",
+      "source_id": "ee757afd1a9e0e96cbc7"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would LeBron James hypothetically glance upwards at Yuri Gagarin?\"\n\nSupporting facts: LeBron James is 6 feet 9 inches tall. Yuri Gagarin was 5 feet 2 inches tall. Typically shorter individuals look up at taller individuals when they are speaking as it is polite to look face to face at someone when you are speaking to them.",
+      "candidate_answer": "Yes \u2014 Would LeBron James hypothetically glance upwards at Yuri Gagarin.",
+      "ground_truth": "No. Supporting evidence: LeBron James is 6 feet 9 inches tall. Yuri Gagarin was 5 feet 2 inches tall. Typically shorter individuals look up at taller individuals when they are speaking as it is polite to look face to face at someone when you are speaking to them.",
+      "source_id": "70b2122323424f6e80c2"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do calico cat patterns cover every drain fly color variety?\"\n\nSupporting facts: Drain flies come in two color varieties, black and grey. Calico cats have a traditional color pattern that includes white, orange, and black.",
+      "candidate_answer": "Yes \u2014 Do calico cat patterns cover every drain fly color variety.",
+      "ground_truth": "No. Supporting evidence: Drain flies come in two color varieties, black and grey. Calico cats have a traditional color pattern that includes white, orange, and black.",
+      "source_id": "2206eb47fc70f106a91d"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do children send their Christmas letters to the South Pole?\"\n\nSupporting facts: Children send Christmas letters to Santa Claus. Santa Claus is fabled to live in the North Pole.",
+      "candidate_answer": "Yes \u2014 Do children send their Christmas letters to the South Pole.",
+      "ground_truth": "No. Supporting evidence: Children send Christmas letters to Santa Claus. Santa Claus is fabled to live in the North Pole.",
+      "source_id": "91da868cfe707bfa9d4e"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is the Easter Bunny popular in September?\"\n\nSupporting facts: The Easter Bunny is a symbol of the Christian holiday of Easter Easter occurs in March or April each year",
+      "candidate_answer": "Yes \u2014 Is the Easter Bunny popular in September.",
+      "ground_truth": "No. Supporting evidence: The Easter Bunny is a symbol of the Christian holiday of Easter Easter occurs in March or April each year",
+      "source_id": "b64be915de0e671e8548"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Lil Wayne's children ride in a Chevrolet Corvette ZR1 together?\"\n\nSupporting facts: Lil Wayne has four children. A Chevrolet Corvette ZR1 has 2 seats.",
+      "candidate_answer": "Yes \u2014 Could Lil Wayne's children ride in a Chevrolet Corvette ZR1 together.",
+      "ground_truth": "No. Supporting evidence: Lil Wayne has four children. A Chevrolet Corvette ZR1 has 2 seats.",
+      "source_id": "50d09b10f985b4763225"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are fresh garlic cloves as easy to eat as roasted garlic cloves?\"\n\nSupporting facts: Allicin is the component of garlic that makes it 'spicy' feeling in the mouth. When garlic is cooked, the Allicin in it is removed.",
+      "candidate_answer": "Yes \u2014 Are fresh garlic cloves as easy to eat as roasted garlic cloves.",
+      "ground_truth": "No. Supporting evidence: Allicin is the component of garlic that makes it 'spicy' feeling in the mouth. When garlic is cooked, the Allicin in it is removed.",
+      "source_id": "f9abd88f0bd83d3316f0"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Karl Marx influence the communist party of China?\"\n\nSupporting facts: Communist ideology is the foundation of communist party of China. Marx produced a political pamphlet that has since come to be commonly known as the communist manifesto. ",
+      "candidate_answer": "Yes \u2014 Did Karl Marx influence the communist party of China.",
+      "ground_truth": "Yes. Supporting evidence: Communist ideology is the foundation of communist party of China. Marx produced a political pamphlet that has since come to be commonly known as the communist manifesto. ",
+      "source_id": "29c9d972bd56437185ee"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"If he were poor, would Christopher Reeve have lived?\"\n\nSupporting facts: Christopher Reeve suffered a serious spinal cord injury that left him a quadriplegic.  Christopher Reeve required a portable ventilator after his injury. At one point, Christopher Reeve's treatment was costing $400,000 yearly.",
+      "candidate_answer": "Yes \u2014 If he were poor, would Christopher Reeve have lived.",
+      "ground_truth": "No. Supporting evidence: Christopher Reeve suffered a serious spinal cord injury that left him a quadriplegic.  Christopher Reeve required a portable ventilator after his injury. At one point, Christopher Reeve's treatment was costing $400,000 yearly.",
+      "source_id": "ba8d04adf8848e0d28a7"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would an Evander Holyfield 2020 boxing return set age record?\"\n\nSupporting facts: Evander Holyfield will turn 58 years old at the end of 2020. Steve Ward holds the world's oldest boxer title at age 59.",
+      "candidate_answer": "Yes \u2014 Would an Evander Holyfield 2020 boxing return set age record.",
+      "ground_truth": "No. Supporting evidence: Evander Holyfield will turn 58 years old at the end of 2020. Steve Ward holds the world's oldest boxer title at age 59.",
+      "source_id": "7ea958a52fc626ac5577"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Santa Claus work during summer?\"\n\nSupporting facts: Christmas is in winter. Santa works on Christmas.",
+      "candidate_answer": "Yes \u2014 Does Santa Claus work during summer.",
+      "ground_truth": "No. Supporting evidence: Christmas is in winter. Santa works on Christmas.",
+      "source_id": "7ced603c3d79a2f2739d"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Anakin Skywalker from Star Wars associated with the color black?\"\n\nSupporting facts: As a Jedi during the Clone Wars, Anakin Skywalker often wore black robes. After he was burned and transformed into the cyborg Darth Vader, he received a distinctive and famous all-black outfit including a black mask.",
+      "candidate_answer": "Yes \u2014 Is Anakin Skywalker from Star Wars associated with the color black.",
+      "ground_truth": "Yes. Supporting evidence: As a Jedi during the Clone Wars, Anakin Skywalker often wore black robes. After he was burned and transformed into the cyborg Darth Vader, he received a distinctive and famous all-black outfit including a black mask.",
+      "source_id": "811f06c3d045430a5359"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can children become lieutenants?\"\n\nSupporting facts: Lieutenant the second junior-most or in some cases the junior-most commissioned officer in the armed forces, fire services, police, and other organizations of many nations. Many gangs use military rankings to describe their internal heirarchy. Many young children are inducted into gangs with heirarchies. Children can grow up to be whatever they want to be. ",
+      "candidate_answer": "Yes \u2014 Can children become lieutenants.",
+      "ground_truth": "Yes. Supporting evidence: Lieutenant the second junior-most or in some cases the junior-most commissioned officer in the armed forces, fire services, police, and other organizations of many nations. Many gangs use military rankings to describe their internal heirarchy. Many young children are inducted into gangs with heirarchies. Children can grow up to be whatever they want to be. ",
+      "source_id": "8d06743969021bb22a3d"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is coal needed to practice parachuting?\"\n\nSupporting facts: Parachuting requires a parachute. Parachutes are made from nylon. Nylon is made from coal. ",
+      "candidate_answer": "Yes \u2014 Is coal needed to practice parachuting.",
+      "ground_truth": "Yes. Supporting evidence: Parachuting requires a parachute. Parachutes are made from nylon. Nylon is made from coal. ",
+      "source_id": "81af1391cbdbf67be3f7"
+    },
+    {
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Land of Israel in possession of an Islamic empire in 16th century?\"\n\nSupporting facts: Land of Israel was controlled by the Ottoman Empire in 16th century.  The religion of Ottoman Empire was Sunni Islam. ",
+      "candidate_answer": "Yes \u2014 Was Land of Israel in possession of an Islamic empire in 16th century.",
+      "ground_truth": "Yes. Supporting evidence: Land of Israel was controlled by the Ottoman Empire in 16th century.  The religion of Ottoman Empire was Sunni Islam. ",
+      "source_id": "7c74e1234d292f83fbba"
+    }
+  ],
+  "errors": [
+    {
+      "index": 2,
+      "source_id": "b18b7cbde476888d0059",
+      "error": "Error code: 400 - {'error': {'message': \"This model's maximum context length is 40960 tokens. However, your request has 41456 input tokens. Please reduce the length of the input messages. (parameter=input_tokens, value=41456)\", 'type': 'BadRequestError', 'param': 'input_tokens', 'code': 400}}"
+    }
+  ]
+}
