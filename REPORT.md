@@ -9,6 +9,44 @@ This report highlights a detailed outline of this project's initial question of 
 
 (System architecture, debate protocol details, model choices and justification, configuration and hyperparameters)
 
+## System Architecture:
+
+My pipeline is organized to 7 primary python files that handles one portion (in alphabetical order):
+| File | Role | 
+| ----- | ----- |
+| `config.py` | API client initialzation and hyperparameters|
+| `dataset_loader.py` | StrategyQA and ARC-Challenge dataset ingestions, sample batch runner, CLIs |
+| `judge.py` | Judge Agent - non-interactive agent that has a four section ruling for the debates |
+| `main.py` | Main debate orchestrator that runs only one question, question must be changed if wanting different topics |
+| `opponent.py` | Opponent Agent - calls API with streaming effects and returns full, thoughtful responses |
+| `prompts.py` | ALL prompt templates for all three agents with the four-version history documented within |
+| `proponent.py` | Proponent Agent - same pattern as opponent except with different prompts |
+
+The data flow outputted by `main.py` and `dataset_loader.py` are are similar in nature:
+
+1. The proponent and opponent are introduced to the problem context independently and outputs their initial stances.
+2. For `NUM_ROUNDS = 3`, the propnent agent and opponent agent debate on a said topic for 3 rounds.
+3. The judge agent gathers the full transcript of the debate and outputs a sophisticated, reflective response with a breakdown of 4 categories: chain-of-thought analysis, argument breakdowns, final verdicts, and confidence scores.
+4. An evaluation comparing the judge's ruling against the ground-truth answer.
+5. Transcripts in the format of a markdown file and a JSON file are outputted and stored in `tests/*` and `test_outputs/*` respectively.
+
+The main difference between the two files is that `main.py` is used for only one topic alone (see "Single Debate Prompt for Initial Testing" in Appendix for initial topic). On the other hand, `dataset_loader.py` gathers StrategyQA and ARC-Challenge datasets and selects 100-200 questions at random to run the debate protocols.
+
+## Debate Protocol Details:
+
+This was breifly explained in the System Architecture subsection, but this part will go deeper.
+
+### Phase 1: Initialzation
+
+For this phase, the proponent agent and opponent agent are called independently and recieve only the problem context and candidate answer. Once this happens, both agents create an initial stance. After both response, a check will be called to verify both agents are NOT in agreement. If an agreement is detected, Phase 2 is skipped entirely and the protocol is moved to Phase 3.
+
+### Phase 2: Multi-Round Debate
+### Phase 3: Judgement
+### Phase 4: Evaluation
+
+
+## Model Choices/Justification:
+## Hyperparameters:
 </details>
 
 # Experiments
@@ -301,5 +339,6 @@ if __name__ == "__main__":
 
      run_debate(problem_context, candidate_answer, ground_truth=ground_truth
 ```
+For a full summary of the prompts for the agents, please see the commented section of `prompts.py` titled "PROMPT ITERATION HISTORY" for a full details.
 
 </details>
