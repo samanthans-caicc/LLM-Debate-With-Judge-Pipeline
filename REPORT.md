@@ -85,7 +85,8 @@ Include `batch_20260313_193737/q002_b18b7cbde476888d0059.md` from the 200 sample
 
 ## System Roles:
 
-Proponent System Role:
+### Proponent System Role:
+
 ```
 PROPONENT_SYSTEM_ROLE = (
     # Role: establishes the agent as a true believer, not a neutral summarizer.
@@ -101,7 +102,8 @@ PROPONENT_SYSTEM_ROLE = (
 )
 ```
 
-Opponent System Role:
+### Opponent System Role:
+
 ```
 OPPONENT_SYSTEM_ROLE = (
     # Role: establishes a harsh critic who makes specific, named attacks — not vague ones.
@@ -120,7 +122,8 @@ OPPONENT_SYSTEM_ROLE = (
 )
 ```
 
-Judge System Role:
+### Judge System Role:
+
 ```
 JUDGE_SYSTEM_ROLE = (
     # Role: a fair, ruthless arbitrator who produces structured, parseable output.
@@ -142,7 +145,8 @@ JUDGE_SYSTEM_ROLE = (
 
 ## Proponent Prompts:
 
-Proponent Initial Prompt:
+### Proponent Initial Prompt:
+
 ```
 def proponent_initial_prompt(problem_context: str, candidate_answer: str) -> str:
     """
@@ -163,7 +167,8 @@ def proponent_initial_prompt(problem_context: str, candidate_answer: str) -> str
     )
 ```
 
-Proponent Round Prompt:
+### Proponent Round Prompt:
+
 ```
 def proponent_round_prompt(
     problem_context: str, candidate_answer: str, full_transcript: str
@@ -200,7 +205,8 @@ def proponent_round_prompt(
 
 ## Opponent Prompts:
 
-Opponent Initial Prompt:
+### Opponent Initial Prompt:
+
 ```
 def opponent_initial_prompt(problem_context: str, candidate_answer: str) -> str:
     """
@@ -221,7 +227,8 @@ def opponent_initial_prompt(problem_context: str, candidate_answer: str) -> str:
         f"Be concise and structured."
     )
 ```
-Opponent Round Prompt:
+### Opponent Round Prompt:
+
 ```
 def opponent_round_prompt(
     problem_context: str, candidate_answer: str, full_transcript: str
@@ -264,7 +271,8 @@ def opponent_round_prompt(
 
 ## Judge Prompts:
 
-Judge Prompt:
+### Judge Prompt:
+
 ```
 def judge_prompt(problem_context: str, candidate_answer: str, full_transcript: str) -> str:
     """
@@ -324,6 +332,7 @@ def judge_prompt(problem_context: str, candidate_answer: str, full_transcript: s
 ```
 
 ## Single Debate Prompt for Initial Testing:
+
 ```
 # Debate prompt one.
 if __name__ == "__main__":
