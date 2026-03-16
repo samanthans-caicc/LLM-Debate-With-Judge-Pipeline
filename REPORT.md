@@ -1,6 +1,4 @@
-Refer to https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet when writing this report.
-
-# Introduction
+# LLM Debate with Judge Pipeline
 
 This report highlights a detailed outline of this project's initial question of "Can a structured adversarial debate between two LLM agents, supervised by an LLM judge, produce more accurate and well-reasoned answers than a single LLM answering directly?" I used Claude and a little bit of ChatGPT to aid me in this experimental project.
 
@@ -11,8 +9,12 @@ This report highlights a detailed outline of this project's initial question of 
 ## System Architecture:
 
 My pipeline is organized to 7 primary python files that handles one portion (in alphabetical order):
+
+#### Table 1: Main Executable Files
 | File | Role | 
 | ----- | ----- |
+| `baseline_direct_qa.py` | Direct Q&A with CoT prompting; no debate |
+| `baseline_self_consistency.py` | Self-consistency sampling N questions with majority vote |
 | `config.py` | API client initialzation and hyperparameters|
 | `dataset_loader.py` | StrategyQA and ARC-Challenge dataset ingestions, sample batch runner, CLIs |
 | `judge.py` | Judge Agent - non-interactive agent that has a four section ruling for the debates |
@@ -63,6 +65,7 @@ Due to this project being assigned in school, different models were given to us.
 
 ## Hyperparameters:
 
+#### Table 2: Hyperparameters
 | Parameter | Value | Notes |
 | ----- | ----- | ----- |
 | `"temperature"` | 0.8 | Initially set at 0.7. Increased for argument variety and creativity. |
@@ -77,11 +80,10 @@ These hyperparameters can be viewed under `config.py`.
 # Experiments
 
 <details>
-(Experimental setup, results tables/figures for all experiments in Section 4, statistical significance tests where applicable)
-
-Timeline: Setup the agents individually, initialized them by making them debate on one question sample size with a judge (pinapple on pizza thing), boosted the debate rounds to 3, then loaded the datasets.
 
 My experimental setup came together in the sequence of the pipeline architecture required for this project.
+
+## The Initial Setup
 
 The initial setup was straightforward:
 
@@ -93,13 +95,54 @@ The initial setup was straightforward:
 > NOTE: The single-question debates can be ran via `main.py`.
 3. **Step 3 - Loading the Datasets:** Once I verified that the debates ran smoothly without any compiling error, mid-debate bugs, or debates running for too long, I coded the datasets to be loaded for the intended experiments of this project. The file in question is titled `dataset_loader.py`.
 
+#### Table 3: Data Available
+| Batch | Dataset | Sample Size | Path |
+|--------|---------|--------|---------|
+| batch_20260312_221358 | ARC-Challenge | 100 | `/LLM-Debate-With-Judge-Pipeline/tests/batch_20260312_221358` |
+| batch_20260313_193737 | StrategyQA | 200 | `/LLM-Debate-With-Judge-Pipeline/tests/batch_20260313_193737` |
 
+## The Experiment
 
-|Placeholder|Placeholder|
-|--------|---------|
-|||
-|||
-|||
+A sample of 100 questions from the ARC-Challenge dataset was selected *at random*. The random selection ensured uniform selection without replacement to construct and log the evaluation set. This was done by a pseudorandom number generator with a fixed seed to enhance reproducibility. In this case, the number randomly selected was 42, `--seed 42`.
+
+> The same methodology was used when sampling a set of 200 questions from the StrategyQA dataset. The results will be focused on the 100-question sample set.
+
+## Results and Discussions
+
+### Accuracy Results and Discussion:
+
+#### Table 4: Accuracy Results of All Methods
+| Method | Sample Size | Rounds | Correct | Total | Accuracy |
+|--------|---------|--------|---------|--------|---------|
+| Debate Pipeline | 103 | 3 | 80 | 103 | 77.7% |
+| Direct Q&A | 99 | N/A | 79 | 99 | 79.8 % |
+| Self-Consistency | 99 | N/A | 95 | 99 | 96.0% |
+
+The debate pipeline actually does worse than both the Direct Q&A abd Self-Consistency experiments at an accuracy of 77.7%. This suggests that having structured, adversarial debates did not improve answer accuracy over a single-pass LLM response. However, the accuracies are close in range with the debate pipeline and the Direct Q&A accuracy of 79.8%. This comparison is not perfectly balanced as the debate pipeline had a sample size of 103 and the Direct Q&A had a sample size of 99. This is a minor error during the sampling run of the Direct Q&A that is discussed in [Analysis](https://github.com/samanthans-caicc/LLM-Debate-With-Judge-Pipeline/edit/main/REPORT.md#analysis).
+
+On the other hand, Self-Consistency dominated both of them by a near-perfect accuracy score. It ran 14 samples per question which was an arbitrary number, but the larger the independent samples there is for voting purposes, the more reliable majority vote you get. The only downside of this number is that the compute cost; it will be higher. 
+
+The key takeaway from this is a simple debate pipeline did not outperform the simpliest baseline.
+
+### Judge Verdict Distribution (Debate Pipeline) and Discussion
+
+#### Table 5: Debate Pipeline Verdict Distribution
+| Verdict | Count | Percentage of Happening |
+|--------|---------|--------|
+| Proponent Wins | 19 | 18.4 % |
+| Opponent Wins | 84 | 81.6% | 
+| Tie | 0 | 0.0% |
+
+#### Table 6: Debate Pipeline Confidence Score Distribution
+| Score | Count | Percentage of Happening |
+|--------|---------|--------|
+| 5 - Extremely Confident | 72 | 69.9% |
+| 4 - Somewhat Confident| 31 | 30.1% | 
+| 3 - Average Confidence | 0 | 0.0% |
+| 2 - Somewhat Uncertain | 0 | 0.0% |
+| 1 - Extremely Uncertain| 0 | 0.0% |
+| Average | 4.7/5.0 | |
+
 </details>
 
 # Analysis
