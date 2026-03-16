@@ -154,7 +154,7 @@ Table 6 shows no scores were recorded with 1, 2, or 3. Every debate was scored w
 <details>
 
 ## Proponent's Success
-(Qualitative analysis of 3–5 debate transcripts (what went well, failure cases), connection to theoretical predictions from Irving et al.)
+
 > For transcript reference, please refer to [ARC-Challenge Batch Q 010](tests/batch_20260312_221358/q010_dd5a2ed28bfb890a14e5.md)
 
 This is the first case recorded where the pipeline worked as intended. The question was should Celiacs avoid eating spaghetti. The ground truth is yes since Celiac is a gluten intolerance disease, and sphagetti is milled from wheat which is gluten. The proponent was projected to win from the intial stances alone. The opponent had to argue against the candidate answer, which was also the ground truth. The opponent knew this, too, and even used the same logic as the supporting facts. The opponent had to spiral out of its way to find a weakness in the argument given the length of its original position. Overall, the CoT scaffolding from both sides focused and even prompted the opponent to form an opposing argument toward the candidate answer.
@@ -183,6 +183,8 @@ There is also a minor error in the evaluation phase worth noting. While the judg
 
 There is one error I'd like to point out: an inefficient number of tokens. This debate starts out as normal where both the proponent and opponent form their initial stances. The question is whether Bernie Sandars could visit the Metropolitan Museum 20 times with $200. This is a math question, so the answer is a straightforward "No" in the context of each ticket being $17. Despite this, the candidate answer is a "Yes." Given the proponent is always asked to argue in favor of the candidate answer, the proponent fails to do so at the very beginning of Round 1 by arguing against it. This causes the opponent *and* proponent to circular reason. The opponent reaches the maximum token limit mid-debate and crashes because of this.
 </details>
+
+The findings from this section and [Experiments](#experiments) suggest that the conditions required for AI debates to function theorized by Irving et al. were not met in this implemendation of 100 ARC-Challenge questions.
 
 # Prompt Engineering
 
