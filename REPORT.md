@@ -47,7 +47,7 @@ Given no initial agreement is detected, the debate agents go through a 3-round d
 
 For the judging phase, the judge receives the transcript of the full debate, all rounds between the proponent and opponent, their initial stances, and the problem context. The judge then outputs its response in four categories:
 1. A chain-of-thought analysis of both the proponent and opponent's arguments,
-2. Strongest and weakest arguments of both debators and justification,
+2. Strongest and weakest arguments of both debaters and justification,
 3. A final verdict dictating a debate winner,
 4. A 1-5 scale confidence score of the winner
 
@@ -106,24 +106,15 @@ My prompt engineering development was created in syncronization with the phases 
 2. I assigned them roles to role-play.
 3. I did thorough prompt engineering for per-round debates.
 
-Initially, I created the proponent, opponent, and judge agents without any prompts embedded. I introduced a very general, yet controversial, debate question that even divides the internet: the question of whether or not pineapple go on top of pizza. 
+Initially, I created the proponent, opponent, and judge agents without any prompts embedded. I introduced a very general, yet controversial, debate question that even divides the internet: the question of whether or not pineapple go on top of pizza. To make the agents more "human" I assigned all agents to have basic arrogant, snarky attitudes towards each other. Even the judge had a thing or two to say during its evaluation of the debate and the debate agents.
 
-To make the agents more "human" I assigned all agents to have basic arrogant, snarky attitudes towards each other. Even the judge had a thing or two to say during its evaluation of the debate and the debate agents.
+> NOTE: The pineapple on pizza tests were conducted *before* `prompts.py` existed. 
 
-> Up to this point, this was for initial testing of the debates themselves to see how they went.
-
-Once all the roles were confirmed and the debate transcripts saved the way I wanted them to (see: `tests/* .md`), that's when I gave all the agents more sophisticated prompts and roles BEFORE running the batch tests (see: `tests/batch_*/*`).
+Once all the roles were confirmed and the debate transcripts saved the way I wanted them to (see: `tests/* .md`), that's when I gave all the agents more "sophisticated" prompts and roles BEFORE running the batch tests (see: `tests/batch_*/*`). 
 
 > NOTE: prompts of system roles, initial and round prompts, and judge prompts can be viewed in the Appendix or `prompts.py`.
 
-In the `prompt.py` file itself, I describe the iteration process in the terms of "v#," where # is a number greater than 0. Each v# represents is a key iteration of prompts. A quick summary of this is in the table below:
-
-| v# | Purpose |
-| ----- | ----- |
-| v1 | Initial statements/drafts |
-| v2 | Persona additions and basic structures |
-| v3 | Added CoT scaffolding and section labels |
-| v4 | Full transcript context and tightened CoT Q's |
+In the `prompt.py` file itself, I describe the iteration process in the terms of "v#," where # is a number greater than 0. Each v# represents is a key iteration of prompts. 
 
 The full commented describing the design decisions is below. It is also included inside `prompts.py`.
 
@@ -169,6 +160,7 @@ The full commented describing the design decisions is below. It is also included
 # Lesson: Context design (what you feed the model) matters as much as instruction
 #         design. Rubric labels remove ambiguity from scalar outputs.
 ```
+Overall, the most significant yet impactful change was the chain-of-thought scaffolding that was introduced in v3. Instead of immediately arguing back, each debater is first forced to answer three questions *before* arguing back: identifying opponents' strongest points, self-contradictory checks, and introducing new arguments that were not made in the initial standpoint. This outputs targeted reasoning first before any claim, opting for a professional debate.
 
 </details>
 
