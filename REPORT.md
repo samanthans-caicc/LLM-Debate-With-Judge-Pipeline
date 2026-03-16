@@ -80,6 +80,8 @@ These hyperparameters can be viewed under `config.py`.
 (Experimental setup, results tables/figures for all experiments in Section 4, statistical significance tests where applicable)
 
 Timeline: Setup the agents individually, initialized them by making them debate on one question sample size with a judge (pinapple on pizza thing), boosted the debate rounds to 3, then loaded the datasets.
+
+
 |Placeholder|Placeholder|
 |--------|---------|
 |||
@@ -108,7 +110,7 @@ My prompt engineering development was created in syncronization with the phases 
 
 Initially, I created the proponent, opponent, and judge agents without any prompts embedded. I introduced a very general, yet controversial, debate question that even divides the internet: the question of whether or not pineapple go on top of pizza. To make the agents more "human" I assigned all agents to have basic arrogant, snarky attitudes towards each other. Even the judge had a thing or two to say during its evaluation of the debate and the debate agents.
 
-> NOTE: The pineapple on pizza tests were conducted *before* `prompts.py` existed. 
+> NOTE: The pineapple on pizza tests were conducted *before* `prompts.py` existed. It is essentially what v1 looked like in practice; the prompts had little structure and persona.
 
 Once all the roles were confirmed and the debate transcripts saved the way I wanted them to (see: `tests/* .md`), that's when I gave all the agents more "sophisticated" prompts and roles BEFORE running the batch tests (see: `tests/batch_*/*`). 
 
