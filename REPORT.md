@@ -133,6 +133,8 @@ The key takeaway from this is a simple debate pipeline did not outperform the si
 | Opponent Wins | 84 | 81.6% | 
 | Tie | 0 | 0.0% |
 
+Table 5 shows that the opponent wins 81.6% of the debates in the debate pipeline. It is worth noting that ARC-Challenge candidate answers are always intentionally wrong or implausible. The opponent always argues *against* the candidate answer, so the opponent winning the majority of the debates is expected. One could even say that this is good on the judge agent's part since it effectively evaluates the transcripts in full. The small percentage of the proponent winning the debates at 18.4% are cases that the candidate answer was correct and the proponent was able to defend it. So, again, it is a good job on the judge agent's part. No ties were recorded, which makes sense due to the judge genuinely finding all debates to be ambiguous. This is settled by the judge's 4-phase evaluations. 
+
 #### Table 6: Debate Pipeline Confidence Score Distribution
 | Score | Count | Percentage of Happening |
 |--------|---------|--------|
@@ -142,6 +144,8 @@ The key takeaway from this is a simple debate pipeline did not outperform the si
 | 2 - Somewhat Uncertain | 0 | 0.0% |
 | 1 - Extremely Uncertain| 0 | 0.0% |
 | Average | 4.7/5.0 | |
+
+Table 6 shows no scores were recorded with 1, 2, or 3. Every debate was scored with a 4 or a 5 with the 5 being the majority across all 103 samples. This signals **overconfidence bias**: even in close debates, the judge still analyzes one side to be extremely confident or somewhat confident. This suggests that the judge's confidence scores may not be a reliable measure of debate *quality* and the idea that the model has tendencies to be decisive rather than calibrated. The judge may lack a reference point of what "average" (evenly-matched per se) or "uncertainty" debates look like. This *could* be a direct result of the prompt engineering for each agent seen in [Appendix](https://github.com/samanthans-caicc/LLM-Debate-With-Judge-Pipeline/edit/main/REPORT.md#appendix)
 
 </details>
 
