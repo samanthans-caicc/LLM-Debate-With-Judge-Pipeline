@@ -118,7 +118,7 @@ A sample of 100 questions from the ARC-Challenge dataset was selected *at random
 | Direct Q&A | 99 | N/A | 79 | 99 | 79.8 % |
 | Self-Consistency | 99 | N/A | 95 | 99 | 96.0% |
 
-The debate pipeline actually does worse than both the Direct Q&A abd Self-Consistency experiments at an accuracy of 77.7%. This suggests that having structured, adversarial debates did not improve answer accuracy over a single-pass LLM response. However, the accuracies are close in range with the debate pipeline and the Direct Q&A accuracy of 79.8%. This comparison is not perfectly balanced as the debate pipeline had a sample size of 103 and the Direct Q&A had a sample size of 99. This is a minor error during the sampling run of the Direct Q&A that is discussed in [Analysis](https://github.com/samanthans-caicc/LLM-Debate-With-Judge-Pipeline/edit/main/REPORT.md#analysis).
+The debate pipeline actually does worse than both the Direct Q&A abd Self-Consistency experiments at an accuracy of 77.7%. This suggests that having structured, adversarial debates did not improve answer accuracy over a single-pass LLM response. However, the accuracies are close in range with the debate pipeline and the Direct Q&A accuracy of 79.8%. This comparison is not perfectly balanced as the debate pipeline had a sample size of 103 and the Direct Q&A had a sample size of 99. This is a minor error during the sampling run of the Direct Q&A that is discussed in [Analysis](#analysis).
 
 On the other hand, Self-Consistency dominated both of them by a near-perfect accuracy score. It ran 14 samples per question which was an arbitrary number, but the larger the independent samples there is for voting purposes, the more reliable majority vote you get. The only downside of this number is that the compute cost; it will be higher. 
 
@@ -152,17 +152,23 @@ Table 6 shows no scores were recorded with 1, 2, or 3. Every debate was scored w
 # Analysis
 
 <details>
-(Qualitative analysis of 3–5 debate transcripts (what went well, failure cases), connection to theoretical predictions from Irving et al.)
 
+## Proponent's Success
+(Qualitative analysis of 3–5 debate transcripts (what went well, failure cases), connection to theoretical predictions from Irving et al.)
+## Opponent's Success
+
+## Failure Cases
 Include `batch_20260313_193737/q002_b18b7cbde476888d0059.md` from the 200 sample size due to agent literally having a stroke as a failure case. (It had to cut off due to token size being inefficient.) 
 
+### The Inefficient Token Failure
+There is one error I'd like to point out.
 </details>
 
 # Prompt Engineering
 
 <details>
 
-My prompt engineering development was created in syncronization with the phases of the pipline architecture explained in [Experiments](https://github.com/samanthans-caicc/LLM-Debate-With-Judge-Pipeline/edit/main/REPORT.md#experiments). It can be summarized into three distinct, simple steps:
+My prompt engineering development was created in syncronization with the phases of the pipline architecture explained in [Experiments](#experiments). It can be summarized into three distinct, simple steps:
 
 1. I created the agents themselves
 2. I assigned them roles to role-play.
