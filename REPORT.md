@@ -145,7 +145,7 @@ Table 5 shows that the opponent wins 81.6% of the debates in the debate pipeline
 | 1 - Extremely Uncertain| 0 | 0.0% |
 | Average | 4.7/5.0 | |
 
-Table 6 shows no scores were recorded with 1, 2, or 3. Every debate was scored with a 4 or a 5 with the 5 being the majority across all 103 samples. This signals **overconfidence bias**: even in close debates, the judge still analyzes one side to be extremely confident or somewhat confident. This suggests that the judge's confidence scores may not be a reliable measure of debate *quality* and the idea that the model has tendencies to be decisive rather than calibrated. The judge may lack a reference point of what "average" (evenly-matched per se) or "uncertainty" debates look like. This *could* be a direct result of the prompt engineering for each agent seen in [Appendix](https://github.com/samanthans-caicc/LLM-Debate-With-Judge-Pipeline/edit/main/REPORT.md#appendix)
+Table 6 shows no scores were recorded with 1, 2, or 3. Every debate was scored with a 4 or a 5 with the 5 being the majority across all 103 samples. This signals **overconfidence bias**: even in close debates, the judge still analyzes one side to be extremely confident or somewhat confident. This suggests that the judge's confidence scores may not be a reliable measure of debate *quality* and the idea that the model has tendencies to be decisive rather than calibrated. The judge may lack a reference point of what "average" (evenly-matched per se) or "uncertainty" debates look like. This *could* be a direct result of the prompt engineering for each agent seen in [Appendix](#appendix)
 
 </details>
 
