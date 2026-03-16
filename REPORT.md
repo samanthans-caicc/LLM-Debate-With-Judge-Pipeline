@@ -110,7 +110,7 @@ To make the agents more "human" I assigned all agents to have basic arrogant, sn
 
 > Up to this point, this was for initial testing of the debates themselves to see how they went.
 
-Once all the roles were confirmed and the debate transcripts saved the way I wanted them to (see: `tests/* .md`), that's when I gave all the agents more sophisticated prompts and roles BEFORE running the batches (`tests/batch_*`).
+Once all the roles were confirmed and the debate transcripts saved the way I wanted them to (see: `tests/* .md`), that's when I gave all the agents more sophisticated prompts and roles BEFORE running the batches (`tests/batch_*/*`).
 
 > NOTE: prompts of system roles, initial and round prompts, and judge prompts can be viewed in the Appendix or `prompts.py`.
 
