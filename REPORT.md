@@ -123,6 +123,50 @@ In the `prompt.py` file itself, I describe the iteration process in the terms of
 | v3 | Added CoT scaffolding and section labels |
 | v4 | Full transcript context and tightened CoT Q's |
 
+The full commented describing the design decisions is below. It is also included inside `prompts.py`.
+
+```
+# prompts.py — Centralized prompt definitions for all agents in the debate pipeline.
+#
+# PROMPT ITERATION HISTORY
+# ========================
+# Prompts in this file went through four rounds of deliberate iteration.
+# Each iteration is documented below to show what changed and why.
+#
+# --- v1 (initial draft) ---
+# Problem: Generic "argue for/against" instructions with no persona or structure.
+# Debaters produced short, bland paragraphs. Judge gave one-line verdicts.
+# Lesson: LLMs need a clear identity and explicit output structure to perform well.
+#
+# --- v2 (add personas + basic structure) ---
+# Change: Added character descriptions (confident proponent, ruthless opponent,
+#         dramatic judge).
+# Result: Personality improved, but reasoning was shallow and reactive only to the
+#         most recent message rather than the full debate arc. The judge roasted
+#         but did not analyze.
+# Lesson: Persona helps tone; it does not substitute for reasoning instructions.
+#
+# --- v3 (add CoT scaffolding + section labels) ---
+# Change: Inserted explicit think-before-you-argue steps for debaters. Gave the
+#         judge four labeled sections to fill. Added "name the fallacy" requirement
+#         to the opponent to prevent vague attacks.
+# Result: Arguments became more targeted and rebuttal-focused. Judge output became
+#         structured and usable as data. However, debaters still only saw their
+#         opponent's side, missing context from their own prior rounds.
+# Lesson: CoT scaffolding significantly improves argument quality and output
+#         parseability. Structured output labels are essential for evaluation.
+#
+# --- v4 (full transcript context + tightened CoT questions) ---
+# Change: Switched context from per-side history to a full interleaved transcript
+#         so both debaters see the complete debate arc. Sharpened CoT questions to
+#         force concrete identification of the opponent's most vulnerable claim each
+#         round. Added rubric labels to the judge's confidence score scale.
+# Result: Debaters now build coherently across rounds instead of just reacting to
+#         the last exchange. Critiques are surgical. Judge output maps cleanly to
+#         evaluation fields. Confidence scores are consistent across runs.
+# Lesson: Context design (what you feed the model) matters as much as instruction
+#         design. Rubric labels remove ambiguity from scalar outputs.
+```
 
 </details>
 
