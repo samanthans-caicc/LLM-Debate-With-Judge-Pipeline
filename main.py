@@ -11,6 +11,16 @@ from opponent import opponent_agent, opponent_initial_position
 from judge import judge_agent
 
 
+def _extract_yes_no(text: str) -> bool:
+    """
+    Extract YES/NO from a model response that may contain <think>...</think> blocks.
+    Strips thinking blocks and checks the remaining text for a leading YES.
+    """
+    import re
+    cleaned = re.sub(r"<think>.*?</think>", "", text, flags=re.DOTALL).strip()
+    return cleaned.upper().startswith("YES")
+
+
 def present_question(problem_context, candidate_answer):
     return (
         f"Problem: {problem_context}\n\n"
@@ -45,8 +55,8 @@ def check_agreement(prop_response, opp_response):
         messages=[{"role": "user", "content": prompt}],
         stream=False,
     )
-    answer = response.choices[0].message.content.strip().upper()
-    return answer.startswith("YES")
+    answer = response.choices[0].message.content.strip()
+    return _extract_yes_no(answer)
 
 
 def evaluate_verdict(judge_response, candidate_answer, ground_truth):
@@ -70,7 +80,7 @@ def evaluate_verdict(judge_response, candidate_answer, ground_truth):
         stream=False,
     )
     explanation = response.choices[0].message.content.strip()
-    matches = explanation.upper().startswith("YES")
+    matches = _extract_yes_no(explanation)
     return {"verdict_matches_ground_truth": matches, "explanation": explanation}
 
 

@@ -1,0 +1,1127 @@
+{
+  "baseline": "self_consistency",
+  "model": "Qwen/Qwen3-8B",
+  "n_samples": 14,
+  "hyperparameters": {
+    "temperature": 0.8,
+    "max_tokens": 2049,
+    "top_p": 0.9
+  },
+  "timestamp": "2026-03-15T22:40:19.812468",
+  "n": 99,
+  "correct": 95,
+  "accuracy": 0.9595959595959596,
+  "results": [
+    {
+      "source_id": "69f1599823635bfc075b",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can food be cooked in the cosmic microwave background?\"\n\nSupporting facts: The cosmic microwave background is faint electromagnetic radiation in space that is a remnant of the Big Bang. Food can be cooked in a microwave oven, but not in the remnants of space radiation.",
+      "candidate_answer": "Yes \u2014 Can food be cooked in the cosmic microwave background.",
+      "ground_truth": "No. Supporting evidence: The cosmic microwave background is faint electromagnetic radiation in space that is a remnant of the Big Bang. Food can be cooked in a microwave oven, but not in the remnants of space radiation.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "20814715f495fc0e3dca",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did number of Imams Reza Shah believed in exceed number of Jesus's disciples?\"\n\nSupporting facts: Reza Shah, the founder of the Imperial state of Iran, was a Twelver Shia Muslim. Twelver Shia Muslims believe that there are 12 Imams. Jesus is typically represented as having 12 disciples.",
+      "candidate_answer": "Yes \u2014 Did number of Imams Reza Shah believed in exceed number of Jesus's disciples.",
+      "ground_truth": "No. Supporting evidence: Reza Shah, the founder of the Imperial state of Iran, was a Twelver Shia Muslim. Twelver Shia Muslims believe that there are 12 Imams. Jesus is typically represented as having 12 disciples.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "d723358c3932de9ce765",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do German Shepherds worry about the Abitur?\"\n\nSupporting facts: The Abitur is a qualification granted by university-preparatory schools in Germany, Lithuania, and Estonia. The Abitur is conferred on students who pass their final exams at the end of their secondary education. Students that attend university-preparatory schools are humans. German Shepherds are not humans.",
+      "candidate_answer": "Yes \u2014 Do German Shepherds worry about the Abitur.",
+      "ground_truth": "No. Supporting evidence: The Abitur is a qualification granted by university-preparatory schools in Germany, Lithuania, and Estonia. The Abitur is conferred on students who pass their final exams at the end of their secondary education. Students that attend university-preparatory schools are humans. German Shepherds are not humans.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "cf57e005787dd2d5f90c",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did J. D. Salinger ever ask his father for a quincea\u00f1era?\"\n\nSupporting facts: A quincea\u00f1era is celebration of a girl's 15th birthday. J. D. Salinger was male. A quincea\u00f1era is a Hispanic tradition. J. D. Salinger was Jewish.",
+      "candidate_answer": "Yes \u2014 Did J. D. Salinger ever ask his father for a quincea\u00f1era.",
+      "ground_truth": "No. Supporting evidence: A quincea\u00f1era is celebration of a girl's 15th birthday. J. D. Salinger was male. A quincea\u00f1era is a Hispanic tradition. J. D. Salinger was Jewish.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "01254b50648f4fb08b51",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could two newborn American Black Bear cubs fit on a king size bed?\"\n\nSupporting facts: The average size of an American Black Bear cub is only 8 inches at birth. King size beds are 76\"x80\" in size.",
+      "candidate_answer": "Yes \u2014 Could two newborn American Black Bear cubs fit on a king size bed.",
+      "ground_truth": "Yes. Supporting evidence: The average size of an American Black Bear cub is only 8 inches at birth. King size beds are 76\"x80\" in size.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "3ebb62af96f836d2d4d6",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do movies always show nerds as the losers?\"\n\nSupporting facts: Superbad features two main characters that are nerds on a quest for love, and ends with them being victorious. The Social Network is a film about a University Nerd who took his website global and became one of the most powerful people in the world.",
+      "candidate_answer": "Yes \u2014 Do movies always show nerds as the losers.",
+      "ground_truth": "No. Supporting evidence: Superbad features two main characters that are nerds on a quest for love, and ends with them being victorious. The Social Network is a film about a University Nerd who took his website global and became one of the most powerful people in the world.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 11,
+        "CORRECT": 3
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "44c59a3ac10f2921a009",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Rick and Morty considered an anime?\"\n\nSupporting facts: Anime is a genre of animation that is hand drawn and is of Japanese origin. Rick and Morty is an American animated show.",
+      "candidate_answer": "Yes \u2014 Is Rick and Morty considered an anime.",
+      "ground_truth": "No. Supporting evidence: Anime is a genre of animation that is hand drawn and is of Japanese origin. Rick and Morty is an American animated show.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "c7a1cb4992a5eafa99ec",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a Bengal cat be afraid of catching a fish?\"\n\nSupporting facts: Fish live in water.  Many Bengal owners say that their Bengal naturally retrieves items. Bengal cats often enjoy playing in water.",
+      "candidate_answer": "Yes \u2014 Would a Bengal cat be afraid of catching a fish.",
+      "ground_truth": "No. Supporting evidence: Fish live in water.  Many Bengal owners say that their Bengal naturally retrieves items. Bengal cats often enjoy playing in water.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "CORRECT": 5,
+        "INCORRECT": 9
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "dd5a2ed28bfb890a14e5",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Should a Celiac sufferer avoid spaghetti?\"\n\nSupporting facts: Celiac is a disease in which the body cannot process gluten. Gluten is a protein found in wheat. Spaghetti is made with milled wheat and water.",
+      "candidate_answer": "Yes \u2014 Should a Celiac sufferer avoid spaghetti.",
+      "ground_truth": "Yes. Supporting evidence: Celiac is a disease in which the body cannot process gluten. Gluten is a protein found in wheat. Spaghetti is made with milled wheat and water.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "ff2f4c5a037ca826fe2a",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Downton Abbey finale viewership defeat every Kazakhstan citizen in tug of war?\"\n\nSupporting facts: Downton Abbey's finale had a total of 9.6 million viewers. Kazakhstan has 18.7 million citizens as of 2020.",
+      "candidate_answer": "Yes \u2014 Would Downton Abbey finale viewership defeat every Kazakhstan citizen in tug of war.",
+      "ground_truth": "No. Supporting evidence: Downton Abbey's finale had a total of 9.6 million viewers. Kazakhstan has 18.7 million citizens as of 2020.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "45cccf7bbcd884bc0af0",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did the band Led Zeppelin own a prime number of gilded gramophones?\"\n\nSupporting facts: 5 is a prime number A Grammy Award trophy is a gilded gramophone Led Zeppelin won 5 Grammy Awards",
+      "candidate_answer": "Yes \u2014 Did the band Led Zeppelin own a prime number of gilded gramophones.",
+      "ground_truth": "Yes. Supporting evidence: 5 is a prime number A Grammy Award trophy is a gilded gramophone Led Zeppelin won 5 Grammy Awards",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "715336c5f99281337469",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Amazon involved in the lunar landing?\"\n\nSupporting facts: The lunar landing occurred in 1969. Amazon was founded in 1994.",
+      "candidate_answer": "Yes \u2014 Was Amazon involved in the lunar landing.",
+      "ground_truth": "No. Supporting evidence: The lunar landing occurred in 1969. Amazon was founded in 1994.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "73cbfb23a5cf28915b4e",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is it comfortable to wear sandals outside Esperanza Base?\"\n\nSupporting facts: Sandals are a type of footwear that leave parts of the foot exposed Esperanza Base is located in Antarctica Average temperatures in Antarctica range from -10.5C to 1.4C",
+      "candidate_answer": "Yes \u2014 Is it comfortable to wear sandals outside Esperanza Base.",
+      "ground_truth": "No. Supporting evidence: Sandals are a type of footwear that leave parts of the foot exposed Esperanza Base is located in Antarctica Average temperatures in Antarctica range from -10.5C to 1.4C",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "95bd44fab517139182f2",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Has Alan Greenspan lived through at least a baker's dozen of president's?\"\n\nSupporting facts: A baker's dozen refers to the number 13. Alan Greenspan was born in 1926 and turned 94 years old in March of 2020. There have been 16 different president's from 1926-2020.",
+      "candidate_answer": "Yes \u2014 Has Alan Greenspan lived through at least a baker's dozen of president's.",
+      "ground_truth": "Yes. Supporting evidence: A baker's dozen refers to the number 13. Alan Greenspan was born in 1926 and turned 94 years old in March of 2020. There have been 16 different president's from 1926-2020.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "fab08cce89ad00ba8339",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are multiple Christmas Carol's named after Saints?\"\n\nSupporting facts: The Christmas Carol Good King Wenceslas is based on the Bohemian king Wenceslaus I. Wenceslaus I was named a Saint in the Catholic Church and has a feast day of September 28. Jolly Old Saint Nicholas is a Christmas Carol named after an early Christian bishop who became a Saint.",
+      "candidate_answer": "Yes \u2014 Are multiple Christmas Carol's named after Saints.",
+      "ground_truth": "Yes. Supporting evidence: The Christmas Carol Good King Wenceslas is based on the Bohemian king Wenceslaus I. Wenceslaus I was named a Saint in the Catholic Church and has a feast day of September 28. Jolly Old Saint Nicholas is a Christmas Carol named after an early Christian bishop who became a Saint.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "2930044a09f13c95fb91",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is a paraplegic suitable for conducting an orchestra?\"\n\nSupporting facts: Musical conductors use their hands to wave a baton and guide the orchestra. Paraplegics are people that are paralyzed from the waist down. Paraplegics are able to play sports that involve their upper body, such as basketball.",
+      "candidate_answer": "Yes \u2014 Is a paraplegic suitable for conducting an orchestra.",
+      "ground_truth": "Yes. Supporting evidence: Musical conductors use their hands to wave a baton and guide the orchestra. Paraplegics are people that are paralyzed from the waist down. Paraplegics are able to play sports that involve their upper body, such as basketball.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "b4c61fdd96959a52f996",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would the tunnels at CERN fit onto the High Speed 1 rails?\"\n\nSupporting facts: High Speed 1 (HS1), legally the Channel Tunnel Rail Link (CTRL), is a 67-mile (108 km) high-speed railway. The CERN collider is contained in a circular tunnel, with a circumference of 26.7 kilometres (16.6 mi). The circumference of a circle is the length of the enclosing boundary.",
+      "candidate_answer": "Yes \u2014 Would the tunnels at CERN fit onto the High Speed 1 rails.",
+      "ground_truth": "Yes. Supporting evidence: High Speed 1 (HS1), legally the Channel Tunnel Rail Link (CTRL), is a 67-mile (108 km) high-speed railway. The CERN collider is contained in a circular tunnel, with a circumference of 26.7 kilometres (16.6 mi). The circumference of a circle is the length of the enclosing boundary.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "55fe694e6b5e5dc9def0",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can you substitute the pins in a bowling alley lane with Dustin Hoffman's Oscars?\"\n\nSupporting facts: There are ten pins in a bowling alley lane Dustin Hoffman has won two Oscars",
+      "candidate_answer": "Yes \u2014 Can you substitute the pins in a bowling alley lane with Dustin Hoffman's Oscars.",
+      "ground_truth": "No. Supporting evidence: There are ten pins in a bowling alley lane Dustin Hoffman has won two Oscars",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 12,
+        "CORRECT": 2
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "036a0cce807566449c9f",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Marco Polo travel with Christopher Columbus?\"\n\nSupporting facts: Marco Polo died in 1324. Christopher Columbus was born in 1451.",
+      "candidate_answer": "Yes \u2014 Did Marco Polo travel with Christopher Columbus.",
+      "ground_truth": "No. Supporting evidence: Marco Polo died in 1324. Christopher Columbus was born in 1451.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "c1ecd6ec8ca3c02ed008",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Mesopotamia part of what is now China?\"\n\nSupporting facts: Mesopotamia occupies an area of land called the Fertile Crescent which is part of what is currently known as the Middle East. China is much further East, beyond the Stans and India.",
+      "candidate_answer": "Yes \u2014 Was Mesopotamia part of what is now China.",
+      "ground_truth": "No. Supporting evidence: Mesopotamia occupies an area of land called the Fertile Crescent which is part of what is currently known as the Middle East. China is much further East, beyond the Stans and India.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "9cfdec34fa9bd1ed9d3f",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did J. P. Morgan have healthy lungs?\"\n\nSupporting facts: J. P. Morgan smoked dozens of cigars per day. Smoking tobacco damages the lungs and increases the risk of lung cancer significantly.",
+      "candidate_answer": "Yes \u2014 Did J. P. Morgan have healthy lungs.",
+      "ground_truth": "No. Supporting evidence: J. P. Morgan smoked dozens of cigars per day. Smoking tobacco damages the lungs and increases the risk of lung cancer significantly.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "0aa6769cb88143b3dba1",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would the average American family find Adam Sandler's home to be too small?\"\n\nSupporting facts: The average American family has about 3 people in it. Adam Sandler's home has 14 bedrooms and 7 bathrooms.",
+      "candidate_answer": "Yes \u2014 Would the average American family find Adam Sandler's home to be too small.",
+      "ground_truth": "No. Supporting evidence: The average American family has about 3 people in it. Adam Sandler's home has 14 bedrooms and 7 bathrooms.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "0a8bb20dbdb99d68127e",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do people who smoke Djarum's like cloves?\"\n\nSupporting facts: Djarum is a brand of cigarette popular around the world. Djarum cigarettes are made with a blend of cloves and tobacco.",
+      "candidate_answer": "Yes \u2014 Do people who smoke Djarum's like cloves.",
+      "ground_truth": "Yes. Supporting evidence: Djarum is a brand of cigarette popular around the world. Djarum cigarettes are made with a blend of cloves and tobacco.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "c16870454604d281f0f1",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is dysphoria around one's pelvis treatable without surgery?\"\n\nSupporting facts: For individuals experiencing dysphoria around having a vagina, packers can relieve symptoms. For people experiencing dysphoria about having a penis, there are tucking underwear and comfort gaffs available.",
+      "candidate_answer": "Yes \u2014 Is dysphoria around one's pelvis treatable without surgery.",
+      "ground_truth": "Yes. Supporting evidence: For individuals experiencing dysphoria around having a vagina, packers can relieve symptoms. For people experiencing dysphoria about having a penis, there are tucking underwear and comfort gaffs available.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "a9d3a5f8cd6eb6b2c19a",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can Spartina Patens thrive in the Sahara Desert?\"\n\nSupporting facts: Spartina Patens is a type of cordgrass that grows in salt marshes. Spartina Patens requires a marsh-like environment to thrive. The Sahara Desert is known for being dry and very hot.",
+      "candidate_answer": "Yes \u2014 Can Spartina Patens thrive in the Sahara Desert.",
+      "ground_truth": "No. Supporting evidence: Spartina Patens is a type of cordgrass that grows in salt marshes. Spartina Patens requires a marsh-like environment to thrive. The Sahara Desert is known for being dry and very hot.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "9ca37a720a283c3d6045",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a Common warthog starve in a greenhouse?\"\n\nSupporting facts: A greenhouse is an enclosed building in which plants are grown. The Common warthog is an animal that feeds on grasses, roots, berries, and small insects. Aphids, fungus gnats, and caterpillars, are common insects found in greenhouses.",
+      "candidate_answer": "Yes \u2014 Would a Common warthog starve in a greenhouse.",
+      "ground_truth": "No. Supporting evidence: A greenhouse is an enclosed building in which plants are grown. The Common warthog is an animal that feeds on grasses, roots, berries, and small insects. Aphids, fungus gnats, and caterpillars, are common insects found in greenhouses.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "f1e48f5dc1662a84942b",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Harvey Milk ever run for governor?\"\n\nSupporting facts: In 1977 Harvey Milk was elected to the San Francisco Board of Supervisors. Less than a year later, he was assassinated before he could run for higher offices.",
+      "candidate_answer": "Yes \u2014 Did Harvey Milk ever run for governor.",
+      "ground_truth": "No. Supporting evidence: In 1977 Harvey Milk was elected to the San Francisco Board of Supervisors. Less than a year later, he was assassinated before he could run for higher offices.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "3c354ae95bfcbd8e8664",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Jesus go to school to study railroad engineering?\"\n\nSupporting facts: The steam locomotive to drive a train was invented in the 19th century. Jesus lived around 0 AD. ",
+      "candidate_answer": "Yes \u2014 Did Jesus go to school to study railroad engineering.",
+      "ground_truth": "No. Supporting evidence: The steam locomotive to drive a train was invented in the 19th century. Jesus lived around 0 AD. ",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "59542ff1d7782e4cbd89",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do Windows or Android smartphones run newer versions of Linux?\"\n\nSupporting facts: Android smartphones are based on Linux. Windows smartphones are based on the Windows operating system.",
+      "candidate_answer": "Yes \u2014 Do Windows or Android smartphones run newer versions of Linux.",
+      "ground_truth": "No. Supporting evidence: Android smartphones are based on Linux. Windows smartphones are based on the Windows operating system.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 11,
+        "INCORRECT": 3
+      },
+      "verdict_matches_ground_truth": false
+    },
+    {
+      "source_id": "ecc4a9173c24ace0215a",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is the Jurassic era a tourist destination?\"\n\nSupporting facts: The Jurassic era is a period of time in the past. Time travel does not currently exist. ",
+      "candidate_answer": "Yes \u2014 Is the Jurassic era a tourist destination.",
+      "ground_truth": "No. Supporting evidence: The Jurassic era is a period of time in the past. Time travel does not currently exist. ",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "674c5dac91798a609ec8",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Hapshetsut be considered a monarch?\"\n\nSupporting facts: A monarch is the head of a monarchy and was appointed for life. Hapshetsut was the second known female pharaoh. Pharaohs ruled for life and their wealth was even buried with them to take into the afterlife.",
+      "candidate_answer": "Yes \u2014 Would Hapshetsut be considered a monarch.",
+      "ground_truth": "Yes. Supporting evidence: A monarch is the head of a monarchy and was appointed for life. Hapshetsut was the second known female pharaoh. Pharaohs ruled for life and their wealth was even buried with them to take into the afterlife.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "4ceb5ba3fb64a5f89a59",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do most people only memorize slightly over half of their ZIP code?\"\n\nSupporting facts: ZIP codes in the US are 9 digits in length.  Most forms in the US only require and have space for the first 5 digits of a ZIP code?",
+      "candidate_answer": "Yes \u2014 Do most people only memorize slightly over half of their ZIP code.",
+      "ground_truth": "Yes. Supporting evidence: ZIP codes in the US are 9 digits in length.  Most forms in the US only require and have space for the first 5 digits of a ZIP code?",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "9711b3fc634e6f4f471d",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would World War II have been the same without Alan Turing?\"\n\nSupporting facts: During WW2, the German Military used something called the Engima device to send messages secretly.  Alan Turing broke the Enigma code, allowing German messages to be understood and intercepted.",
+      "candidate_answer": "Yes \u2014 Would World War II have been the same without Alan Turing.",
+      "ground_truth": "No. Supporting evidence: During WW2, the German Military used something called the Engima device to send messages secretly.  Alan Turing broke the Enigma code, allowing German messages to be understood and intercepted.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "506c7e618094c78b7614",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is electricity necessary to balance an account in Microsoft Excel?\"\n\nSupporting facts: Microsoft Excel is a computer program Computers require a power source",
+      "candidate_answer": "Yes \u2014 Is electricity necessary to balance an account in Microsoft Excel.",
+      "ground_truth": "Yes. Supporting evidence: Microsoft Excel is a computer program Computers require a power source",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "fedce5dbd46bf58a4e53",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Mike Tyson train to use the gogoplata?\"\n\nSupporting facts: Mike Tyson is a boxer The gogoplata is a chokehold used in mixed martial arts and various submission grappling disciplines",
+      "candidate_answer": "Yes \u2014 Did Mike Tyson train to use the gogoplata.",
+      "ground_truth": "No. Supporting evidence: Mike Tyson is a boxer The gogoplata is a chokehold used in mixed martial arts and various submission grappling disciplines",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "d2af086597e0e03a4f57",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is latitude required to determine the coordinates of an area?\"\n\nSupporting facts: Longitude is one of the required data points needed for determining coordinates. Latitude is the other angle required to determine coordinates of an area. ",
+      "candidate_answer": "Yes \u2014 Is latitude required to determine the coordinates of an area.",
+      "ground_truth": "Yes. Supporting evidence: Longitude is one of the required data points needed for determining coordinates. Latitude is the other angle required to determine coordinates of an area. ",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "2295eaf3cdbecc17ca0a",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was historical Dracula from a town in Bucharest?\"\n\nSupporting facts: Vlad III Prince of Wallachia, also called Vlad the Impaler, is believed to be the historical inspiration for Dracula. Vlad III was born in Sighi\u0219oara, Romania, which is located in the historic region of Transylvania. Bucharest is located 276 km away from Transylvania.",
+      "candidate_answer": "Yes \u2014 Was historical Dracula from a town in Bucharest.",
+      "ground_truth": "No. Supporting evidence: Vlad III Prince of Wallachia, also called Vlad the Impaler, is believed to be the historical inspiration for Dracula. Vlad III was born in Sighi\u0219oara, Romania, which is located in the historic region of Transylvania. Bucharest is located 276 km away from Transylvania.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "37f33f40f86886a334d8",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could amoebas have played a part in the Black Death?\"\n\nSupporting facts: The Black Death is a bacterial disease called bubonic plague. Yersinia pestis has been found to grow and thrive inside amoebas. Bubonic plague is caused by Yersinia pestis.",
+      "candidate_answer": "Yes \u2014 Could amoebas have played a part in the Black Death.",
+      "ground_truth": "Yes. Supporting evidence: The Black Death is a bacterial disease called bubonic plague. Yersinia pestis has been found to grow and thrive inside amoebas. Bubonic plague is caused by Yersinia pestis.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "a2a5a06a55c24bf2d408",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do women often need new shoes during their pregnancy?\"\n\nSupporting facts: Pregnancy can cause swelling in the feet and legs. For safety and comfort, one needs to get new shoes if the size of their feet change.",
+      "candidate_answer": "Yes \u2014 Do women often need new shoes during their pregnancy.",
+      "ground_truth": "Yes. Supporting evidence: Pregnancy can cause swelling in the feet and legs. For safety and comfort, one needs to get new shoes if the size of their feet change.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "bbc91b6a34ebcebd5e5b",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was the British car, the Mini, the first car manufactured?\"\n\nSupporting facts: The first car widely manufactured was the Model T. The Model T was manufactured in 1908. The Mini was made beginning in 1959.",
+      "candidate_answer": "Yes \u2014 Was the British car, the Mini, the first car manufactured.",
+      "ground_truth": "No. Supporting evidence: The first car widely manufactured was the Model T. The Model T was manufactured in 1908. The Mini was made beginning in 1959.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "449e539f14ff346b8f03",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Will bumblebees derail the United States presidential election?\"\n\nSupporting facts: The United States presidential election is held in November of each year. Bees die off during the winter months except for the queen bee. During November, bees go into their hives and hibernate.",
+      "candidate_answer": "Yes \u2014 Will bumblebees derail the United States presidential election.",
+      "ground_truth": "No. Supporting evidence: The United States presidential election is held in November of each year. Bees die off during the winter months except for the queen bee. During November, bees go into their hives and hibernate.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "381d38f377cfce5087b9",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can dementia be cured with a cast?\"\n\nSupporting facts: Dementia refers to various disorders of the brain. Casts are used to help treat broken bones. The brain does not contain any bones.",
+      "candidate_answer": "Yes \u2014 Can dementia be cured with a cast.",
+      "ground_truth": "No. Supporting evidence: Dementia refers to various disorders of the brain. Casts are used to help treat broken bones. The brain does not contain any bones.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "0d527db1bc94c695fb74",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do any Islamic dominated countries have a Starbucks?\"\n\nSupporting facts: Starbucks is a coffee shop found in numerous countries including USA, China, and the United Arab Emirates. The United Arab Emirates has a Starbucks in Dubai. Islam is the largest and the official state religion of the United Arab Emirates. Pew Research estimates state that over 76% of the citizens of the United Arab Emirates are Islamic.",
+      "candidate_answer": "Yes \u2014 Do any Islamic dominated countries have a Starbucks.",
+      "ground_truth": "Yes. Supporting evidence: Starbucks is a coffee shop found in numerous countries including USA, China, and the United Arab Emirates. The United Arab Emirates has a Starbucks in Dubai. Islam is the largest and the official state religion of the United Arab Emirates. Pew Research estimates state that over 76% of the citizens of the United Arab Emirates are Islamic.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "cc41d3b2a3f1aab33adf",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did the Social Democratic Party of Germany help Frederick II become King of Prussia?\"\n\nSupporting facts: The Social Democratic Party of Germany was founded in 1863. Frederick II was King of Prussia from 1740-1786.",
+      "candidate_answer": "Yes \u2014 Did the Social Democratic Party of Germany help Frederick II become King of Prussia.",
+      "ground_truth": "No. Supporting evidence: The Social Democratic Party of Germany was founded in 1863. Frederick II was King of Prussia from 1740-1786.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "8c0614f44911693572b5",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can you transport a primate in a backpack?\"\n\nSupporting facts: Primates include lemurs, monkeys, apes, and humans. A Capuchin is a type of monkey that are an average height of twelve inches and weighs nine pounds. A school ruler is twelve inches. One school textbook can weigh up to six pounds.",
+      "candidate_answer": "Yes \u2014 Can you transport a primate in a backpack.",
+      "ground_truth": "Yes. Supporting evidence: Primates include lemurs, monkeys, apes, and humans. A Capuchin is a type of monkey that are an average height of twelve inches and weighs nine pounds. A school ruler is twelve inches. One school textbook can weigh up to six pounds.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "d2af3c2b2eee3ce311ea",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can a carrot receive an organ transplant?\"\n\nSupporting facts: Organs are groups of tissues that perform a similar function. The whole of a carrot is a root. A root is a plant organ. You cannot transplant the entire carrot into another carrot.",
+      "candidate_answer": "Yes \u2014 Can a carrot receive an organ transplant.",
+      "ground_truth": "No. Supporting evidence: Organs are groups of tissues that perform a similar function. The whole of a carrot is a root. A root is a plant organ. You cannot transplant the entire carrot into another carrot.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "137d189866b9e69845c1",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does frost mean that it will be a snowy day?\"\n\nSupporting facts: Frost forms regularly in areas that experience freezing temperatures and morning dew. Frost isn't deposited from the sky like snow, it forms on the ground.",
+      "candidate_answer": "Yes \u2014 Does frost mean that it will be a snowy day.",
+      "ground_truth": "No. Supporting evidence: Frost forms regularly in areas that experience freezing temperatures and morning dew. Frost isn't deposited from the sky like snow, it forms on the ground.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "746b563db21efc4cfa92",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did the lead singer of Led Zepplin ever perform with Ernest Chataway?\"\n\nSupporting facts: Robert Plant is the lead singer of Led Zepplin Robert Plant was in the band The Honeydrippers Ernest Chataway was in the band The Honeydrippers",
+      "candidate_answer": "Yes \u2014 Did the lead singer of Led Zepplin ever perform with Ernest Chataway.",
+      "ground_truth": "Yes. Supporting evidence: Robert Plant is the lead singer of Led Zepplin Robert Plant was in the band The Honeydrippers Ernest Chataway was in the band The Honeydrippers",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "5f9ae2b7933da8c32505",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does butter industry survive cow extinction?\"\n\nSupporting facts: Butter is a dairy product made from milk. Cows are the predominant source of milk in the US. Goats, sheep, buffalo, and other mammals produce milk. Goat butter, made from 100% Goat's Milk, is an excellent source of Vitamin A.",
+      "candidate_answer": "Yes \u2014 Does butter industry survive cow extinction.",
+      "ground_truth": "Yes. Supporting evidence: Butter is a dairy product made from milk. Cows are the predominant source of milk in the US. Goats, sheep, buffalo, and other mammals produce milk. Goat butter, made from 100% Goat's Milk, is an excellent source of Vitamin A.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "1ab9f6651469645c0573",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do mountain goats inhabit the summit of Mount Sharp?\"\n\nSupporting facts: Mountain goats are animals Animals require oxygen in order to live Mount Sharp is located on Mars The atmosphere of Mars contains only trace amounts of oxygen",
+      "candidate_answer": "Yes \u2014 Do mountain goats inhabit the summit of Mount Sharp.",
+      "ground_truth": "No. Supporting evidence: Mountain goats are animals Animals require oxygen in order to live Mount Sharp is located on Mars The atmosphere of Mars contains only trace amounts of oxygen",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "2bc94c6dfc79d7a86fa2",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could Christopher Walken enlist in the United States Marine Corps?\"\n\nSupporting facts: Christopher Walken is 77 years old. The maximum age for first-time enlistment in the United States Marine Corps is 28.",
+      "candidate_answer": "Yes \u2014 Could Christopher Walken enlist in the United States Marine Corps.",
+      "ground_truth": "No. Supporting evidence: Christopher Walken is 77 years old. The maximum age for first-time enlistment in the United States Marine Corps is 28.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "40b7c34188d5b36bc486",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can Lamborghini's fastest model win a race against a Porsche 911?\"\n\nSupporting facts: Lamborghini's fastest model is the Lamborghini Aventador SVJ Roadster. The Lamborghini Aventador SVJ Roadster has a top speed of 217 MPH. The Porsche 911 has a top speed of 191 MPH.",
+      "candidate_answer": "Yes \u2014 Can Lamborghini's fastest model win a race against a Porsche 911.",
+      "ground_truth": "Yes. Supporting evidence: Lamborghini's fastest model is the Lamborghini Aventador SVJ Roadster. The Lamborghini Aventador SVJ Roadster has a top speed of 217 MPH. The Porsche 911 has a top speed of 191 MPH.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "2f20fd52567450e69e68",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would members of Blue Lives Matter support every element of Grand Theft Auto III?\"\n\nSupporting facts: Blue Lives Matter is a countermovement in the United States that supports police officers and law enforcement personnel. Grand Theft Auto III allows for gratuitous violence against police officers in the game.",
+      "candidate_answer": "Yes \u2014 Would members of Blue Lives Matter support every element of Grand Theft Auto III.",
+      "ground_truth": "No. Supporting evidence: Blue Lives Matter is a countermovement in the United States that supports police officers and law enforcement personnel. Grand Theft Auto III allows for gratuitous violence against police officers in the game.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "fbcda00a5524a9fda557",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Florence a Theocracy during Italian Renaissance?\"\n\nSupporting facts: The Italian Renaissance was a period of history from the 13th century to 1600. A theocracy is a type of rule in which religious leaders have power. Friar Girolamo Savonarola was the ruler of Florence, after driving out the Medici family, from November 1494 \u2013 23 May 1498.",
+      "candidate_answer": "Yes \u2014 Was Florence a Theocracy during Italian Renaissance.",
+      "ground_truth": "Yes. Supporting evidence: The Italian Renaissance was a period of history from the 13th century to 1600. A theocracy is a type of rule in which religious leaders have power. Friar Girolamo Savonarola was the ruler of Florence, after driving out the Medici family, from November 1494 \u2013 23 May 1498.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 11,
+        "CORRECT": 3
+      },
+      "verdict_matches_ground_truth": false
+    },
+    {
+      "source_id": "423d83b2533271615c06",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are amoebas safe from breast cancer?\"\n\nSupporting facts: Breast cancer is a disease that occurs in the mammary tissues of mammals. Amoebas are single cell organisms that lack mammary tissue.",
+      "candidate_answer": "Yes \u2014 Are amoebas safe from breast cancer.",
+      "ground_truth": "Yes. Supporting evidence: Breast cancer is a disease that occurs in the mammary tissues of mammals. Amoebas are single cell organisms that lack mammary tissue.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "1cd4ba0baee559bf7a0f",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do white blood cells outnumber red blood cells in the human body?\"\n\nSupporting facts: Red blood cells are about 40-50% of what makes up human blood. White blood cells make up about 1% of the blood in a human body.",
+      "candidate_answer": "Yes \u2014 Do white blood cells outnumber red blood cells in the human body.",
+      "ground_truth": "No. Supporting evidence: Red blood cells are about 40-50% of what makes up human blood. White blood cells make up about 1% of the blood in a human body.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "7447fdc904d63a6f77bf",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does the name C-SPAN refer to a form of telecommunications that utilizes outer space?\"\n\nSupporting facts: The S in C-SPAN refers to Satellite. Satellite communications require communicating with satellites that orbit the Earth in outer space.",
+      "candidate_answer": "Yes \u2014 Does the name C-SPAN refer to a form of telecommunications that utilizes outer space.",
+      "ground_truth": "Yes. Supporting evidence: The S in C-SPAN refers to Satellite. Satellite communications require communicating with satellites that orbit the Earth in outer space.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "4994ea9dbe0705df08fd",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do oak trees have leaves during winter?\"\n\nSupporting facts: Oak trees are deciduous. Deciduous trees lose their leaves during autumn, and they grow back during spring. Winter is between autumn and spring.",
+      "candidate_answer": "Yes \u2014 Do oak trees have leaves during winter.",
+      "ground_truth": "No. Supporting evidence: Oak trees are deciduous. Deciduous trees lose their leaves during autumn, and they grow back during spring. Winter is between autumn and spring.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "4464ad7e6a0b908632ac",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Will The Exorcist stimulate limbic system?\"\n\nSupporting facts: The limbic system of the brain contains regions that detect fear, control bodily functions and perceive sensory information. The Exorcist has been called one of the scariest movies of all time. The Exorcist ranked number 3 on the American Film Institute's 100 Years/100 Thrills list.",
+      "candidate_answer": "Yes \u2014 Will The Exorcist stimulate limbic system.",
+      "ground_truth": "Yes. Supporting evidence: The limbic system of the brain contains regions that detect fear, control bodily functions and perceive sensory information. The Exorcist has been called one of the scariest movies of all time. The Exorcist ranked number 3 on the American Film Institute's 100 Years/100 Thrills list.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "d354d1594bf431bf9ee8",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did the confederate states speak Old English before the Civil War?\"\n\nSupporting facts: Old English is the earliest form of English during the middle ages. Modern English replaced old English during the seventeenth century. American English was created and spoken during the formation of the first US colonies.  The civil war started in 1861, and was a war between the northern states and southern states. ",
+      "candidate_answer": "Yes \u2014 Did the confederate states speak Old English before the Civil War.",
+      "ground_truth": "No. Supporting evidence: Old English is the earliest form of English during the middle ages. Modern English replaced old English during the seventeenth century. American English was created and spoken during the formation of the first US colonies.  The civil war started in 1861, and was a war between the northern states and southern states. ",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "43f5550e1447823f8290",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is one blast from double-barreled shotgun likely to kill all squid brains?\"\n\nSupporting facts: A double-barreled shotgun fires two rounds in one single blast. Squids have three brains.",
+      "candidate_answer": "Yes \u2014 Is one blast from double-barreled shotgun likely to kill all squid brains.",
+      "ground_truth": "No. Supporting evidence: A double-barreled shotgun fires two rounds in one single blast. Squids have three brains.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 12,
+        "CORRECT": 2
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "db7ceb3da1361288eeb2",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Are there multiple Star Wars TV shows produced by Disney?\"\n\nSupporting facts: Star Wars Rebels and Star Wars Resistance were released after Disney bought ownership of Star Wars. Disney also produced the first live-action TV show set in the Star Wars galaxy, The Mandalorian. Disney produced one additional revival season of Star Wars Clone Wars which was originally produced before Disney owned Star Wars.",
+      "candidate_answer": "Yes \u2014 Are there multiple Star Wars TV shows produced by Disney.",
+      "ground_truth": "Yes. Supporting evidence: Star Wars Rebels and Star Wars Resistance were released after Disney bought ownership of Star Wars. Disney also produced the first live-action TV show set in the Star Wars galaxy, The Mandalorian. Disney produced one additional revival season of Star Wars Clone Wars which was originally produced before Disney owned Star Wars.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "fc712fb2286006222e50",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is it dark is Basel during the day in Los Angeles?\"\n\nSupporting facts: Basel is located in the CEST time zone. Los Angeles is located in the PDT time zone.",
+      "candidate_answer": "Yes \u2014 Is it dark is Basel during the day in Los Angeles.",
+      "ground_truth": "Yes. Supporting evidence: Basel is located in the CEST time zone. Los Angeles is located in the PDT time zone.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "CORRECT": 2,
+        "INCORRECT": 12
+      },
+      "verdict_matches_ground_truth": false
+    },
+    {
+      "source_id": "2484c935b239f1454f8e",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Barack Obama participate in the Reformation?\"\n\nSupporting facts: The Reformation took place in the 16th century.  Barack Obama was born in 1961.",
+      "candidate_answer": "Yes \u2014 Did Barack Obama participate in the Reformation.",
+      "ground_truth": "No. Supporting evidence: The Reformation took place in the 16th century.  Barack Obama was born in 1961.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "f43533225534420816d6",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can you house a giant squid at Soldier Field?\"\n\nSupporting facts: Soldier Field is a football stadium Football fields are 120 yards long, or 360 feet The maximum length of a giant squid is 43 feet",
+      "candidate_answer": "Yes \u2014 Can you house a giant squid at Soldier Field.",
+      "ground_truth": "Yes. Supporting evidence: Soldier Field is a football stadium Football fields are 120 yards long, or 360 feet The maximum length of a giant squid is 43 feet",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 11,
+        "INCORRECT": 3
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "3b38e00d8d1da26f7f02",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Mario use mushrooms to run faster?\"\n\nSupporting facts: Mushrooms in the Mario universe are used to provide extra lives and to make Mario grow, providing him an extra hit point.  Mario is made to run faster when he wears bunny ears or uses a starman.",
+      "candidate_answer": "Yes \u2014 Does Mario use mushrooms to run faster.",
+      "ground_truth": "No. Supporting evidence: Mushrooms in the Mario universe are used to provide extra lives and to make Mario grow, providing him an extra hit point.  Mario is made to run faster when he wears bunny ears or uses a starman.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "87acce77a8b6362f4f96",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would 2020 Toyota Supra lag behind at a Nascar rally?\"\n\nSupporting facts: The 2020 Toyota Supra has a top speed of 155 MPH. Nascar stock cars routinely exceed 200 MPH.",
+      "candidate_answer": "Yes \u2014 Would 2020 Toyota Supra lag behind at a Nascar rally.",
+      "ground_truth": "Yes. Supporting evidence: The 2020 Toyota Supra has a top speed of 155 MPH. Nascar stock cars routinely exceed 200 MPH.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "c2bbc9f09c8ac750e8bd",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would a bodybuilder enjoy wearing a cast for several weeks?\"\n\nSupporting facts: Casts encase a limb and prevent it from moving. Movement of limbs under resistance promote muscle growth. An absence of limb movement will result in decreased muscle size. The goal of bodybuilding is to increase the size of your muscles. Individuals are not happy when they are prevented from pursuing their goals.",
+      "candidate_answer": "Yes \u2014 Would a bodybuilder enjoy wearing a cast for several weeks.",
+      "ground_truth": "No. Supporting evidence: Casts encase a limb and prevent it from moving. Movement of limbs under resistance promote muscle growth. An absence of limb movement will result in decreased muscle size. The goal of bodybuilding is to increase the size of your muscles. Individuals are not happy when they are prevented from pursuing their goals.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "CORRECT": 4,
+        "INCORRECT": 10
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "3b762e848e0e43f2e97a",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Donald Duck be allowed into most grocery stores?\"\n\nSupporting facts: Donald Duck is known for not wearing any pants or shoes. Most grocery stores have a \"No shoes, No Shirt, No Service\" policy.",
+      "candidate_answer": "Yes \u2014 Would Donald Duck be allowed into most grocery stores.",
+      "ground_truth": "No. Supporting evidence: Donald Duck is known for not wearing any pants or shoes. Most grocery stores have a \"No shoes, No Shirt, No Service\" policy.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "b94f96243e515dba1dac",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Will a celibate cleric likely suffer a stoning in Somalia?\"\n\nSupporting facts: A cleric is the term for a Muslim priest. Celibate people remain chaste and do not engage in relations with others. Stoning is a penalty in Somalia used to punish adulterers. Many Islamic militants have been in control of various parts of Somalia.",
+      "candidate_answer": "Yes \u2014 Will a celibate cleric likely suffer a stoning in Somalia.",
+      "ground_truth": "No. Supporting evidence: A cleric is the term for a Muslim priest. Celibate people remain chaste and do not engage in relations with others. Stoning is a penalty in Somalia used to punish adulterers. Many Islamic militants have been in control of various parts of Somalia.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "9d981b77a8466dfe621d",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does the United States of America touch the Indian Ocean?\"\n\nSupporting facts: The United States of America is bordered by the Atlantic and Pacific Oceans. Even the westernmost point of the USA, the Hawaiian Islands, is too far east in the Pacific to be anywhere near that ocean's border with the Indian Ocean.",
+      "candidate_answer": "Yes \u2014 Does the United States of America touch the Indian Ocean.",
+      "ground_truth": "No. Supporting evidence: The United States of America is bordered by the Atlantic and Pacific Oceans. Even the westernmost point of the USA, the Hawaiian Islands, is too far east in the Pacific to be anywhere near that ocean's border with the Indian Ocean.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "67c5305550f1612a2f49",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is it hard for Rahul Dravid to order food at a restaurant in Aurangabad?\"\n\nSupporting facts: Aurangabad is located in Maharashtra. Marathi is an Indo-Aryan language spoken predominantly by around 100 million Marathi people of Maharashtra, India. Rahul Dravid is fluent in Marathi.",
+      "candidate_answer": "Yes \u2014 Is it hard for Rahul Dravid to order food at a restaurant in Aurangabad.",
+      "ground_truth": "No. Supporting evidence: Aurangabad is located in Maharashtra. Marathi is an Indo-Aryan language spoken predominantly by around 100 million Marathi people of Maharashtra, India. Rahul Dravid is fluent in Marathi.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "5416d6ace8e5bef7e467",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could a nymph tick pass through a standard hole punch?\"\n\nSupporting facts: A nymph tick is the size of a poppy seed. A poppy seed is around 1mm in size. The ISO 838 standards set a hole punch size at 6 mm.",
+      "candidate_answer": "Yes \u2014 Could a nymph tick pass through a standard hole punch.",
+      "ground_truth": "Yes. Supporting evidence: A nymph tick is the size of a poppy seed. A poppy seed is around 1mm in size. The ISO 838 standards set a hole punch size at 6 mm.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "2a9cf64b15df1b841f25",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Santa Claus hypothetically give Joffrey Baratheon presents?\"\n\nSupporting facts: Santa Claus is a figure in folklore that gives good children presents and bad children coal. Joffrey Baratheon is a character in the Game of Thrones TV series. Joffrey is a young royal that has a man's tongue cut out. Joffrey shoots his crossbow into the flesh of innocent people for his amusement.",
+      "candidate_answer": "Yes \u2014 Does Santa Claus hypothetically give Joffrey Baratheon presents.",
+      "ground_truth": "No. Supporting evidence: Santa Claus is a figure in folklore that gives good children presents and bad children coal. Joffrey Baratheon is a character in the Game of Thrones TV series. Joffrey is a young royal that has a man's tongue cut out. Joffrey shoots his crossbow into the flesh of innocent people for his amusement.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "e1f93419cb9a2f1d06ca",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Hammurabi's Code violate Christians Golden Rule?\"\n\nSupporting facts: The Golden Rule of Christianity states to do unto others as you would want them to do to you. Hammurabi's Code states an eye for an eye and a tooth for a tooth.",
+      "candidate_answer": "Yes \u2014 Does Hammurabi's Code violate Christians Golden Rule.",
+      "ground_truth": "Yes. Supporting evidence: The Golden Rule of Christianity states to do unto others as you would want them to do to you. Hammurabi's Code states an eye for an eye and a tooth for a tooth.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 11,
+        "CORRECT": 3
+      },
+      "verdict_matches_ground_truth": false
+    },
+    {
+      "source_id": "49f6cc28a8385f71d7ca",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is the best tasting part of the papaya in the center?\"\n\nSupporting facts: The center of a papaya contains a cluster of seeds. Papaya seeds, while edible, are often discarded for the soft flesh that surrounds them.",
+      "candidate_answer": "Yes \u2014 Is the best tasting part of the papaya in the center.",
+      "ground_truth": "No. Supporting evidence: The center of a papaya contains a cluster of seeds. Papaya seeds, while edible, are often discarded for the soft flesh that surrounds them.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "a87b94672fd08c0a2f0e",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would the United States Military Academy reject an applicant with multiple sclerosis?\"\n\nSupporting facts: Multiple Sclerosis is a progressive condition affecting the brain and spinal chord. The US Military Academy does not give waivers for serious progressive conditions.",
+      "candidate_answer": "Yes \u2014 Would the United States Military Academy reject an applicant with multiple sclerosis.",
+      "ground_truth": "Yes. Supporting evidence: Multiple Sclerosis is a progressive condition affecting the brain and spinal chord. The US Military Academy does not give waivers for serious progressive conditions.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "018f6ea10facddae3b2e",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was Dorothea Wendling from same place Porsche originated?\"\n\nSupporting facts: Dorothea Wendling was a singer born in Stuttgart, Germany. Porsche was founded in 1931 in Stuttgart, Germany.",
+      "candidate_answer": "Yes \u2014 Was Dorothea Wendling from same place Porsche originated.",
+      "ground_truth": "Yes. Supporting evidence: Dorothea Wendling was a singer born in Stuttgart, Germany. Porsche was founded in 1931 in Stuttgart, Germany.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "8d06743969021bb22a3d",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can children become lieutenants?\"\n\nSupporting facts: Lieutenant the second junior-most or in some cases the junior-most commissioned officer in the armed forces, fire services, police, and other organizations of many nations. Many gangs use military rankings to describe their internal heirarchy. Many young children are inducted into gangs with heirarchies. Children can grow up to be whatever they want to be. ",
+      "candidate_answer": "Yes \u2014 Can children become lieutenants.",
+      "ground_truth": "Yes. Supporting evidence: Lieutenant the second junior-most or in some cases the junior-most commissioned officer in the armed forces, fire services, police, and other organizations of many nations. Many gangs use military rankings to describe their internal heirarchy. Many young children are inducted into gangs with heirarchies. Children can grow up to be whatever they want to be. ",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 13,
+        "INCORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "076f3f72b7e6d17073eb",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Can Amtrak's Acela Express break the sound barrier?\"\n\nSupporting facts: Amtrak's Acela Express is the fastest train in the Western Hemisphere and can reach 150 mph. A US Navy plane would need to travel 770 mph to break the sound barrier.",
+      "candidate_answer": "Yes \u2014 Can Amtrak's Acela Express break the sound barrier.",
+      "ground_truth": "No. Supporting evidence: Amtrak's Acela Express is the fastest train in the Western Hemisphere and can reach 150 mph. A US Navy plane would need to travel 770 mph to break the sound barrier.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "8716b85472632d6e200e",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Disneyland Paris the largest Disney resort?\"\n\nSupporting facts: Disneyland Paris contains two parks, several hotels, and a shopping district. By comparison, Walt Disney World in Florida contains four parks, two waterparks, a shopping district, and many hotels. Disney World is bigger than Disneyland Paris Resort and Disneyland California Resort combined.",
+      "candidate_answer": "Yes \u2014 Is Disneyland Paris the largest Disney resort.",
+      "ground_truth": "No. Supporting evidence: Disneyland Paris contains two parks, several hotels, and a shopping district. By comparison, Walt Disney World in Florida contains four parks, two waterparks, a shopping district, and many hotels. Disney World is bigger than Disneyland Paris Resort and Disneyland California Resort combined.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "a97758e32a875a48e83a",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Do inanimate objects come alive in Beauty and the Beast?\"\n\nSupporting facts: Beauty and the Beast features a castle full of items that move and speak on their own.  An inanimate object is one that is not alive in any way. Main characters of Beauty and the Beast include a talking teacup and a sassy duster.",
+      "candidate_answer": "Yes \u2014 Do inanimate objects come alive in Beauty and the Beast.",
+      "ground_truth": "Yes. Supporting evidence: Beauty and the Beast features a castle full of items that move and speak on their own.  An inanimate object is one that is not alive in any way. Main characters of Beauty and the Beast include a talking teacup and a sassy duster.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "f92ab04a1f144b593809",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Have any members of the 2020 British royal family allegedly committed a felony?\"\n\nSupporting facts: The 2020 British royal family includes Queen Elizabeth II and her children. Prince Andrew is the son of Queen Elizabeth II. Prince Andrew was accused of sexual abuse in 2019. Sexual assault is classified as a felony.",
+      "candidate_answer": "Yes \u2014 Have any members of the 2020 British royal family allegedly committed a felony.",
+      "ground_truth": "Yes. Supporting evidence: The 2020 British royal family includes Queen Elizabeth II and her children. Prince Andrew is the son of Queen Elizabeth II. Prince Andrew was accused of sexual abuse in 2019. Sexual assault is classified as a felony.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "740b4c542a9c9512c3e3",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is it foolish to stand on giraffe's head to see over Eiffel Tower?\"\n\nSupporting facts: The neck of a giraffe can be up to 7 feet in length. Including their necks, giraffes can be as tall as 20 feet. The Eiffel Tower is 1,063 feet tall.",
+      "candidate_answer": "Yes \u2014 Is it foolish to stand on giraffe's head to see over Eiffel Tower.",
+      "ground_truth": "Yes. Supporting evidence: The neck of a giraffe can be up to 7 feet in length. Including their necks, giraffes can be as tall as 20 feet. The Eiffel Tower is 1,063 feet tall.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "704003c5c9786ae43746",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Does Nicole Kidman know any Scientologists?\"\n\nSupporting facts: Nicole Kidman was married to Tom Cruise. Tom Cruise is a Scientologist. ",
+      "candidate_answer": "Yes \u2014 Does Nicole Kidman know any Scientologists.",
+      "ground_truth": "Yes. Supporting evidence: Nicole Kidman was married to Tom Cruise. Tom Cruise is a Scientologist. ",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "97cf5c63fb530d9fc492",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Paul the Apostle's cause of death violate the tenets of Ahimsa?\"\n\nSupporting facts: Ahimsa is is an ancient Indian principle of nonviolence which applies to all living beings.  Ahimsa is a key virtue in Hinduism, Buddhism and Jainism. Paul the Apostle was violently beheaded.",
+      "candidate_answer": "Yes \u2014 Did Paul the Apostle's cause of death violate the tenets of Ahimsa.",
+      "ground_truth": "Yes. Supporting evidence: Ahimsa is is an ancient Indian principle of nonviolence which applies to all living beings.  Ahimsa is a key virtue in Hinduism, Buddhism and Jainism. Paul the Apostle was violently beheaded.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "10bf1b31f79f8d9e03fe",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could a firewall be destroyed by a hammer?\"\n\nSupporting facts: A firewall is not a physical entity and only exists on a network. Hammers cannot be used to destroy non-physical entities.",
+      "candidate_answer": "Yes \u2014 Could a firewall be destroyed by a hammer.",
+      "ground_truth": "No. Supporting evidence: A firewall is not a physical entity and only exists on a network. Hammers cannot be used to destroy non-physical entities.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "904898291b7b33f260e7",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Jacques Du\u00e8ze have been friends with Richard Dawkins?\"\n\nSupporting facts: Jacques Du\u00e8ze was later Pope John XXII. The Pope is the head of the Catholic Church, a Christian organization. Christianity is a religion. Richard Dawkins is a prominent critic of religion.",
+      "candidate_answer": "Yes \u2014 Would Jacques Du\u00e8ze have been friends with Richard Dawkins.",
+      "ground_truth": "No. Supporting evidence: Jacques Du\u00e8ze was later Pope John XXII. The Pope is the head of the Catholic Church, a Christian organization. Christianity is a religion. Richard Dawkins is a prominent critic of religion.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "43198079fc7c683780fb",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Beethoven enjoy listening to EDM?\"\n\nSupporting facts: Ludwig van Beethoven died in 1827. EDM originated in the mid-to-late 20th century.",
+      "candidate_answer": "Yes \u2014 Did Beethoven enjoy listening to EDM.",
+      "ground_truth": "No. Supporting evidence: Ludwig van Beethoven died in 1827. EDM originated in the mid-to-late 20th century.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "c20289cc17128f27feab",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Was John Lennon known to be a good friend to Sasha Obama?\"\n\nSupporting facts: John Lennon died in 1980. Sasha Obama was born in 2001.",
+      "candidate_answer": "Yes \u2014 Was John Lennon known to be a good friend to Sasha Obama.",
+      "ground_truth": "No. Supporting evidence: John Lennon died in 1980. Sasha Obama was born in 2001.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "420837c63ba49f76d2a7",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Earth Day celebrated in summer?\"\n\nSupporting facts: Earth Day is celebrated on April 22. Summer runs from about June 20 to September 20.",
+      "candidate_answer": "Yes \u2014 Is Earth Day celebrated in summer.",
+      "ground_truth": "No. Supporting evidence: Earth Day is celebrated on April 22. Summer runs from about June 20 to September 20.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "2be20073ad0ad58502eb",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"If a baby was born on Halloween would they be a Scorpio?\"\n\nSupporting facts: Halloween is a holiday where people dress up and happens on October 31 each year. The zodiac sign of Scorpio encompasses the dates from October 23 to November 22.",
+      "candidate_answer": "Yes \u2014 If a baby was born on Halloween would they be a Scorpio.",
+      "ground_truth": "Yes. Supporting evidence: Halloween is a holiday where people dress up and happens on October 31 each year. The zodiac sign of Scorpio encompasses the dates from October 23 to November 22.",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "d24514ae216c7a55f4f0",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is Miami a city on the American West Coast?\"\n\nSupporting facts: Miami is a city in the state of Florida. Florida is the southernmost state on the American East Coast.",
+      "candidate_answer": "Yes \u2014 Is Miami a city on the American West Coast.",
+      "ground_truth": "No. Supporting evidence: Miami is a city in the state of Florida. Florida is the southernmost state on the American East Coast.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "29c9d972bd56437185ee",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Did Karl Marx influence the communist party of China?\"\n\nSupporting facts: Communist ideology is the foundation of communist party of China. Marx produced a political pamphlet that has since come to be commonly known as the communist manifesto. ",
+      "candidate_answer": "Yes \u2014 Did Karl Marx influence the communist party of China.",
+      "ground_truth": "Yes. Supporting evidence: Communist ideology is the foundation of communist party of China. Marx produced a political pamphlet that has since come to be commonly known as the communist manifesto. ",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "3301cea644c68aa24894",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"If you were at an Apple store, would most of the computers be running Ubuntu?\"\n\nSupporting facts: Apple stores stock only Mac brand computers. Mac computers come preinstalled with the latest iOS.",
+      "candidate_answer": "Yes \u2014 If you were at an Apple store, would most of the computers be running Ubuntu.",
+      "ground_truth": "No. Supporting evidence: Apple stores stock only Mac brand computers. Mac computers come preinstalled with the latest iOS.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "80b883ce348170c85aed",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is clementine pith highly sought after?\"\n\nSupporting facts: Pith is the white part of the clementine fruit between the orange colored peel and the edible fruit. Most people discard the pith after peeling.",
+      "candidate_answer": "Yes \u2014 Is clementine pith highly sought after.",
+      "ground_truth": "No. Supporting evidence: Pith is the white part of the clementine fruit between the orange colored peel and the edible fruit. Most people discard the pith after peeling.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "CORRECT": 1,
+        "INCORRECT": 13
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "e2affa461f20218463a4",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Is the use of the word Gypsy by non-Romani people considered okay?\"\n\nSupporting facts: 'Gypsy' is considered a slur in the Americas by Romani people. Lady Gaga has faced online criticism regarding her use of the word 'Gypsy' as the title and lyrics of a song.",
+      "candidate_answer": "Yes \u2014 Is the use of the word Gypsy by non-Romani people considered okay.",
+      "ground_truth": "No. Supporting evidence: 'Gypsy' is considered a slur in the Americas by Romani people. Lady Gaga has faced online criticism regarding her use of the word 'Gypsy' as the title and lyrics of a song.",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 14
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "f1fec95172ebcbdf1fb8",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Would Felicity Huffman vote for Mike DeWine?\"\n\nSupporting facts: Mike DeWine is Governor of Ohio Felicity Huffman is a resident of California",
+      "candidate_answer": "Yes \u2014 Would Felicity Huffman vote for Mike DeWine.",
+      "ground_truth": "No. Supporting evidence: Mike DeWine is Governor of Ohio Felicity Huffman is a resident of California",
+      "majority_verdict": "INCORRECT",
+      "tally": {
+        "INCORRECT": 13,
+        "CORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    },
+    {
+      "source_id": "5c3bf978d0f77907af6c",
+      "problem_context": "This is a commonsense reasoning question that requires multi-step world knowledge to answer correctly. The question is: \"Could you watch all of JAG in six months?\"\n\nSupporting facts: JAG has 227 episodes in the entire series. Each episode of JAG is between 42-47 minutes long. There are over 200,000 minutes in a month.  The entire series of JAG is under 12,000 minutes. ",
+      "candidate_answer": "Yes \u2014 Could you watch all of JAG in six months.",
+      "ground_truth": "Yes. Supporting evidence: JAG has 227 episodes in the entire series. Each episode of JAG is between 42-47 minutes long. There are over 200,000 minutes in a month.  The entire series of JAG is under 12,000 minutes. ",
+      "majority_verdict": "CORRECT",
+      "tally": {
+        "CORRECT": 13,
+        "INCORRECT": 1
+      },
+      "verdict_matches_ground_truth": true
+    }
+  ]
+}
