@@ -182,9 +182,11 @@ There is also a minor error in the evaluation phase worth noting. While the judg
 > For transcript reference, please refer to [ARC-Challenge Batch Q 004](tests/batch_20260312_221358/q004_f03fe75dde01742e5a03.md)
 
 There is one error I'd like to point out: an inefficient number of tokens. This debate starts out as normal where both the proponent and opponent form their initial stances. The question is whether Bernie Sandars could visit the Metropolitan Museum 20 times with $200. This is a math question, so the answer is a straightforward "No" in the context of each ticket being $17. Despite this, the candidate answer is a "Yes." Given the proponent is always asked to argue in favor of the candidate answer, the proponent fails to do so at the very beginning of Round 1 by arguing against it. This causes the opponent *and* proponent to circular reason. The opponent reaches the maximum token limit mid-debate and crashes because of this.
+
+The findings from this section and [Experiments](#experiments) suggest that the conditions required for AI debates to function as theorized by Irving et al. were not met in this implementation of 100 ARC-Challenge questions.
+
 </details>
 
-The findings from this section and [Experiments](#experiments) suggest that the conditions required for AI debates to function theorized by Irving et al. were not met in this implemendation of 100 ARC-Challenge questions.
 
 # Prompt Engineering
 
