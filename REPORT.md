@@ -81,6 +81,19 @@ These hyperparameters can be viewed under `config.py`.
 
 Timeline: Setup the agents individually, initialized them by making them debate on one question sample size with a judge (pinapple on pizza thing), boosted the debate rounds to 3, then loaded the datasets.
 
+My experimental setup came together in the sequence of the pipeline architecture required for this project.
+
+The initial setup was straightforward:
+
+1. **Step 1 - Agent Setups:** I hardcoded the proponent, opponent, and judge agents. These are the primary, interactive chat bots that will be engaging in the debate rounds. The only thing is the judge does not interact with the propnent and opponent directly as it is only purpose is to call a debate verdict and analysis of the full debate.
+2. **Step 2 - Single-question intialization test experiments:** Using a single prompt, I tested the full code to verify that no bugs appeared in the middle of debates into a few substeps:
+   - **Step 2.1:** I first tested debates with only round and then a judge's verdict.
+   - **Step 2.2:** The opponent and proponent engaged in 3-round debates ending with the judge's verdict.
+   - **Step 2.3:** With steps 2.1 and 2.2 complete, the final task was to embed the Evaluation transcript with the full trasncript.
+> NOTE: The single-question debates can be ran via `main.py`.
+3. **Step 3 - Loading the Datasets:** Once I verified that the debates ran smoothly without any compiling error, mid-debate bugs, or debates running for too long, I coded the datasets to be loaded for the intended experiments of this project. The file in question is titled `dataset_loader.py`.
+
+
 
 |Placeholder|Placeholder|
 |--------|---------|
@@ -102,7 +115,7 @@ Include `batch_20260313_193737/q002_b18b7cbde476888d0059.md` from the 200 sample
 
 <details>
 
-My prompt engineering development was created in syncronization with the phases of the pipline architecture. It can be summarized into three distinct, simple steps:
+My prompt engineering development was created in syncronization with the phases of the pipline architecture explained in [Experiments](https://github.com/samanthans-caicc/LLM-Debate-With-Judge-Pipeline/edit/main/REPORT.md#experiments). It can be summarized into three distinct, simple steps:
 
 1. I created the agents themselves
 2. I assigned them roles to role-play.
