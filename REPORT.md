@@ -41,12 +41,38 @@ This was breifly explained in the System Architecture subsection, but this part 
 For this phase, the proponent agent and opponent agent are called independently and recieve only the problem context and candidate answer. Once this happens, both agents create an initial stance. After both response, a check will be called to verify both agents are NOT in agreement. If an agreement is detected, Phase 2 is skipped entirely and the protocol is moved to Phase 3.
 
 ### Phase 2: Multi-Round Debate
+
+Given no initial agreement is detected, the debate agents go through a 3-round debate with each other. The proponent presents an argument arguing in favor for a/the candidate answer through a chain-of-thought reasoning prompting. Once this runs, the opponent agnet recieves the transcript of the proponent's first argument and presents the proponent with a counterargument through the same prompting type. Because `NUM_ROUNDS = 3`, the proponent and opponent recieve full transcripts of previous debate rounds for context going into the next round (i.e., output transcript of debate round 1 being shown for the context for debate round 2). Phase 1 is still active in this phase; if an agreement is detected before the third round, the debate ends early and judgement and evaluation proceeds.
+
 ### Phase 3: Judgement
+
+For the judging phase, the judge receives the transcript of the full debate, all rounds between the proponent and opponent, their initial stances, and the problem context. The judge then outputs its response in four categories:
+1. A chain-of-thought analysis of both the proponent and opponent's arguments,
+2. Strongest and weakest arguments of both debators and justification,
+3. A final verdict dictating a debate winner,
+4. A 1-5 scale confidence score of the winner
+
+The trasncript is saved in the same `.md` and JSON file as the full transcript.
+
 ### Phase 4: Evaluation
 
+This phase might be the most simple, but it can be the most confusing when comparing the judge's verdict to the ground-truth answer. This is all this phase does in addition to recording all the data that is: initial reasonings, all arguments per round, the judge's reasoning and final verdict. This is explained further in the "Analysis" subsection.
 
 ## Model Choices/Justification:
+
+Due to this project being assigned in school, different models were given to us. However, first, we needed to be under a school-issued VPN. Personally, I used the LLM Qwen model issued by UTSA since it was the model that worked best and quickest on my machines. This model is loaded by exporting UTSA_MODEL environment variable in Linux. It is a UTSA-hosted API endpoint that is also OpenAI-compatible. All the agents, proponent, opponent, and judge, use this model.
+
 ## Hyperparameters:
+
+| Parameter | Value | Notes |
+| ----- | ----- | ----- |
+| `"temperature"` | 0.8 | Initially set at 0.7. Increased for argument variety and creativity. |
+| `"max_tokens"` | 2049 | Initially set at 4096. Reduced for more concise-structured arguments. |
+| `"top_p` | 0.9 | Nucleus samplying for respoonse diversity. |
+| `"NUM_ROUNDS"` | 3 | Maximum number of debate rounds, but early-exit possible after or before 2 consecutive agreement rounds. |
+
+These hyperparameters can be viewed under `config.py`.
+
 </details>
 
 # Experiments
