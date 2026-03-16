@@ -98,11 +98,31 @@ Include `batch_20260313_193737/q002_b18b7cbde476888d0059.md` from the 200 sample
 # Prompt Engineering
 <details>
 
-(Describe your prompt design process: how you crafted and iterated prompts for Debater A, Debater B, and the Judge. Explain key design decisions (role framing, CoT instructions, output format constraints) and what changed between iterations based on failure analysis)
+My prompt engineering development was created in syncronization with the phases of the pipline architecture. It can be summarized into three distinct, simple steps:
 
 1. I created the agents themselves
 2. I assigned them roles to role-play.
-3. I did thorough  prompt engineering then.
+3. I did thorough prompt engineering for per-round debates.
+
+Initially, I created the proponent, opponent, and judge agents without any prompts embedded. I introduced a very general, yet controversial, debate question that even divides the internet: the question of whether or not pineapple go on top of pizza. 
+
+To make the agents more "human" I assigned all agents to have basic arrogant, snarky attitudes towards each other. Even the judge had a thing or two to say during its evaluation of the debate and the debate agents.
+
+> Up to this point, this was for initial testing of the debates themselves to see how they went.
+
+Once all the roles were confirmed and the debate transcripts saved the way I wanted them to (see: `tests/* .md`), that's when I gave all the agents more sophisticated prompts and roles BEFORE running the batches (`tests/batch_*`).
+
+> NOTE: prompts of system roles, initial and round prompts, and judge prompts can be viewed in the Appendix or `prompts.py`.
+
+In the `prompt.py` file itself, I describe the iteration process in the terms of "v#," where # is a number greater than 0. Each v# represents is a key iteration of prompts. A quick summary of this is in the table below:
+
+| v# | Purpose |
+| ----- | ----- |
+| v1 | Initial statements/drafts |
+| v2 | Persona additions and basic structures |
+| v3 | Added CoT scaffolding and section labels |
+| v4 | Full transcript context and tightened CoT Q's |
+
 
 </details>
 
