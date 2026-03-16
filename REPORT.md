@@ -5,9 +5,8 @@ Refer to https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet when w
 This report highlights a detailed outline of this project's initial question of "Can a structured adversarial debate between two LLM agents, supervised by an LLM judge, produce more accurate and well-reasoned answers than a single LLM answering directly?" I used Claude and a little bit of ChatGPT to aid me in this experimental project.
 
 # Methodology
-<details>
 
-(System architecture, debate protocol details, model choices and justification, configuration and hyperparameters)
+<details>
 
 ## System Architecture:
 
@@ -41,19 +40,48 @@ This was breifly explained in the System Architecture subsection, but this part 
 For this phase, the proponent agent and opponent agent are called independently and recieve only the problem context and candidate answer. Once this happens, both agents create an initial stance. After both response, a check will be called to verify both agents are NOT in agreement. If an agreement is detected, Phase 2 is skipped entirely and the protocol is moved to Phase 3.
 
 ### Phase 2: Multi-Round Debate
+
+Given no initial agreement is detected, the debate agents go through a 3-round debate with each other. The proponent presents an argument arguing in favor for a/the candidate answer through a chain-of-thought reasoning prompting. Once this runs, the opponent agnet recieves the transcript of the proponent's first argument and presents the proponent with a counterargument through the same prompting type. Because `NUM_ROUNDS = 3`, the proponent and opponent recieve full transcripts of previous debate rounds for context going into the next round (i.e., output transcript of debate round 1 being shown for the context for debate round 2). Phase 1 is still active in this phase; if an agreement is detected before the third round, the debate ends early and judgement and evaluation proceeds.
+
 ### Phase 3: Judgement
+
+For the judging phase, the judge receives the transcript of the full debate, all rounds between the proponent and opponent, their initial stances, and the problem context. The judge then outputs its response in four categories:
+1. A chain-of-thought analysis of both the proponent and opponent's arguments,
+2. Strongest and weakest arguments of both debaters and justification,
+3. A final verdict dictating a debate winner,
+4. A 1-5 scale confidence score of the winner
+
+The trasncript is saved in the same `.md` and JSON file as the full transcript.
+
 ### Phase 4: Evaluation
 
+This phase might be the most simple, but it can be the most confusing when comparing the judge's verdict to the ground-truth answer. This is all this phase does in addition to recording all the data that is: initial reasonings, all arguments per round, the judge's reasoning and final verdict. This is explained further in the "Analysis" subsection.
 
 ## Model Choices/Justification:
+
+Due to this project being assigned in school, different models were given to us. However, first, we needed to be under a school-issued VPN. Personally, I used the LLM Qwen model issued by UTSA since it was the model that worked best and quickest on my machines. This model is loaded by exporting UTSA_MODEL environment variable in Linux. It is a UTSA-hosted API endpoint that is also OpenAI-compatible. All the agents, proponent, opponent, and judge, use this model.
+
 ## Hyperparameters:
+
+| Parameter | Value | Notes |
+| ----- | ----- | ----- |
+| `"temperature"` | 0.8 | Initially set at 0.7. Increased for argument variety and creativity. |
+| `"max_tokens"` | 2049 | Initially set at 4096. Reduced for more concise-structured arguments. |
+| `"top_p` | 0.9 | Nucleus samplying for respoonse diversity. |
+| `"NUM_ROUNDS"` | 3 | Maximum number of debate rounds, but early-exit possible after or before 2 consecutive agreement rounds. |
+
+These hyperparameters can be viewed under `config.py`.
+
 </details>
 
 # Experiments
+
 <details>
 (Experimental setup, results tables/figures for all experiments in Section 4, statistical significance tests where applicable)
 
 Timeline: Setup the agents individually, initialized them by making them debate on one question sample size with a judge (pinapple on pizza thing), boosted the debate rounds to 3, then loaded the datasets.
+
+
 |Placeholder|Placeholder|
 |--------|---------|
 |||
@@ -62,6 +90,7 @@ Timeline: Setup the agents individually, initialized them by making them debate 
 </details>
 
 # Analysis
+
 <details>
 (Qualitative analysis of 3–5 debate transcripts (what went well, failure cases), connection to theoretical predictions from Irving et al.)
 
@@ -70,13 +99,70 @@ Include `batch_20260313_193737/q002_b18b7cbde476888d0059.md` from the 200 sample
 </details>
 
 # Prompt Engineering
+
 <details>
 
-(Describe your prompt design process: how you crafted and iterated prompts for Debater A, Debater B, and the Judge. Explain key design decisions (role framing, CoT instructions, output format constraints) and what changed between iterations based on failure analysis)
+My prompt engineering development was created in syncronization with the phases of the pipline architecture. It can be summarized into three distinct, simple steps:
 
 1. I created the agents themselves
 2. I assigned them roles to role-play.
-3. I did thorough  prompt engineering then.
+3. I did thorough prompt engineering for per-round debates.
+
+Initially, I created the proponent, opponent, and judge agents without any prompts embedded. I introduced a very general, yet controversial, debate question that even divides the internet: the question of whether or not pineapple go on top of pizza. To make the agents more "human" I assigned all agents to have basic arrogant, snarky attitudes towards each other. Even the judge had a thing or two to say during its evaluation of the debate and the debate agents.
+
+> NOTE: The pineapple on pizza tests were conducted *before* `prompts.py` existed. It is essentially what v1 looked like in practice; the prompts had little structure and persona.
+
+Once all the roles were confirmed and the debate transcripts saved the way I wanted them to (see: `tests/* .md`), that's when I gave all the agents more "sophisticated" prompts and roles BEFORE running the batch tests (see: `tests/batch_*/*`). 
+
+> NOTE: prompts of system roles, initial and round prompts, and judge prompts can be viewed in the Appendix or `prompts.py`.
+
+In the `prompt.py` file itself, I describe the iteration process in the terms of "v#," where # is a number greater than 0. Each v# represents is a key iteration of prompts. 
+
+The full commented describing the design decisions is below. It is also included inside `prompts.py`.
+
+```
+# prompts.py — Centralized prompt definitions for all agents in the debate pipeline.
+#
+# PROMPT ITERATION HISTORY
+# ========================
+# Prompts in this file went through four rounds of deliberate iteration.
+# Each iteration is documented below to show what changed and why.
+#
+# --- v1 (initial draft) ---
+# Problem: Generic "argue for/against" instructions with no persona or structure.
+# Debaters produced short, bland paragraphs. Judge gave one-line verdicts.
+# Lesson: LLMs need a clear identity and explicit output structure to perform well.
+#
+# --- v2 (add personas + basic structure) ---
+# Change: Added character descriptions (confident proponent, ruthless opponent,
+#         dramatic judge).
+# Result: Personality improved, but reasoning was shallow and reactive only to the
+#         most recent message rather than the full debate arc. The judge roasted
+#         but did not analyze.
+# Lesson: Persona helps tone; it does not substitute for reasoning instructions.
+#
+# --- v3 (add CoT scaffolding + section labels) ---
+# Change: Inserted explicit think-before-you-argue steps for debaters. Gave the
+#         judge four labeled sections to fill. Added "name the fallacy" requirement
+#         to the opponent to prevent vague attacks.
+# Result: Arguments became more targeted and rebuttal-focused. Judge output became
+#         structured and usable as data. However, debaters still only saw their
+#         opponent's side, missing context from their own prior rounds.
+# Lesson: CoT scaffolding significantly improves argument quality and output
+#         parseability. Structured output labels are essential for evaluation.
+#
+# --- v4 (full transcript context + tightened CoT questions) ---
+# Change: Switched context from per-side history to a full interleaved transcript
+#         so both debaters see the complete debate arc. Sharpened CoT questions to
+#         force concrete identification of the opponent's most vulnerable claim each
+#         round. Added rubric labels to the judge's confidence score scale.
+# Result: Debaters now build coherently across rounds instead of just reacting to
+#         the last exchange. Critiques are surgical. Judge output maps cleanly to
+#         evaluation fields. Confidence scores are consistent across runs.
+# Lesson: Context design (what you feed the model) matters as much as instruction
+#         design. Rubric labels remove ambiguity from scalar outputs.
+```
+Overall, the most significant yet impactful change was the chain-of-thought scaffolding that was introduced in v3. Instead of immediately arguing back, each debater is first forced to answer three questions *before* arguing back: identifying opponents' strongest points, self-contradictory checks, and introducing new arguments that were not made in the initial standpoint. This outputs targeted reasoning first before any claim, opting for a professional debate.
 
 </details>
 
