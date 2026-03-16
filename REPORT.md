@@ -5,9 +5,8 @@ Refer to https://github.com/adam-p/markdown-here/wiki/markdown-cheatsheet when w
 This report highlights a detailed outline of this project's initial question of "Can a structured adversarial debate between two LLM agents, supervised by an LLM judge, produce more accurate and well-reasoned answers than a single LLM answering directly?" I used Claude and a little bit of ChatGPT to aid me in this experimental project.
 
 # Methodology
-<details>
 
-(System architecture, debate protocol details, model choices and justification, configuration and hyperparameters)
+<details>
 
 ## System Architecture:
 
@@ -76,6 +75,7 @@ These hyperparameters can be viewed under `config.py`.
 </details>
 
 # Experiments
+
 <details>
 (Experimental setup, results tables/figures for all experiments in Section 4, statistical significance tests where applicable)
 
@@ -88,6 +88,7 @@ Timeline: Setup the agents individually, initialized them by making them debate 
 </details>
 
 # Analysis
+
 <details>
 (Qualitative analysis of 3–5 debate transcripts (what went well, failure cases), connection to theoretical predictions from Irving et al.)
 
@@ -96,6 +97,7 @@ Include `batch_20260313_193737/q002_b18b7cbde476888d0059.md` from the 200 sample
 </details>
 
 # Prompt Engineering
+
 <details>
 
 My prompt engineering development was created in syncronization with the phases of the pipline architecture. It can be summarized into three distinct, simple steps:
