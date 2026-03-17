@@ -15,7 +15,7 @@ My pipeline is organized to 7 primary python files that handles one portion (in 
 | ----- | ----- |
 | `baseline_direct_qa.py` | Direct Q&A with CoT prompting; no debate |
 | `baseline_self_consistency.py` | Self-consistency sampling N questions with majority vote |
-| `config.py` | API client initialzation and hyperparameters|
+| `config.py` | API client initialization and hyperparameters|
 | `dataset_loader.py` | StrategyQA and ARC-Challenge dataset ingestions, sample batch runner, CLIs |
 | `judge.py` | Judge Agent - non-interactive agent that has a four section ruling for the debates |
 | `main.py` | Main debate orchestrator that runs only one question, question must be changed if wanting different topics |
@@ -35,15 +35,15 @@ The main difference between the two files is that `main.py` is used for only one
 
 ## Debate Protocol Details:
 
-This was breifly explained in the System Architecture subsection, but this part will go deeper.
+This was briefly explained in the System Architecture subsection, but this part will go deeper.
 
-### Phase 1: Initialzation
+### Phase 1: Initialization
 
-For this phase, the proponent agent and opponent agent are called independently and recieve only the problem context and candidate answer. Once this happens, both agents create an initial stance. After both response, a check will be called to verify both agents are NOT in agreement. If an agreement is detected, Phase 2 is skipped entirely and the protocol is moved to Phase 3.
+For this phase, the proponent agent and opponent agent are called independently and receive only the problem context and candidate answer. Once this happens, both agents create an initial stance. After both response, a check will be called to verify both agents are NOT in agreement. If an agreement is detected, Phase 2 is skipped entirely and the protocol is moved to Phase 3.
 
 ### Phase 2: Multi-Round Debate
 
-Given no initial agreement is detected, the debate agents go through a 3-round debate with each other. The proponent presents an argument arguing in favor for a/the candidate answer through a chain-of-thought reasoning prompting. Once this runs, the opponent agnet recieves the transcript of the proponent's first argument and presents the proponent with a counterargument through the same prompting type. Because `NUM_ROUNDS = 3`, the proponent and opponent recieve full transcripts of previous debate rounds for context going into the next round (i.e., output transcript of debate round 1 being shown for the context for debate round 2). Phase 1 is still active in this phase; if an agreement is detected before the third round, the debate ends early and judgement and evaluation proceeds.
+Given no initial agreement is detected, the debate agents go through a 3-round debate with each other. The proponent presents an argument arguing in favor for a/the candidate answer through a chain-of-thought reasoning prompting. Once this runs, the opponent agent receives the transcript of the proponent's first argument and presents the proponent with a counterargument through the same prompting type. Because `NUM_ROUNDS = 3`, the proponent and opponent receive full transcripts of previous debate rounds for context going into the next round (i.e., output transcript of debate round 1 being shown for the context for debate round 2). Phase 1 is still active in this phase; if an agreement is detected before the third round, the debate ends early and judgement and evaluation proceeds.
 
 ### Phase 3: Judgement
 
@@ -53,7 +53,7 @@ For the judging phase, the judge receives the transcript of the full debate, all
 3. A final verdict dictating a debate winner,
 4. A 1-5 scale confidence score of the winner
 
-The trasncript is saved in the same `.md` and JSON file as the full transcript.
+The transcript is saved in the same `.md` and JSON file as the full transcript.
 
 ### Phase 4: Evaluation
 
@@ -70,7 +70,7 @@ Due to this project being assigned in school, different models were given to us.
 | ----- | ----- | ----- |
 | `"temperature"` | 0.8 | Initially set at 0.7. Increased for argument variety and creativity. |
 | `"max_tokens"` | 2049 | Initially set at 4096. Reduced for more concise-structured arguments. |
-| `"top_p` | 0.9 | Nucleus samplying for respoonse diversity. |
+| `"top_p"` | 0.9 | Nucleus sampling for response diversity. |
 | `"NUM_ROUNDS"` | 3 | Maximum number of debate rounds, but early-exit possible after or before 2 consecutive agreement rounds. |
 
 These hyperparameters can be viewed under `config.py`.
@@ -118,7 +118,7 @@ A sample of 100 questions from the ARC-Challenge dataset was selected *at random
 | Direct Q&A | 99 | N/A | 79 | 99 | 79.8 % |
 | Self-Consistency | 99 | N/A | 95 | 99 | 96.0% |
 
-The debate pipeline actually does worse than both the Direct Q&A abd Self-Consistency experiments at an accuracy of 77.7%. This suggests that having structured, adversarial debates did not improve answer accuracy over a single-pass LLM response. However, the accuracies are close in range with the debate pipeline and the Direct Q&A accuracy of 79.8%. This comparison is not perfectly balanced as the debate pipeline had a sample size of 103 and the Direct Q&A had a sample size of 99. This is a minor error during the sampling run of the Direct Q&A that is discussed in [Analysis](#analysis).
+The debate pipeline actually does worse than both the Direct Q&A and Self-Consistency experiments at an accuracy of 77.7%. This suggests that having structured, adversarial debates did not improve answer accuracy over a single-pass LLM response. However, the accuracies are close in range with the debate pipeline and the Direct Q&A accuracy of 79.8%. This comparison is not perfectly balanced as the debate pipeline had a sample size of 103 and the Direct Q&A had a sample size of 99. This is a minor error during the sampling run of the Direct Q&A that is discussed in [Analysis](#analysis).
 
 On the other hand, Self-Consistency dominated both of them by a near-perfect accuracy score. It ran 14 samples per question which was an arbitrary number, but the larger the independent samples there is for voting purposes, the more reliable majority vote you get. The only downside of this number is that the compute cost; it will be higher. 
 
@@ -133,7 +133,7 @@ The key takeaway from this is a simple debate pipeline did not outperform the si
 | Opponent Wins | 84 | 81.6% | 
 | Tie | 0 | 0.0% |
 
-Table 5 shows that the opponent wins 81.6% of the debates in the debate pipeline. It is worth noting that ARC-Challenge candidate answers are always intentionally wrong or implausible. The opponent always argues *against* the candidate answer, so the opponent winning the majority of the debates is expected. One could even say that this is good on the judge agent's part since it effectively evaluates the transcripts in full. The small percentage of the proponent winning the debates at 18.4% are cases that the candidate answer was correct and the proponent was able to defend it. So, again, it is a good job on the judge agent's part. No ties were recorded, which makes sense due to the judge genuinely finding all debates to be unambiguous. This is settled by the judge's 4-phase evaluations. 
+Table 5 shows that the opponent wins 81.6% of the debates in the debate pipeline. It is worth noting that ARC-Challenge candidate answers are always intentionally wrong or implausible. The opponent always argues *against* the candidate answer, so the opponent winning the majority of the debates is expected. One could even say that this is good on the judge agent's part since it effectively evaluates the transcripts in full. The small percentage of the proponent winning the debates at 18.4% are cases that the candidate answer was correct and the proponent was able to defend it. So, again, it is a good job on the judge agent's part. No ties were recorded, which makes sense due to the judge genuinely finding all debates to be unambiguous. This is settled by the judge's 4-section evaluations. 
 
 #### Table 6: Debate Pipeline Confidence Score Distribution
 | Score | Count | Percentage of Happening |
@@ -163,7 +163,7 @@ This is the first case recorded where the pipeline worked as intended. The quest
 
 > For transcript reference, please refer to [ARC-Challenge Batch Q 001](tests/batch_20260312_221358/q001_69f1599823635bfc075b.md)
 
-The opponent's success comes from a similar output of the proponent's success. Like the proponent in question 010, the opponent was easily able to figure out why the candidate answer was wrong and offer a clear, CoT thought process of why. On the other hand, this debate was a klutz since the rounds were practically copy and pasted 2 times from the first, meaning all 3 rounds had the same content. Neither agent advanced from their positions from the first round. This isn't unique to this sample, though. It happens in about 72.8% of the 99 samples.
+The opponent's success comes from a similar output of the proponent's success. Like the proponent in question 010, the opponent was easily able to figure out why the candidate answer was wrong and offer a clear, CoT thought process of why. On the other hand, this debate was a klutz since the rounds were practically copy and pasted 2 times from the first, meaning all 3 rounds had the same content. Neither agent advanced from their positions from the first round. This isn't unique to this sample, though. It happens in about 72.8% of the 103 samples.
 
 ## Failure Cases
 
