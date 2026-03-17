@@ -87,11 +87,11 @@ My experimental setup came together in the sequence of the pipeline architecture
 
 The initial setup was straightforward:
 
-1. **Step 1 - Agent Setups:** I hardcoded the proponent, opponent, and judge agents. These are the primary, interactive chat bots that will be engaging in the debate rounds. The only thing is the judge does not interact with the propnent and opponent directly as it is only purpose is to call a debate verdict and analysis of the full debate.
-2. **Step 2 - Single-question intialization test experiments:** Using a single prompt, I tested the full code to verify that no bugs appeared in the middle of debates into a few substeps:
+1. **Step 1 - Agent Setups:** I hardcoded the proponent, opponent, and judge agents. These are the primary, interactive chat bots that will be engaging in the debate rounds. The only thing is the judge does not interact with the proponent and opponent directly as it is only purpose is to call a debate verdict and analysis of the full debate.
+2. **Step 2 - Single-question initialization test experiments:** Using a single prompt, I tested the full code to verify that no bugs appeared in the middle of debates into a few substeps:
    - **Step 2.1:** I first tested debates with only round and then a judge's verdict.
    - **Step 2.2:** The opponent and proponent engaged in 3-round debates ending with the judge's verdict.
-   - **Step 2.3:** With steps 2.1 and 2.2 complete, the final task was to embed the Evaluation transcript with the full trasncript.
+   - **Step 2.3:** With steps 2.1 and 2.2 complete, the final task was to embed the Evaluation transcript with the full transcript.
 > NOTE: The single-question debates can be ran via `main.py`.
 3. **Step 3 - Loading the Datasets:** Once I verified that the debates ran smoothly without any compiling error, mid-debate bugs, or debates running for too long, I coded the datasets to be loaded for the intended experiments of this project. The file in question is titled `dataset_loader.py`.
 
@@ -133,7 +133,7 @@ The key takeaway from this is a simple debate pipeline did not outperform the si
 | Opponent Wins | 84 | 81.6% | 
 | Tie | 0 | 0.0% |
 
-Table 5 shows that the opponent wins 81.6% of the debates in the debate pipeline. It is worth noting that ARC-Challenge candidate answers are always intentionally wrong or implausible. The opponent always argues *against* the candidate answer, so the opponent winning the majority of the debates is expected. One could even say that this is good on the judge agent's part since it effectively evaluates the transcripts in full. The small percentage of the proponent winning the debates at 18.4% are cases that the candidate answer was correct and the proponent was able to defend it. So, again, it is a good job on the judge agent's part. No ties were recorded, which makes sense due to the judge genuinely finding all debates to be ambiguous. This is settled by the judge's 4-phase evaluations. 
+Table 5 shows that the opponent wins 81.6% of the debates in the debate pipeline. It is worth noting that ARC-Challenge candidate answers are always intentionally wrong or implausible. The opponent always argues *against* the candidate answer, so the opponent winning the majority of the debates is expected. One could even say that this is good on the judge agent's part since it effectively evaluates the transcripts in full. The small percentage of the proponent winning the debates at 18.4% are cases that the candidate answer was correct and the proponent was able to defend it. So, again, it is a good job on the judge agent's part. No ties were recorded, which makes sense due to the judge genuinely finding all debates to be unambiguous. This is settled by the judge's 4-phase evaluations. 
 
 #### Table 6: Debate Pipeline Confidence Score Distribution
 | Score | Count | Percentage of Happening |
@@ -157,13 +157,13 @@ Table 6 shows no scores were recorded with 1, 2, or 3. Every debate was scored w
 
 > For transcript reference, please refer to [ARC-Challenge Batch Q 010](tests/batch_20260312_221358/q010_dd5a2ed28bfb890a14e5.md)
 
-This is the first case recorded where the pipeline worked as intended. The question was should Celiacs avoid eating spaghetti. The ground truth is yes since Celiac is a gluten intolerance disease, and sphagetti is milled from wheat which is gluten. The proponent was projected to win from the intial stances alone. The opponent had to argue against the candidate answer, which was also the ground truth. The opponent knew this, too, and even used the same logic as the supporting facts. The opponent had to spiral out of its way to find a weakness in the argument given the length of its original position. Overall, the CoT scaffolding from both sides focused and even prompted the opponent to form an opposing argument toward the candidate answer.
+This is the first case recorded where the pipeline worked as intended. The question was should Celiacs avoid eating spaghetti. The ground truth is yes since Celiac is a gluten intolerance disease, and spaghetti is milled from wheat which is gluten. The proponent was projected to win from the intial stances alone. The opponent had to argue against the candidate answer, which was also the ground truth. The opponent knew this, too, and even used the same logic as the supporting facts. The opponent had to spiral out of its way to find a weakness in the argument given the length of its original position. Overall, the CoT scaffolding from both sides focused and even prompted the opponent to form an opposing argument toward the candidate answer.
 
 ## Opponent's Success
 
 > For transcript reference, please refer to [ARC-Challenge Batch Q 001](tests/batch_20260312_221358/q001_69f1599823635bfc075b.md)
 
-The opponent's success comes from a similar output of the proponent's success. Like the proponent in question 010, the opponent was easily able to figure out why the candidate answer was wrong and offer a clear, CoT thought process of why. On the other hand, this debate was a klutz since the rounds were practically copy and pasted 2 times from the first, meaning all 3 rounds had the same content. Neither agent advanced from their positions from the first round.
+The opponent's success comes from a similar output of the proponent's success. Like the proponent in question 010, the opponent was easily able to figure out why the candidate answer was wrong and offer a clear, CoT thought process of why. On the other hand, this debate was a klutz since the rounds were practically copy and pasted 2 times from the first, meaning all 3 rounds had the same content. Neither agent advanced from their positions from the first round. This isn't unique to this sample, though. It happens in about 72.8% of the 99 samples.
 
 ## Failure Cases
 
@@ -181,7 +181,7 @@ There is also a minor error in the evaluation phase worth noting. While the judg
 
 > For transcript reference, please refer to [ARC-Challenge Batch Q 004](tests/batch_20260312_221358/q004_f03fe75dde01742e5a03.md)
 
-There is one error I'd like to point out: an inefficient number of tokens. This debate starts out as normal where both the proponent and opponent form their initial stances. The question is whether Bernie Sandars could visit the Metropolitan Museum 20 times with $200. This is a math question, so the answer is a straightforward "No" in the context of each ticket being $17. Despite this, the candidate answer is a "Yes." Given the proponent is always asked to argue in favor of the candidate answer, the proponent fails to do so at the very beginning of Round 1 by arguing against it. This causes the opponent *and* proponent to circular reason. The opponent reaches the maximum token limit mid-debate and crashes because of this.
+There is one error I'd like to point out: an inefficient number of tokens. This debate starts out as normal where both the proponent and opponent form their initial stances. The question is whether Bernie Sanders could visit the Metropolitan Museum 20 times with $200. This is a math question, so the answer is a straightforward "No" in the context of each ticket being $17. Despite this, the candidate answer is a "Yes." Given the proponent is always asked to argue in favor of the candidate answer, the proponent fails to do so at the very beginning of Round 1 by arguing against it. This causes the opponent *and* proponent to circular reason. The opponent reaches the maximum token limit mid-debate and crashes because of this.
 
 The findings from this section and [Experiments](#experiments) suggest that the conditions required for AI debates to function as theorized by Irving et al. were not met in this implementation of 100 ARC-Challenge questions.
 
