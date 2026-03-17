@@ -23,10 +23,10 @@ My pipeline is organized to 7 primary python files that handles one portion (in 
 | `prompts.py` | ALL prompt templates for all three agents with the four-version history documented within |
 | `proponent.py` | Proponent Agent - same pattern as opponent except with different prompts |
 
-The data flow outputted by `main.py` and `dataset_loader.py` are are similar in nature:
+The data flow outputted by `main.py` and `dataset_loader.py` are similar in nature:
 
 1. The proponent and opponent are introduced to the problem context independently and outputs their initial stances.
-2. For `NUM_ROUNDS = 3`, the propnent agent and opponent agent debate on a said topic for 3 rounds.
+2. For `NUM_ROUNDS = 3`, the proponent agent and opponent agent debate on a said topic for 3 rounds.
 3. The judge agent gathers the full transcript of the debate and outputs a sophisticated, reflective response with a breakdown of 4 categories: chain-of-thought analysis, argument breakdowns, final verdicts, and confidence scores.
 4. An evaluation comparing the judge's ruling against the ground-truth answer.
 5. Transcripts in the format of a markdown file and a JSON file are outputted and stored in `tests/*` and `test_outputs/*` respectively.
@@ -122,7 +122,7 @@ The debate pipeline actually does worse than both the Direct Q&A and Self-Consis
 
 On the other hand, Self-Consistency dominated both of them by a near-perfect accuracy score. It ran 14 samples per question which was an arbitrary number, but the larger the independent samples there is for voting purposes, the more reliable majority vote you get. The only downside of this number is that the compute cost; it will be higher. 
 
-The key takeaway from this is a simple debate pipeline did not outperform the simpliest baseline.
+The key takeaway from this is a simple debate pipeline did not outperform the simplest baseline.
 
 ### Judge Verdict Distribution (Debate Pipeline) and Discussion
 
@@ -192,7 +192,7 @@ The findings from this section and [Experiments](#experiments) suggest that the 
 
 <details>
 
-My prompt engineering development was created in syncronization with the phases of the pipline architecture explained in [Experiments](#experiments). It can be summarized into three distinct, simple steps:
+My prompt engineering development was created in synchronization with the phases of the pipeline architecture explained in [Experiments](#experiments). It can be summarized into three distinct, simple steps:
 
 1. I created the agents themselves
 2. I assigned them roles to role-play.
@@ -206,7 +206,7 @@ Once all the roles were confirmed and the debate transcripts saved the way I wan
 
 > NOTE: prompts of system roles, initial and round prompts, and judge prompts can be viewed in the Appendix or `prompts.py`.
 
-In the `prompt.py` file itself, I describe the iteration process in the terms of "v#," where # is a number greater than 0. Each v# represents is a key iteration of prompts. 
+In the `prompt.py` file itself, I describe the iteration process in the terms of "v#," where # is a number greater than 0. Each v# represents a key iteration of prompts. 
 
 The full commented describing the design decisions is below. It is also included inside `prompts.py`.
 
